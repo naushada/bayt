@@ -1,0 +1,32 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2021"><meta name="DC.rights.owner" content="(C) Copyright 2021"><meta name="DC.Type" content="concept"><meta name="description" content="The PW EMS Monitoring and Reporting function manages counters it receives in a large form file from the vBBU through the Secure File Transfer Protocol (SFTP) micro-service."><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/Abt_PW_EMS_Mntrng_Rprtng.html"><meta name="prodname" content=""><meta name="prodname" content="PW EMS"><meta name="version" content="6"><meta name="version" content="6"><meta name="release" content="1.1"><meta name="release" content="1"><meta name="modification" content="1"><meta name="series" content=""><meta name="DC.Creator" content="DMcAlpine"><meta name="DC.Publisher" content="Parallel Wireless Inc. Proprietary and Confidential"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Counter_Management"><meta name="DC.Language" content="en-US"><link rel="stylesheet" type="text/css" href="../../commonltr.css"><title>Counter Management</title></head><body id="Counter_Management"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Counter Management</h1>
+    
+    <div class="body conbody"><p class="shortdesc">The PW EMS Monitoring and Reporting function manages counters it receives in a large
+        form file from the vBBU through the Secure File Transfer Protocol (SFTP)
+        micro-service.</p>
+        <p class="p">Counters are used by the application software, SON components, and access nodes such as
+            the HNG, vBBU, vNodes and 2G and 4G cells. The SON statistics micro-service (SMS)
+            handles statistics management for vBBU LTE and 2G resource files, and the SON interval
+            configuration controls how often statistics are collected from access network
+            components. SON also raises the appropriate alarms and events at different levels. For
+            example:</p>
+        <ul class="ul">
+            <li class="li">The SON sends appropriate events if the internal stats database management function
+                must remove counter data before successful consumption by the PW EMS.</li>
+            <li class="li"> The SON raises and clears an alarm if the communication link between the internal
+                statistics database management function and the PW EMS fails for sending
+                statistics.</li>
+        </ul>
+        <p class="p">Refer to the <span class="ph"><em class="ph i">Alarms and Events Reference Guide</em></span> for more information on the list of alarms and events.</p>
+        <p class="p">Counters can be used in the PW EMS Monitoring and Reporting KPI dashboards. For example,
+            the <strong class="ph b">total_ul_prb_used</strong> and <strong class="ph b">total_system_ul_prbs</strong> counters (both highlighted
+            in
+            yellow)
+            are used in a query for the default LTE_KPI (<strong class="ph b">Dashboards</strong> &gt; <strong class="ph b">Manage</strong> &gt;
+                <strong class="ph b">LTE_KPI</strong>): </p>
+        <p class="p"><img class="image" id="Counter_Management__image_aln_jmk_npb" src="../Images/PW_EMS_NM_Cntrs_usd_KPI.PNG" width="624"></p>
+        <p class="p">Refer to the <span class="ph"><em class="ph i">Virtual Baseband Unit RAN Counters and KPI Guide</em></span> for detailed information about counters and statistics.</p>
+    </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../Common/Topics/Abt_PW_EMS_Mntrng_Rprtng.html" title="Parallel Wireless Element Management System (PW EMS) Monitoring and Reporting application is provided through a Web User Interface (UI). This application collects device data from the system and presents it in interactive charts, graphs, Key Performance Indicators (KPIs), and alerts so operators can respond to the way devices are performing on the network.">About PW EMS Monitoring and Reporting</a></div></div></nav></article></main></body></html>

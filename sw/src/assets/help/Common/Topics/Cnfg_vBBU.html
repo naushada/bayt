@@ -1,0 +1,180 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2021"><meta name="DC.rights.owner" content="(C) Copyright 2021"><meta name="DC.Type" content="task"><meta name="description" content="Use this task to configure a discovered vBBU, its location, and select its profiles."><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/Dvc_Cnfg_Mngmnt.html"><meta name="prodname" content=""><meta name="prodname" content=""><meta name="version" content="6"><meta name="version" content="6"><meta name="release" content="1.1"><meta name="release" content="1"><meta name="modification" content="1"><meta name="series" content=""><meta name="DC.Creator" content="DMcAlpine"><meta name="DC.Publisher" content="Parallel Wireless Inc. Proprietary and Confidential"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0"><meta name="DC.Language" content="en-US"><link rel="stylesheet" type="text/css" href="../../commonltr.css"><title>Configure a vBBU</title></head><body id="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Configure a vBBU</h1>
+    
+    
+    <div class="body taskbody"><p class="shortdesc">Use this task to configure a discovered vBBU, its location, and select its
+        profiles.</p>
+        <div class="section prereq p" id="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__prereq_tmn_tql_lpb">You must pre-provision the vBBU using the WCT tool. Refer to
+            the <span class="ph"><em class="ph i">Virtual Baseband Unit Server Commissioning Guide</em></span> for more information. For example, the following information is configured for the
+            vBBU in the vBBU WCT: <p class="p"><img class="image" id="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__image_bvq_qwm_mpb" src="../Images/WCT_vBBU_cnfg.PNG" width="624"></p></div>
+        <ol class="ol steps" id="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__steps_ily_24x_p4b"><li class="li step stepexpand">
+                <span class="ph cmd">In the navigation bar, click <strong class="ph b">Devices</strong> &gt; <strong class="ph b">Create Devices</strong>.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">In the <strong class="ph b">Create New Device</strong> window, complete the following fields in the
+                        <strong class="ph b">Device Id: 41733</strong> section:</span>
+                <div class="itemgroup info">
+                    <div class="note note note_note"><span class="note__title">NOTE:</span> The prefix number: 41733 is part of the vBBU device identifier (ID) that
+                        is used for every vBBU or vNode that gets created in the system.</div>
+                </div>
+                <div class="itemgroup info">
+                    <table class="table" id="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_kkw_v4x_p4b"><caption></caption><colgroup><col><col></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_kkw_v4x_p4b__entry__1">
+                                        <p class="p">Field</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_kkw_v4x_p4b__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_kkw_v4x_p4b__entry__1 "><strong class="ph b">Device Id</strong> field</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_kkw_v4x_p4b__entry__2 ">This is a static field shows the Parallel Wireless
+                                        Organization Unique Identifier (OUI), which is
+                                        41733.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_kkw_v4x_p4b__entry__1 ">
+                                        <strong class="ph b">Device Product Class</strong> field</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_kkw_v4x_p4b__entry__2 ">Enter the vBBU device ID. This is the <strong class="ph b">HW Class ID</strong>
+                                        that was configured in the WCT vBBU interface. For example:
+                                        C19999</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_kkw_v4x_p4b__entry__1 "><strong class="ph b">Device Serial Number</strong> field</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_kkw_v4x_p4b__entry__2 ">Enter the required vBBU hardware serial number that is
+                                        assigned to the vBBU (that can be found on the device
+                                        itself). This ID is also the <strong class="ph b">UniRAN ID</strong> for the vBBU
+                                        interface. For example: S3837C2X1113972</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_kkw_v4x_p4b__entry__1 "><strong class="ph b">Device Name</strong> field</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_kkw_v4x_p4b__entry__2 ">
+                                        <p class="p">The device name displays automatically as a combination
+                                            the previous device ID, product class and serial number
+                                            entries. </p>
+                                        <p class="p">For example: 41733-C19999- S3837C2X1113972</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_kkw_v4x_p4b__entry__1 "><strong class="ph b">Select Device Type</strong> drop-down list</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_kkw_v4x_p4b__entry__2 ">Select <strong class="ph b">vBBU</strong> as the device type.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_kkw_v4x_p4b__entry__1 ">
+                                        <strong class="ph b">Name of Region</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_kkw_v4x_p4b__entry__2 ">Enter the region in which this vBBU or vNode exists. For
+                                        example, New Hampshire.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_kkw_v4x_p4b__entry__1 ">
+                                        <strong class="ph b">Site</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_kkw_v4x_p4b__entry__2 ">
+                                        <p class="p">Enter a specific site location. For example, Darnstable,
+                                            Powdunk Hills.</p>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click the <strong class="ph b">SYSTEM INFORMATION</strong> tab and complete the following
+                    fields:</span>
+                <div class="itemgroup info">
+                    <table class="table" id="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b"><caption></caption><colgroup><col><col></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__1">
+                                        <p class="p">Field</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__1 "><strong class="ph b">Device Version</strong> field</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__2 ">The software version of the vBBU device displays by
+                                        default.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__1 "><strong class="ph b">PKI Enabled</strong> checkbox</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__2 ">Check the checkbox to enable PKI securty on the
+                                        device.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__1 "><strong class="ph b">GSMConfig</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__2 ">Select the name of the Global System for Mobile
+                                        communications (GSM) profile that you created for a
+                                        Converged Wireless System (CWS) access node which performs
+                                        as a multi-carrier node that operates as a standalone base
+                                        station or Remote-Radio Head (RRH) connected to a
+                                        virtualized Baseband Unit (vBBU). Refer to the
+                                            <cite class="cite">Configure a GSM Profile for Access Nodes</cite>
+                                        section for more information.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__1 ">
+                                        <strong class="ph b">HeartBeat </strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__2 ">Select the cell heartbeat monitoring profile that you
+                                        created. Refer to the <cite class="cite">Configure a Cell Heartbeat
+                                            Monitoring Profile</cite> section for more
+                                        information.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__1 ">
+                                        <strong class="ph b">Logging</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__2 ">
+                                        <p class="p">Select the name of the system logging profile that you
+                                            created. Refer to the <cite class="cite">Create a System Logging
+                                                Profile</cite> section for more information.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__1 ">
+                                        <strong class="ph b">PkiSecurity</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__2 ">Select the system security profile which includes the PKI
+                                        certificate parameters required for server authentication
+                                        that you created. Refer to <cite class="cite">Create a System Security
+                                            Profile</cite> for more information.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__1 "><strong class="ph b">QoSUplink</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__2 ">Select the uplink QoS profile that contains
+                                        Differentiated Services Code Point (DSCP) maps that are
+                                        applied to data traffic towards the HNG from access network
+                                        devices profile that you created. Refer to the
+                                            <cite class="cite">Configure Uplink QoS</cite> section for more
+                                        information.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__1 "><strong class="ph b">StatsInterval</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__2 ">Select the cell statistics monitoring profile that you
+                                        created. Refer to the <cite class="cite">Configure a Cell Statistics
+                                            Profile</cite> section for more information.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__1 ">
+                                        <strong class="ph b">TrShapingUplink</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__table_ryt_5qx_p4b__entry__2 ">Select the network traffic shaping profile necessary for
+                                        categorizing access network traffic that you created. Refer
+                                        to the <cite class="cite">Create a Traffic Shaping Profile</cite> section
+                                        for more information.</td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">CREATE+</strong>.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">A configururation page for the vBBU that is similar to the one shown below
+                    appears:</span>
+                <div class="itemgroup info"><img class="image" id="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fd0__image_yk4_c5l_lpb" src="../Images/vBBU_cfg_pg.PNG" width="624"></div>
+            </li></ol>
+    </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../Common/Topics/Dvc_Cnfg_Mngmnt.html" title="Once the appropriate system profiles are configured, and if any 2G or 4G profles are configured or modified on the PW EMS, you can power on all vBBUs. Before doing so, ensure that they are pre-provisioned for the PW EMS system by using the vBBU Web Commisioning Tool (WCT). Refer to the Virtual Baseband Unit Server Commissioning Guide for more information about setting up a vBBU server and pre-provisioning a vBBU, its vNodes, and cells.">Device Configuration and Management</a></div></div></nav></article></main></body></html>

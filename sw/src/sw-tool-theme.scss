@@ -1,0 +1,101 @@
+
+//nav, toolbar theme
+@import '~@angular/material/theming';
+$sw-tools-theme-primary: mat-palette($mat-blue-grey, 800);
+$sw-tools-theme-accent: mat-palette($mat-green);
+$sw-tools-theme-warn: mat-palette($mat-red, 900);
+
+$sw-tools-theme: mat-dark-theme(
+$sw-tools-theme-primary,
+$sw-tools-theme-accent,
+$sw-tools-theme-warn
+);
+
+.sw-tools-theme {
+
+  @include angular-material-theme($sw-tools-theme);
+  a {
+    width: 100%;
+    text-decoration: none;
+    // color: lightgray;
+    // padding: 0 16px;
+  }
+
+  a:hover,
+  a:active {
+    color: lightgray;
+    background-color: rgba(59,174,73,0.3);
+
+  }
+
+  a.active-link {
+    margin: 0;
+    padding: 0 16px;
+    color: rgba(255,255,255,1.0);
+    background-color: rgba(59,174,73,0.3);
+    font-size: 15px;
+    font-weight: 600;
+    border-left: 10px solid  rgba(59,174,73,1.0);
+  }
+  a.active-link .nav-caption{
+    color: rgba(255,255,255);
+  }
+  div.mat-list-item-content{
+    padding:  0 16px;
+    width: 100%;
+    // background-color: rgba(59,174,73);
+  }
+  // div.mat-list-item-content:hover{
+  //   background-color: #3BAE49;
+  // }
+  .mat-list-item-content{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+    //border-left: 11px solid red;
+  }
+  .active .mat-list-item-content{
+    color: #fff !important;
+    //border-left: 11px solid #3BAE49;
+   }
+}
+.ion-tools-theme .active .highlightselecteditem{
+  background-color: #3BAE49 !important;
+  width: 10px !important; 
+  background-color: transparent; 
+  position: absolute;
+  height: 100%;
+}
+.login-ctrl input{
+  &:-webkit-autofill::first-line,
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    font-family: "Open Sans" !important;
+    font-size: 16px !important;
+    box-shadow: 0 0 0 30px #ECECEC inset !important;
+  }
+}
+.mat-drawer-inner-container{
+  overflow: hidden !important;
+}
+.mat-drawer-inner-container:hover{
+  overflow: auto !important;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px transparent; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a8a8a8;
+  border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #D8D8D8; 
+}

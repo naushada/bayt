@@ -1,0 +1,117 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2021"><meta name="DC.rights.owner" content="(C) Copyright 2021"><meta name="DC.Type" content="task"><meta name="description" content="Use this task to create user accounts so they can be authenticated by the PW EMS."><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/Cnfg_Access_PW_EMS.html"><meta name="prodname" content=""><meta name="prodname" content="PW EMS"><meta name="version" content="6"><meta name="version" content="6"><meta name="release" content="1.1"><meta name="release" content="1"><meta name="modification" content="1"><meta name="series" content=""><meta name="DC.Creator" content="DMcAlpine"><meta name="DC.Publisher" content="Parallel Wireless Inc. Proprietary and Confidential"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Create_a_New_User_for_Your_Organization"><meta name="DC.Language" content="en-US"><link rel="stylesheet" type="text/css" href="../../commonltr.css"><title>Create a New User for Your Organization</title></head><body id="Create_a_New_User_for_Your_Organization"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Create a New User for Your Organization</h1>
+    
+    <div class="body taskbody"><p class="shortdesc">Use this task to create user accounts so they can be authenticated by the PW
+        EMS.</p>
+        <ol class="ol steps" id="Create_a_New_User_for_Your_Organization__steps_qxv_cxb_s4b"><li class="li step stepexpand">
+                <span class="ph cmd">Click the Navigation Bar menu and select <strong class="ph b">Administration</strong> &gt;
+                    <strong class="ph b">RBAC</strong>.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Select the appropriate organization from the drop down list at the top of the
+                        <strong class="ph b">Managing Organization</strong> window.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">In the <strong class="ph b">Managing Organization</strong> window, select the <strong class="ph b">USERS</strong> tab and
+                    click <strong class="ph b">CREATE NEW USER FOR:</strong> &lt;Organization&gt;.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">In the <strong class="ph b">Create New User for:</strong>&lt;Organization&gt; dialog box complete the
+                    following fields:</span>
+                <div class="itemgroup info">
+                    <table class="table" id="Create_a_New_User_for_Your_Organization__table_u5g_gxb_s4b"><caption></caption><colgroup><col><col></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="Create_a_New_User_for_Your_Organization__table_u5g_gxb_s4b__entry__1">
+                                        <p class="p">Field</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="Create_a_New_User_for_Your_Organization__table_u5g_gxb_s4b__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_New_User_for_Your_Organization__table_u5g_gxb_s4b__entry__1 ">
+                                        <strong class="ph b">Specify User Name</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_New_User_for_Your_Organization__table_u5g_gxb_s4b__entry__2 ">
+                                        <p class="p">Use the following rules to enter the user name:</p>
+                                        <div class="note note note_note"><span class="note__title">NOTE:</span> The following user name rules are enforced by the PW
+                                            EMS.</div>
+                                        <ul class="ul" id="Create_a_New_User_for_Your_Organization__ul_ths_jkl_hpb">
+                                            <li class="li">One or more lower-case characters.</li>
+                                            <li class="li">One or more upper-case characters.</li>
+                                            <li class="li">One or more numerical characters.</li>
+                                            <li class="li">One or more of the following comma-separated special
+                                                characters: space, @, _ (underscore), and - (dash).
+                                                A user name with an @ symbol is commonly used in
+                                                LDAP configurations. For example:
+                                                  <strong class="ph b">SystemUser1@myorg</strong></li>
+                                            <li class="li">There is a minimum of 8 characters and a maximum of
+                                                64 characters.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_New_User_for_Your_Organization__table_u5g_gxb_s4b__entry__1 ">
+                                        <strong class="ph b">User Password</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_New_User_for_Your_Organization__table_u5g_gxb_s4b__entry__2 ">Enter the user password using the following
+                                            rules:<div class="note note note_note"><span class="note__title">NOTE:</span> The following password rules are enforced by
+                                            the PW EMS.</div><ul class="ul" id="Create_a_New_User_for_Your_Organization__ul_fby_dcz_gpb">
+                                            <li class="li">This new password must be different from the default
+                                                password.</li>
+                                            <li class="li">There is at least one lower case letter.</li>
+                                            <li class="li">There is at least one upper case letter.</li>
+                                            <li class="li">There is at least one numeric character.</li>
+                                            <li class="li">There is at least one special character from the
+                                                list: ! @ # % _ &amp; $ ^ * ? : ; ~ = ` |</li>
+                                            <li class="li">There is a minimum of 8 characters expected in the
+                                                password.</li>
+                                            <li class="li">There is a maximum of 16 characters expected in the
+                                                password</li>
+                                        </ul></td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_New_User_for_Your_Organization__table_u5g_gxb_s4b__entry__1 "><strong class="ph b">Confirm User Password</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_New_User_for_Your_Organization__table_u5g_gxb_s4b__entry__2 ">
+                                        <p class="p">Reenter the new user password that you entered.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_New_User_for_Your_Organization__table_u5g_gxb_s4b__entry__1 ">
+                                        <strong class="ph b">Password Authentication Policy:</strong> drop-down
+                                        list</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_New_User_for_Your_Organization__table_u5g_gxb_s4b__entry__2 ">
+                                        <p class="p">(Not configurable) The <strong class="ph b">Simplistic Passwords
+                                                Authorization</strong> authentication policy appears.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_New_User_for_Your_Organization__table_u5g_gxb_s4b__entry__1 ">
+                                        <strong class="ph b">Change Password Expiration Days:</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_New_User_for_Your_Organization__table_u5g_gxb_s4b__entry__2 ">The number of days allowed before the user is required to
+                                        update their password or their account becomes
+                                        inaccessible.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_New_User_for_Your_Organization__table_u5g_gxb_s4b__entry__1 ">
+                                        <strong class="ph b">User Email:</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_New_User_for_Your_Organization__table_u5g_gxb_s4b__entry__2 ">The user email address for their organization.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_New_User_for_Your_Organization__table_u5g_gxb_s4b__entry__1 ">
+                                        <strong class="ph b">Change Session Timeout:</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_New_User_for_Your_Organization__table_u5g_gxb_s4b__entry__2 ">The number of minutes that the user session can remain
+                                        idle before the session expires and the system logs this
+                                        user out of the system.</td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">CREATE THE ROLE</strong>. The organization displays in the
+                        <strong class="ph b">Organizations</strong> tab.</span>
+            </li></ol>
+    </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../Common/Topics/Cnfg_Access_PW_EMS.html" title="Use the following tasks to configure Role-based Access (RBAC) for users who connect to the PW EMS.">Configure PW EMS Role-Based Access</a></div></div></nav></article></main></body></html>

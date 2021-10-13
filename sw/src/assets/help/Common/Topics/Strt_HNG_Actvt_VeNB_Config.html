@@ -1,0 +1,26 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2021"><meta name="DC.rights.owner" content="(C) Copyright 2021"><meta name="DC.Type" content="task"><meta name="description" content="Once the HNG configuration is added to the PW EMS, the HNG must be started or a switchover must be performed if it is operational already."><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/HNG.html"><meta name="prodname" content=""><meta name="prodname" content="PW EMS"><meta name="version" content="6"><meta name="version" content="6"><meta name="release" content="1.1"><meta name="release" content="1"><meta name="modification" content="1"><meta name="series" content=""><meta name="DC.Creator" content="DMcAlpine"><meta name="DC.Publisher" content="Parallel Wireless Inc. Proprietary and Confidential"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Start_the_Near_RT_RIC"><meta name="DC.Language" content="en-US"><link rel="stylesheet" type="text/css" href="../../commonltr.css"><title>Start the HNG to Activate the VeNB Configuration</title></head><body id="Start_the_Near_RT_RIC"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Start the HNG to Activate the VeNB Configuration</h1>
+    
+
+    <div class="body taskbody"><p class="shortdesc">Once the HNG configuration is added to the PW EMS, the HNG must be started or a
+        switchover must be performed if it is operational already.    </p>
+        <ol class="ol steps" id="Start_the_Near_RT_RIC__steps_t5n_jdt_jpb"><li class="li step">
+                <span class="ph cmd">(Option 1) If the HNG is configured, but not operational, start the HNG.</span>
+            </li><li class="li step">
+                <span class="ph cmd">(Option 2) If the HNG and NETCONF settings are configured on the PW EMS after
+                    an HNG is running, configured, and connected to the PW EMS, perform an HA
+                    switchover on the HNG.</span>
+            </li><li class="li step">
+                <span class="ph cmd">Verify on the HNG that a NETCONF session is active between the HNG and PW EMS
+                    by using the <strong class="ph b">show cli session list</strong> command.</span>
+            </li></ol>
+        <section class="section result" id="Start_the_Near_RT_RIC__result_xlc_xdt_jpb">Once the HNG is operational, it sends the Virtual eNodeB
+            (VeNB) profile configuration (containing the "zone venb-zone" and venb instance) to the
+            PW EMS so that LTE services can be supported by sending its configuration inventory of
+            devices to the PW EMS.</section>
+        <section class="section postreq" id="Start_the_Near_RT_RIC__postreq_ilp_d2t_jpb">Go to the <cite class="cite">Configure Devices</cite> section to
+            configure the vBBU and vNodes.</section>
+    </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../Common/Topics/HNG.html" title="The HetNet Gateway (HNG) is used to virtualize and aggregate multiple technology Radio Access Network (RAN) interfaces to manage GSM (2G), UMTS (3G), and LTE (4G) cells.">HetNet Gateway</a></div></div></nav></article></main></body></html>

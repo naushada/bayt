@@ -1,0 +1,235 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2021"><meta name="DC.rights.owner" content="(C) Copyright 2021"><meta name="DC.Type" content="task"><meta name="description" content="Use this task to configure an uplink QoS profile for Differentiated Services Code Point (DSCP) to be applied to data traffic towards the HNG from access network devices, such as the RRH."><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/Create_Ntwrk_Prfls.html"><meta name="prodname" content=""><meta name="prodname" content=""><meta name="version" content="6"><meta name="version" content="6"><meta name="release" content="1.1"><meta name="release" content="1"><meta name="modification" content="1"><meta name="series" content=""><meta name="DC.Creator" content="DMcAlpine"><meta name="DC.Publisher" content="Parallel Wireless Inc. Proprietary and Confidential"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09"><meta name="DC.Language" content="en-US"><link rel="stylesheet" type="text/css" href="../../commonltr.css"><title>Configure Uplink QoS</title></head><body id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Configure Uplink QoS</h1>
+    
+    
+    <div class="body taskbody"><p class="shortdesc">Use this task to configure an uplink QoS profile for Differentiated Services Code
+        Point (DSCP) to be applied to data traffic towards the HNG from access network devices, such
+        as the RRH.</p>
+        <section class="section context" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__context_l5s_2q1_kpb">The following DSCPs are available for use in this task:<ul class="ul" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__ul_lzp_jq1_kpb">
+                <li class="li">
+                    <strong class="ph b">af11</strong> - Assured Forwarding-11 (10)</li>
+                <li class="li">
+                    <strong class="ph b">af12</strong> - Assured Forwarding-12 (12)</li>
+                <li class="li">
+                    <strong class="ph b">af13</strong> - Assured Forwarding-13 (14)</li>
+                <li class="li">
+                    <strong class="ph b">af21</strong> - Assured Forwarding-21 (18)</li>
+                <li class="li">
+                    <strong class="ph b">af22</strong> - Assured Forwarding-22 (20)</li>
+                <li class="li">
+                    <strong class="ph b">af23</strong> - Assured Forwarding-23 (22)</li>
+                <li class="li">
+                    <strong class="ph b">af31</strong> - Assured Forwarding-31 (26)</li>
+                <li class="li">
+                    <strong class="ph b">af32</strong> - Assured Forwarding-32 (28)</li>
+                <li class="li">
+                    <strong class="ph b">af33</strong> - Assured Forwarding-33 (30)</li>
+                <li class="li">
+                    <strong class="ph b">af41</strong> - Assured Forwarding-41 (34)</li>
+                <li class="li">
+                    <strong class="ph b">af42</strong> - Assured Forwarding-42 (36)</li>
+                <li class="li">
+                    <strong class="ph b">af43</strong> - Assured Forwarding-43 (38)</li>
+                <li class="li">
+                    <strong class="ph b">best-effort</strong> - Best Effort (0)</li>
+                <li class="li">
+                    <strong class="ph b">cs1</strong> - Class Selector-1 (8)</li>
+                <li class="li">
+                    <strong class="ph b">cs2</strong> - Class Selector-2 (16)</li>
+                <li class="li">
+                    <strong class="ph b">cs3</strong> - Class Selector-3 (24)</li>
+                <li class="li">
+                    <strong class="ph b">cs4</strong> - Class Selector-4 (32)</li>
+                <li class="li">
+                    <strong class="ph b">cs5</strong> - Class Selector-5 (40)</li>
+                <li class="li">
+                    <strong class="ph b">cs6</strong> - Class Selector-6 (48)</li>
+                <li class="li">
+                    <strong class="ph b">cs7</strong> - Class Selector-7 (56)</li>
+                <li class="li">
+                    <strong class="ph b">ef</strong> - (Default) Expedited Forwarding (46)</li>
+            </ul></section>
+        <ol class="ol steps" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__steps_zwr_14d_q4b"><li class="li step stepexpand">
+                <span class="ph cmd">In the navigation bar, click <strong class="ph b">Profiles</strong> &gt; <strong class="ph b">Summary</strong>.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">In the <strong class="ph b">Profiles</strong> window, click the <strong class="ph b">System Profiles</strong> tab.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">+Create</strong>.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">In the <strong class="ph b">Create System Profile</strong> window, enter the name of this profile in
+                    the <strong class="ph b">Profile Name</strong> field.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Select <strong class="ph b">QoSUplink</strong> from the <strong class="ph b">Profile Type</strong> drop-down list and
+                    complete the following fields:</span>
+                <div class="itemgroup info">
+                    <table class="table" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b"><caption></caption><colgroup><col><col></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1">
+                                        <p class="p">Field</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 "><strong class="ph b">Name</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">Enter a name for the QoS uplink itself.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 ">
+                                        <strong class="ph b">Control Override</strong>  drop-down list</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">This parameter is <strong class="ph b">Disabled</strong> by default. Select
+                                            <strong class="ph b">Enable</strong> to associate bandwidth settings for DSCP
+                                        profiles for backhaul network data traffic identified for
+                                        congestion-handling purposes.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 "><strong class="ph b">Control DSCP</strong> drop-down list</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">
+                                        <p class="p">Select the DSCP (see above) for control data traffic on a
+                                            network. The default is <strong class="ph b">ef</strong>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 ">
+                                        <strong class="ph b">Signaling Override</strong> drop-down list</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">This parameter is <strong class="ph b">Disabled</strong> by default. Select
+                                            <strong class="ph b">Enable</strong> to associate bandwidth settings for DSCP
+                                        profiles for backhaul network data traffic identified for
+                                        signaling purposes.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 "><strong class="ph b">Signaling DSCP</strong> drop-down list</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">
+                                        <p class="p">Select the DSCP (see above) for signalling data traffic
+                                            on a network. The default is <strong class="ph b">ef</strong>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 ">
+                                        <strong class="ph b">UMTS Voice Override</strong> drop-down list </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">This parameter is <strong class="ph b">Disabled</strong> by default. Select
+                                            <strong class="ph b">Enabled</strong> to associate with bandwidth settings for
+                                        DSCP profiles for backhaul network UMTS voice
+                                        traffic.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 "><strong class="ph b">UMTS Voice DSCP</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">
+                                        <p class="p">Select the DSCP (see above) for QoS profile UMTS voice
+                                            traffic on a network. The default is <strong class="ph b">af42</strong>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 ">
+                                        <strong class="ph b">Data Override</strong> drop-down list</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">This parameter is <strong class="ph b">Disabled</strong> by default. Select
+                                            <strong class="ph b">Enable</strong> to associate bandwidth settings for the
+                                        QoS DSCP profile for backhaul network UMTS data
+                                        traffic.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 ">
+                                        <strong class="ph b">Data DSCP</strong> drop-down list</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">
+                                        <p class="p">Select the DSCP (see above) for bandwidth settings
+                                            associated with the QoS profile for backhaul network
+                                            UMTS data traffic. The default is <strong class="ph b">af42</strong>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 "><strong class="ph b">Edge Data Override</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">The parameter is <strong class="ph b">Disabled</strong> by default. Select
+                                            <strong class="ph b">Enabled</strong> to associate QoS profile DSCP values for
+                                        backhaul network Enhanced Data rates for Global System for
+                                        Mobile Communications (GSM) Evolution (EDGE) cell
+                                        traffic.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 "><strong class="ph b">Edge DSCP</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">
+                                        <p class="p">Select the DSCP (see above) for bandwidth settings for
+                                            backhaul network EDGE cell data traffic on a network.
+                                            The default is <strong class="ph b">af31</strong>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 "><strong class="ph b">GPRS Data Override</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">The parameter is <strong class="ph b">Disabled</strong> by default. Select
+                                            <strong class="ph b">Enabled</strong> to associate QoS DSCP profile values for
+                                        General Packet Radio Service (GPRS) packet-oriented mobile
+                                        data traffic.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 "><strong class="ph b">GPRS Data DSCP</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">
+                                        <p class="p">Select the DSCP (see above) for QoS profile for GPRS
+                                            packet-oriented mobile data traffic. The default is
+                                                <strong class="ph b">af31</strong>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 "><strong class="ph b">GSMMF Signaling Override</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">The parameter is <strong class="ph b">Disabled</strong> by default. Select
+                                            <strong class="ph b">Enabled</strong> to associate QoS DSCP profile values for
+                                        backhaul network Global System for Mobile Communications
+                                        (GSM) Multi-frequency signaling (MF) data traffic.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 "><strong class="ph b">GSMMF Signaling DSCP</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">
+                                        <p class="p">Select the DSCP (see above) for QoS profile for GSMMF
+                                            packet-oriented mobile data traffic. The default is
+                                                <strong class="ph b">ef</strong>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 "><strong class="ph b">GSMMF Voice Override</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">The parameter is <strong class="ph b">Disabled</strong> by default. Select
+                                            <strong class="ph b">Enabled</strong> to associate QoS DSCP for backhaul
+                                        network GSMMF voice traffic.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 "><strong class="ph b">GSM Voice DSCP</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">
+                                        <p class="p">Select the DSCP (see above) for QoS profile for Global
+                                            System for Mobile Communications (GSM) cell voice
+                                            traffic. The default is <strong class="ph b">ef</strong>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 "><strong class="ph b">VOLTE Override</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">The parameter is <strong class="ph b">Disabled</strong> by default. Select
+                                            <strong class="ph b">Enabled</strong> to associate QoS DSCP profile values for
+                                        Voice over LTE (VoLTE) traffic.  </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 "><strong class="ph b">VOLTE DSCP</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">
+                                        <p class="p">Select the DSCP (see above) for QoS profile for VoLTE
+                                            traffic. The default is <strong class="ph b">ef</strong>.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 "><strong class="ph b">IMS Override</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">The parameter is <strong class="ph b">Disabled</strong> by default. Select
+                                            <strong class="ph b">Enabled</strong> to associate QoS DSCP profile values for
+                                        Integrated Management System (IMS) traffic.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__1 "><strong class="ph b">IMS DSCP</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f09__table_u5j_f4d_q4b__entry__2 ">
+                                        <p class="p">Select the DSCP (see above) for QoS profile for IMS
+                                            traffic. The default is <strong class="ph b">ef</strong>.</p>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">Create+</strong>.</span>
+            </li></ol>
+    </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../Common/Topics/Create_Ntwrk_Prfls.html" title="A network profile includes the configuration for traffic shaping, Quality of Service (QoS), and QoS statistics collection for both uplink and downlink directions over the HNG.">Create Network Profiles</a></div></div></nav></article></main></body></html>

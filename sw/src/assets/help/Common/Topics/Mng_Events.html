@@ -1,0 +1,293 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2021"><meta name="DC.rights.owner" content="(C) Copyright 2021"><meta name="DC.Type" content="task"><meta name="description" content="A generated event represents information about an action or state related to a device. Sometimes an event can pertain to the PW EMS itself. Most generated events contain configuration, connectivity, and state change information. Events can also provide information about alarm conditions, warnings, or errors that occur on devices."><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/Fault_Mngmnt.html"><meta name="prodname" content=""><meta name="version" content="6"><meta name="release" content="1.1"><meta name="modification" content="1"><meta name="series" content=""><meta name="DC.Creator" content="DMcAlpine"><meta name="DC.Publisher" content="Parallel Wireless Inc. Proprietary and Confidential"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Manage_Events"><meta name="DC.Language" content="en-US"><link rel="stylesheet" type="text/css" href="../../commonltr.css"><title>Manage Events</title></head><body id="Manage_Events"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Manage Events</h1>
+    
+    <div class="body taskbody"><p class="shortdesc">A generated event represents information about an action or state related to a
+        device. Sometimes an event can pertain to the PW EMS itself. Most generated events contain
+        configuration, connectivity, and state change information. Events can also provide
+        information about alarm conditions, warnings, or errors that occur on devices.</p>
+        <ol class="ol steps" id="Manage_Events__steps_dzq_cl2_q4b"><li class="li step stepexpand">
+                <span class="ph cmd">In the navigation bar, click <strong class="ph b">Events</strong>. You can choose how to display
+                    events and take certain actions with events by using the event configuration bar
+                    selections, which are shown below and discussed in more detail in the following
+                    steps.</span>
+                <div class="itemgroup info"><img class="image" id="Manage_Events__image_lwc_vcj_npb" src="../Images/Event_sort.PNG" width="624"></div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">In the <strong class="ph b">Events</strong> window, the <strong class="ph b">ACTIVE EVENTS</strong> tab displays by default.
+                    The following event fields are described for the list of active events that are
+                    automatically generated or updated:</span>
+                <div class="itemgroup info">
+                    <div class="note note note_note"><span class="note__title">NOTE:</span> You can control how default or optional columns appear in the <strong class="ph b">ACTIVE
+                            EVENTS</strong> table by clicking the column display icon <img class="image" id="Manage_Events__image_dq4_sx1_npb" src="../Images/Column_display_icon.PNG">. In the drop-down list, check or uncheck the
+                        checkbox for any the columns described below that you want to filter in the
+                        table. Unchecking a checkbox hides a column and checking a checkbox makes a
+                        column appear in the table. Events are refreshed every 10 seconds.</div>
+                </div>
+                <div class="itemgroup info">
+                    <table class="table" id="Manage_Events__table_nmv_2l2_q4b"><caption></caption><colgroup><col><col></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="Manage_Events__table_nmv_2l2_q4b__entry__1">
+                                        <p class="p">Field</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="Manage_Events__table_nmv_2l2_q4b__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_nmv_2l2_q4b__entry__1 ">Download <img class="image" id="Manage_Events__image_kz5_tpc_npb" src="../Images/dwnld_icon.PNG" width="38"> icon </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_nmv_2l2_q4b__entry__2 ">
+                                        <p class="p">Click this icon to download events. In the pop-up menu
+                                            that displays, select either <strong class="ph b">Excel</strong> for an
+                                            Event.xlsx file or <strong class="ph b">CSV</strong> for an Event.csv file. The
+                                            file type that you select downloads to your web
+                                            browser's default download location on your system.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_nmv_2l2_q4b__entry__1 ">
+                                        <strong class="ph b">Object ID</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_nmv_2l2_q4b__entry__2 ">Displays the logging module name or internal path. Refer
+                                        to <cite class="cite">Configure the System Logging Profile</cite> topic
+                                        for more information.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_nmv_2l2_q4b__entry__1 ">
+                                        <strong class="ph b">Severity</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_nmv_2l2_q4b__entry__2 ">
+                                        <p class="p">Displays the severity of the event. The following
+                                            severity levels can be displayed for an event:</p>
+                                        <p class="p">(Default column) Displays the severity of the event.
+                                            Click the <strong class="ph b">Severity</strong> drop-down list and check the
+                                            check box next to each of the following event severity
+                                            levels to filter event columns you want to appear in the
+                                            table:</p>
+                                        <ul class="ul" id="Manage_Events__ul_qxz_vk2_q4b">
+                                            <li class="li">
+                                                <strong class="ph b">Critical</strong> - The alert indicates that action
+                                                must be taken immediately. If no actions are taken,
+                                                there may be physical, permanent, and irreparable
+                                                damage to your system.</li>
+                                            <li class="li">
+                                                <strong class="ph b">Major</strong> - Critical conditions exist. The
+                                                functionality has been seriously compromised and a
+                                                loss of functionality, hanging applications, and
+                                                dropped packets may occur. If no actions are taken,
+                                                your system suffers no physical harm, but ceases to
+                                                function.</li>
+                                            <li class="li">
+                                                <strong class="ph b">Minor</strong> - Error conditions exist. The
+                                                functionality has been impaired to a certain degree
+                                                and you might experience compromised functionality.
+                                                There is no physical harm to your system, but you
+                                                need to take actions to keep your system operating
+                                                properly.</li>
+                                            <li class="li"><strong class="ph b">Warning</strong> - Warning conditions exist. Some
+                                                irregularities in performance. These conditions are
+                                                noteworthy and you should take actions to keep your
+                                                system operating properly.</li>
+                                            <li class="li"><strong class="ph b">Clear</strong> - Any cleared messages.</li>
+                                            <li class="li"><strong class="ph b">Info</strong> - Informational messages are
+                                                appearing.</li>
+                                        </ul>
+                                        <p class="p">Any event of a checked event severity level appears in
+                                            the table. Uncheck the checkbox of an event severity
+                                            level to hide any events that belong to this event type
+                                            so they do not appear in the table.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_nmv_2l2_q4b__entry__1 ">
+                                        <strong class="ph b">Message</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_nmv_2l2_q4b__entry__2 ">Displays the system message ID and type of error.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_nmv_2l2_q4b__entry__1 ">
+                                        <strong class="ph b">Network Trigger Element</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_nmv_2l2_q4b__entry__2 ">Displays the name of the Network Element that triggered
+                                        the event.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_nmv_2l2_q4b__entry__1 ">
+                                        <strong class="ph b">Time Stamp</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_nmv_2l2_q4b__entry__2 ">Displays the day, month, year, and Greenwich Mean Time
+                                        (GMT) time for when the event was triggered.</td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click an event once to provide a detailed event view. For example, an Info
+                    event is expanded to show detailed information for it:</span>
+                <div class="itemgroup info"><img class="image" id="Manage_Events__image_fn5_rgj_npb" src="../Images/detailed_event.PNG" width="624"></div>
+                <div class="itemgroup info">The fields described in the following table appear only in the detailed event
+                    view: </div>
+                <div class="itemgroup info">
+                    <table class="table" id="Manage_Events__table_wc3_n5v_mpb"><caption></caption><colgroup><col style="width:50%"><col style="width:50%"></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="Manage_Events__table_wc3_n5v_mpb__entry__1">
+                                        <p class="p">Field</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="Manage_Events__table_wc3_n5v_mpb__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__1 "><strong class="ph b">Alarm Name</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__2 ">The alarm associated with this event. For example:
+                                        CWS_REBOOT_REQ</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__1 ">
+                                        <strong class="ph b">Object ID</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__2 ">The module or internal path for the object
+                                        involved.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__1 "><strong class="ph b">Description</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__2 ">Description of the event action. For example: CWS
+                                        received a reboot request.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__1 "><strong class="ph b">Raised by</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__2 ">Indicates the entity that raised the event.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__1 ">
+                                        <strong class="ph b">Device ID</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__2 ">This is a combination of the Organization Unique ID (OUI)
+                                        for Parallel Wireless (41733), product class (C19999) and
+                                        product serial number (for example, S3837C2X1113972) that
+                                        were made.<p class="p">For example the complete Device ID displays
+                                            like this: 41733-C19999-S3837C2X1113972 </p></td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__1 "><strong class="ph b">Functional Area</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__2 ">Displays what type of service or network element is
+                                        involved.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__1 ">
+                                        <strong class="ph b">Device Name</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__2 ">Displays the device name that triggered the event. This
+                                        name may display the same as the Device ID, if it was not
+                                        re-named by a user.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__1 ">
+                                        <strong class="ph b">Alarm ID</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__2 ">Unique alarm identifier (ID) generated and assigned by
+                                        the PW EMS.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__1 "><strong class="ph b">Acknowledge</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__2 ">Indicates whether the event has been acknowledged or not.
+                                        Click the <strong class="ph b">Acknowledge</strong> drop-down list and check the
+                                        checkbox for the <strong class="ph b">ACK</strong> (acknowledged) and <strong class="ph b">UNACK</strong>
+                                        (unacknowledged) options to display them in the table.
+                                        Uncheck the checkbox to hide either of these event types so
+                                        they do not appear in the table.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__1 "><strong class="ph b">Source</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__2 ">
+                                        <div class="p">Identifies the source device type of the event. Click the
+                                                <strong class="ph b">Source</strong> drop-down list and check the checkbox
+                                            for the following source device types you want to filter
+                                            from which the PW EMS receives events:<ul class="ul" id="Manage_Events__ul_gb3_st1_npb">
+                                                <li class="li"><strong class="ph b">ACS</strong></li>
+                                                <li class="li"><strong class="ph b">COM_VBBU</strong></li>
+                                                <li class="li"><strong class="ph b">COM_VNODE</strong></li>
+                                                <li class="li"><strong class="ph b">COM_VNODE_2G</strong></li>
+                                                <li class="li"><strong class="ph b">COM_VNODE_4G</strong></li>
+                                                <li class="li"><strong class="ph b">HNG</strong></li>
+                                            </ul></div>
+                                        <p class="p">Any checked device appears in the table. Uncheck the
+                                            checkbox to hide source device event types so they do
+                                            not appear in the table.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__1 "><strong class="ph b">Message</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_wc3_n5v_mpb__entry__2 ">(Default column) Displays the system message ID and type
+                                        of error in detail.</td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">The system can store up to 1,000,000 events. The oldest events are deleted when
+                    the maximum amount of events allowed is reached. To set the maximum number of
+                    events, click the <strong class="ph b">SETTINGS</strong> tab and enter the maximum number of events in
+                    the <strong class="ph b">System</strong> field.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click the <strong class="ph b">Auto Refresh</strong> slider <strong class="ph b">On</strong> if you want to have the
+                        <strong class="ph b">Events</strong> window refresh periodically once every 10 minutes.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">To sort table entries, position the cursor to the right of any column header
+                    until a gray arrow appears and click this arrow up (beginning of entry list) or
+                    down (end of entry list) to display results or vice versa, as shown below:</span>
+                <div class="itemgroup info"><img class="image" id="Manage_Events__image_kjf_tgd_npb" src="../Images/List_sort_action.png" width="96"></div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">More</strong> to select from the following event filter types that you want
+                    to use to filter or winnow the type of event information that you want to see in
+                    the <strong class="ph b">ACTIVE EVENTS</strong> table. The event filter types shown in the following
+                    figure are described in the following table:</span>
+                <div class="itemgroup info"><img class="image" id="Manage_Events__image_ntb_5mj_npb" src="../Images/Create_event_filter.PNG" width="624"></div>
+                <div class="itemgroup info">
+                    <table class="table" id="Manage_Events__table_j3r_j1b_npb"><caption></caption><colgroup><col style="width:50%"><col style="width:50%"></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="Manage_Events__table_j3r_j1b_npb__entry__1">
+                                        <p class="p">Alarm Filter</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="Manage_Events__table_j3r_j1b_npb__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_j3r_j1b_npb__entry__1 ">
+                                        <strong class="ph b">Device ID</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_j3r_j1b_npb__entry__2 ">Enter the device ID from which to filter events.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_j3r_j1b_npb__entry__1 ">
+                                        <strong class="ph b">Object ID</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_j3r_j1b_npb__entry__2 ">The module or internal path object from which to filter
+                                        events.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_j3r_j1b_npb__entry__1 "><strong class="ph b">Message</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_j3r_j1b_npb__entry__2 ">Enter message text from which to filter events.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_j3r_j1b_npb__entry__1 "><strong class="ph b">Description</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_j3r_j1b_npb__entry__2 ">Enter a full or partial description from which to filter
+                                        events.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_j3r_j1b_npb__entry__1 "><strong class="ph b">Timestamp</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Events__table_j3r_j1b_npb__entry__2 ">Select a time (from and to) from the date calender and
+                                        enter the time in hours, minutes and seconds (HH:MM:SS) and
+                                        click <strong class="ph b">Apply</strong> from which to filter events.</td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">LOGS</strong> at the top of the window to use as a short-cut to the
+                        <strong class="ph b">Audit Logs</strong> page. This page can also be accessed from the navigation
+                    bar &gt; <strong class="ph b">Audit Logs</strong>.</span>
+            </li></ol>
+    </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../Common/Topics/Fault_Mngmnt.html" title="The PW EMS user interface (UI) uses fault management to manage and view active alarms and events raised by the SON components, HNG, and vBBU, and view their history.">Fault Management</a></div></div></nav></article></main></body></html>

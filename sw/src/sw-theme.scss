@@ -1,0 +1,935 @@
+// Creates a container object for a light theme to be given to individual component theme mixins.
+// @function mat-light-theme($primary, $accent, $warn: mat-palette($mat-red)) {
+//   @return (
+//     primary: $primary,
+//     accent: $accent,
+//     warn: $warn,
+//     is-dark: false,
+//     foreground: $mat-light-theme-foreground,
+//     background: $mat-light-theme-background,
+//   );
+// }
+//
+//
+// // Creates a container object for a dark theme to be given to individual component theme mixins.
+// @function mat-dark-theme($primary, $accent, $warn: mat-palette($mat-red)) {
+//   @return (
+//     primary: $primary,
+//     accent: $accent,
+//     warn: $warn,
+//     is-dark: true,
+//     foreground: $mat-dark-theme-foreground,
+//     background: $mat-dark-theme-background,
+//   );
+// }
+
+
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+// @import './ion-tools-theme';
+//$candy-app-primary: mat-palette($mat-red);
+//$ion-app-primary: mat-palette($mat-blue-grey, 800);
+/***** - Main theme for the ion-control app ****/
+$sw-app-primary: mat-palette($mat-green, 800, A100, A400);
+$sw-app-accent:  mat-palette($mat-green, 800);
+$sw-app-warn:    mat-palette($mat-red);
+$sw-app-theme: mat-light-theme($sw-app-primary, $sw-app-accent, $sw-app-warn);
+@include angular-material-theme($sw-app-theme);
+
+.sw-app-theme {
+  @include angular-material-theme($sw-app-theme);
+}
+
+/** Theme for the alarms section ***/
+$sw-app-alarm-critical: mat-palette($mat-red);
+$sw-app-alarm-warn: mat-palette($mat-orange);
+$sw-app-alarm-primary: mat-palette($mat-green);
+
+$sw-app-alarm-theme: mat-light-theme($sw-app-alarm-primary, $sw-app-alarm-warn, $sw-app-alarm-critical);
+.sw-alarm-theme {
+  @include angular-material-theme($sw-app-alarm-theme);
+}
+
+/***********  Theme for firmware upgrade ****************/
+$sw-app-upgrade-primary: mat-palette($mat-blue);
+$sw-app-upgrade-accent: mat-palette($mat-orange);
+$sw-app-upgrade-warn: mat-palette($mat-red);
+
+$sw-app-upgrade-theme: mat-light-theme($sw-app-upgrade-primary, $sw-app-upgrade-accent, $sw-app-upgrade-warn);
+.sw-upgrade-theme {
+  @include angular-material-theme($sw-app-upgrade-theme);
+}
+/***********  Theme for control states ****************/
+$sw-app-states-primary: mat-palette($mat-green);
+$sw-app-states-accent: mat-palette($mat-green);  //only the accent color is used in a slider, go gigure!
+$sw-app-states-warn: mat-palette($mat-red);
+
+$sw-app-states-theme: mat-light-theme($sw-app-states-primary, $sw-app-states-accent, $sw-app-states-warn);
+.sw-states-theme {
+  @include angular-material-theme($sw-app-states-theme);
+}
+$font-family: "Open Sans,sans-serif";
+$custom-typography: mat-typography-config(
+$font-family: 'Open Sans,sans-serif',
+$headline:      mat-typography-level(24px, 32px, 400),
+
+$body-1: mat-typography-level(14px, 20px, 500)
+);
+// Custom style for my anchor elements
+
+// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
+@include mat-base-typography($custom-typography);
+
+// Override typography for a specific Angular Material components.
+@include mat-checkbox-typography($custom-typography);
+
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($custom-typography);
+
+
+//@include mat-sidenav-theme($ion-app-sidenav-theme);
+
+@include mat-core($custom-typography);
+
+
+$def_text_color: black;
+$def_background_color: white;
+
+
+/*********** text classes ********/
+.text-warn {
+  color: mat-color($sw-app-warn);
+}
+
+.text-primary {
+  color: mat-color($sw-app-primary);
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-half-bold {
+  font-weight: 500;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+a {
+  color: map-get($mat-green, 800);
+}
+
+/**** button classes *****/
+.mat-button-base {
+  text-transform: uppercase;
+}
+
+a.mat-button-base  {
+  color:  map-get($mat-green, 800);
+}
+
+.sw-active {
+  color:  map-get($mat-green, 800);
+}
+
+.sw-inactive, .subdued {
+  color: rgba($def_text_color, 0.54);
+}
+
+
+
+mat-form-field {
+  margin-bottom: 22px;
+}
+mat-form-field {
+  .mat-icon,
+  .mat-form-field-prefix,
+  .mat-form-field-suffix {
+    color: rgba($def-text-color, 0.54); //opacify($def_text_color, 0.54); //
+    &:focus {
+      color: rgba($def_text_color, 0.87);
+    }
+  }
+
+  .mat-icon[disabled] {
+    color: rgba($def_text_color, 0.38);
+  }
+
+  .mat-primary,
+  .mat-accent {
+    .mat-icon {
+      color: inherit;
+    }
+  }
+
+  .mat-form-field-disabled {
+    .mat-form-field-prefix,
+    .mat-form-field-suffix,
+    .mat-form-field-label,
+    .mat-hint {
+      color: rgba($def_text_color, 0.38);
+    }
+  }
+}
+   mat-label.ng-star-inserted  {
+     color:  map-get($mat-green, 800);
+     font-weight: 600;
+  }
+
+/*** table styling ********/
+$table_row_hover_color: #3BAE49;
+$table_data_hyperlink_color: #0288D1;
+
+table, mat-table {
+  margin-left: 36px;
+  margin-right: 36px;
+}
+mat-header-cell, th.mat-header-cell, mat-header-cell.mat-header-cell {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+mat-header-cell.text-center{
+  flex-direction: column;
+  justify-content: center;
+
+}
+th.text-center.mat-header-cell {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+}
+mat-cell, td.mat-cell, mat-cell.mat-cell {
+  font-size: 13px;
+  a {
+    color: $table_data_hyperlink_color;
+    text-decoration: none;
+  }
+  a.mat-button-base{
+    color:  map-get($mat-green, 800);
+    //font-weight: 600;
+    padding-left: 0;
+  }
+  a mat-button{
+    padding-left: 0;
+    margin: 0;
+  }
+}
+mat-cell, .mat-cell, td{
+  font-size: 13px;
+  height: 56px;
+}
+.mat-paginator{
+  padding-top: 10px;
+}
+mat-row:hover, tr:hover {
+  background-color: rgba($table_row_hover_color, 0.1);
+}
+p-table{
+  font-family:  $font-family;
+}
+.p-table tr{
+  border: 1px solid red;
+}
+/**** use this for the title of your component page ****/
+.page-title {
+  font-family: 'Open Sans';
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 27px;
+}
+/* Sometimes we need to scale down control widths */
+  .full-width {
+    width:90%;
+  
+  }
+  .half-width {
+    width:49%;
+  }
+  
+  .quarter-width{
+    width: 25%;
+  }
+/***** use this for your sections that may reside on a background-rectangle class ****/
+.section-title {
+
+  font-size: 16px;
+  font-weight: 600;
+}
+.dialog-section-header {
+  font-size: 15px;
+  font-weight: 600;
+}
+.dialog-error-text {
+  font-size: 9px;
+  padding-top: 1em;
+}
+/*** dialog surface component for modal dialogs ******/
+.surface {
+  padding: 27px;
+  border-radius: 4px;
+  background-color: #FAFAFA;
+  box-shadow: 0 24px 38px 3px rgba($def_text_color,0.14), 0 9px 46px 8px rgba($def_text_color,0.12), 0 11px 15px -7px rgba($def_text_color,0.2);
+}
+.dialog-title {
+  color: rgba($def_text_color,0.87);
+font-family: "Open Sans";
+font-size: 24px;
+letter-spacing: 0.18px;
+line-height: 33px;
+}
+.dialog-prompt {
+  color: rgba($def_text_color,0.87);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.44px;
+  line-height: 20px;
+  margin: 8px 0;
+  padding-bottom: 26px;
+}
+
+.dialog-rectangle {
+  border: 1px solid #D7D8D8;
+  border-radius: 4px;
+  width: 100%;
+}
+/*** background rectangle has a default border and shadow to show a 3D effect ***/
+* .background-rectangle {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba($def_text_color,0.5);
+  padding: 27px;
+  background-color: white;
+
+  /* icons in the background rectangle with a default opacity */
+  mat-icon.sw-header{
+    color: rgba($def_text_color,0.54);
+  }
+}
+
+
+/*** menu items from buttons ***/
+button.mat-menu-item {
+  padding: 0 10px;
+  font-size: 12px;
+  margin: 0px;
+}
+
+button.mat-menu-item {
+  height: 36px;
+  line-height: 36px;
+}
+button.mat-menu-item:hover {
+  background-color: red; //#D8D8D8;
+}
+// button.mat-badge-content, .mat-badge-content, mat-badge-content{
+//   color: transparent;
+// }
+.bell-icon .mat-badge-content{
+  right: -18px !important;
+}
+$mat-badge-xsmall-size: $mat-badge-default-size - 8;
+.mat-badge-xsmall {
+  //@include _mat-badge-size($mat-badge-xsmall-size);
+}
+.mat-badge-alarm-warn{
+  color: mat-color($sw-app-alarm-warn);
+}
+// .mat-badge-transparent {
+//   color: transparent;
+// }
+/***** - mat-tabs styling *****/
+.mat-tab-label-content {
+    text-transform: uppercase;
+    text-align: left;
+    padding-left: 0;
+    font-size: smaller;
+    font-weight: 600;
+}
+.mat-tab-label {
+  padding:0 0;
+  margin: 0;
+}
+
+.button-width { 
+  width: fit-content;
+}
+.device-count-label {
+  color: #2E843B;
+  font-family: "Open Sans";
+  font-size: 13.7px;
+  font-weight: 600;
+}
+
+
+.w-10{ width: 10%;}.w-15{ width: 15%;}.w-20 { width: 20%;}
+.w-25 { width: 25%;}.w-30 { width: 30%;}.w-40 {width: 40%;}
+.w-45 { width: 45%;}.w-60{ width: 60%;}.w-65{ width: 65%;}
+.w-75 { width: 75%;}.w-80{ width: 80%;}.w-85{ width: 85%;}
+.w-90 { width: 90%;}.w-100{ width: 100%}
+
+.ml-1{ margin-left: 0.25rem;}.ml-2{ margin-left: 0.50rem;}.ml-3{ margin-left: 0.75rem;}.ml-4{ margin-left: 1rem;}
+
+.mr-1{ margin-right: 0.25rem;}.mr-2{ margin-right: 0.50rem;}.mr-3{ margin-right: 0.75rem;}.mr-4{ margin-right: 1rem;}
+
+.mb-1{ margin-bottom: 0.25rem;}.mb-2{ margin-bottom: 0.50rem;}.mb-3{ margin-bottom: 0.75rem;}.mb-4{ margin-bottom: 1rem;}
+
+.mt-1{ margin-top: 0.25rem;}.mt-2{ margin-top: 0.50rem;}.mt-3{ margin-top: 0.75rem;}.mt-4{ margin-top: 1rem;}
+
+.pl-1 { padding-left: 0.25rem;}.pl-2 { padding-left: 0.50rem;}.pl-3 { padding-left: 0.75rem;}.pl-4 { padding-left: 1rem;}
+
+.pr-1 { padding-right: 0.25rem;}.pr-2 { padding-right: 0.50rem;}.pr-3 { padding-right: 0.75rem;}.pr-4 { padding-right: 1rem;}
+
+.pt-1 { padding-top: 0.25rem;}.pt-2 { padding-top: 0.50rem;}.pt-3 { padding-top: 0.75rem;}.pt-4 { padding-top: 1rem;}
+
+.pb-1 { padding-bottom: 0.25rem;}.pb-2 { padding-bottom: 0.50rem;}.pb-3 { padding-bottom: 0.75rem;}.pb-4 { padding-bottom: 1rem;}
+
+/**** borders  - helpful during debugging layout of controls *****/ 
+.red-border {
+  border: 1px solid red;
+}
+.blue-border {
+  border: 1px solid blue;
+  }
+  .green-border {
+  border: 1px solid green;
+  }
+
+  /**** alarm severity levels ****/
+.severity-critical {
+color: #C20E0D;  //#E54D43 .dark-red, 
+
+}
+
+.severity-major {
+  color: #E54241; //.crimson, 
+}
+
+.severity-minor {
+  color: #EA9949 //.light-red, 
+}
+
+.severity-warning {
+  color: #E0CF0F; //.orange, 
+}
+
+.severity-clear{
+    color: teal; // lightseagreen;
+ }
+
+.severity-info {
+  color: #0388D1; //lightskyblue; //.light-green,
+}
+
+.mat-menu-panel {
+  max-height: 290px !important;
+  max-width: 400px !important;
+} 
+
+.pointer {
+  cursor: pointer !important;
+}
+
+mat-calendar {
+  mat-month-view, mat-year-view, mat-multi-year-view {
+    table {
+      margin: 0px !important;
+    }
+  }
+}
+
+.text-semi-bold {
+  font-weight: 501;
+}
+
+.disable-mat-menu {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.valign-mat-icon {
+  vertical-align: middle !important;
+  margin-left:10px !important;
+}
+
+.background-white {
+  background: white !important;
+}
+.ui-button  {
+	background-color: #2e7d32 !important;
+  border-color: #2e7d32 !important;
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%) !important;
+  margin-right: 0.25rem !important;
+  margin-left: 0.25rem !important;
+
+}
+
+.ui-table, .ui-treetable {
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%) !important;
+  margin: 0.75rem !important;
+}
+
+.ui-table table, .ui-treetable table {
+  margin: unset !important;
+  background: white !important;
+}
+
+.ui-table tr.ui-state-highlight {
+  color: black !important;
+}
+
+.ui-table tr > th, .ui-treetable tr > th {
+  padding: 8px 12px 8px 12px !important;
+  border-width: 0 !important;
+  border-bottom-width: 1px !important;
+  border-style: solid !important;
+  border-bottom-color: rgba(0, 0, 0, 0.12) !important;
+  background: white !important;
+  text-align: left !important;
+}
+
+.ui-table tr > td, .ui-treetable tr > td {
+  padding: 8px 12px 8px 12px !important;
+  border-width: 0 !important;
+  border-bottom-width: 1px !important;
+  border-style: solid !important;
+  border-bottom-color: rgba(0, 0, 0, 0.12) !important;
+  background: white !important;
+  text-align: left !important;
+}
+
+.ui-tabview-nav ul
+{
+  display: flex !important;
+  margin-bottom: unset !important;
+  border-bottom: solid 2px rgba(0, 0, 0, 0.12) !important;
+  // border-bottom: solid 1px  rgba(0, 0, 0, 0.12) !important;
+}
+.ui-tabview-nav li{
+  background-color: white !important;
+  border: unset !important;
+  margin-right: unset !important;
+  border-bottom: solid 3px white !important;
+  margin-bottom: 2px !important;
+}
+.ui-tabview-nav li.ui-state-active
+{
+  background-color: white !important;
+  border-bottom: solid 3px #2e7d32 !important;
+}
+
+.ui-tabview-nav li.ui-tabview-selected a {
+  color: black !important;
+}
+
+.ui-tabview-nav li:focus {
+  box-shadow: unset !important;
+}
+
+p-treetabletoggler {
+  display: inline-block !important;
+}
+p-table *, .page-container *{
+    font-family: 'Open Sans',sans-serif !important;
+ }
+ 
+ p-table .pi, .page-container .pi {
+  font-family: 'primeicons' !important;
+ } 
+
+ .mat-icon {
+  font-family: "Material Icons" !important;
+ }
+// tr:hover, td:hover ,.p-table-row > tr:hover, .ui-selectable-row > tr:hover, 
+// .ui-table-tbody > tr >td:hover, .ui-table > tr:hover, p-treeTable > tr:hover{
+//   background-color: rgba($table_row_hover_color, 0.1) !important;
+//   //border:1px solid green;
+// }
+.mat-snack-bar-container {
+  margin-top: 78px !important;
+  max-height: 500px;
+  overflow: auto;
+ }
+ .login-ctrl{
+    margin-top: 2px;
+    margin-bottom: 44px;
+    top: 12px;
+ }
+ .login-ctrl .mat-form-field-wrapper{
+  border-radius: 4px;
+  padding-bottom: 5px;
+  background-color: #eaeaea;
+}
+
+.login-ctrl .mat-form-field-wrapper .mat-form-field-flex{
+	padding: 0.3125em 0.75em 0 0.75em !important;
+}
+
+.login-ctrl .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix{
+  padding: 0.25em 0 0.5625em 0;
+}
+
+.login-ctrl .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .mat-form-field-label.mat-empty.mat-form-field-empty{
+  top: 12px;
+}
+.login-ctrl .mat-form-field-label{
+  top: 21.5px;
+}
+.login-ctrl.mat-focused .mat-form-field-label{
+  top: 21.5px !important;
+}
+.login-ctrl.mat-form-field-has-label.ng-dirty.ng-touched.ng-valid.mat-form-field-hide-placeholder,
+.login-ctrl.mat-touched .mat-form-field-label{
+  top: 12px !important;
+}
+.login-ctrl .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .mat-form-field-label mat-label{
+  height: 24px;
+  width: 260px;
+  color: rgba(0,0,0,0.6);
+  font-family: "Open Sans";
+  font-size: 15px;
+  letter-spacing: 0.14px;
+  line-height: 24px;
+}
+
+.login-ctrl input{
+  &:-webkit-autofill::first-line,
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    font-family: "Open Sans" !important;
+    font-size: 16px !important;
+  }
+}
+
+.cd-dropdown .mat-form-field-label-wrapper{
+  margin-top: -14px;
+  margin-left: 20px;
+ }
+ .cd-dropdown .mat-select-min-line,
+ .cd-dropdown .mat-form-field-label{
+   line-height: 20px;
+ }
+ .cd-dropdown .mat-select-value{
+   padding-left: 10px;
+ }
+ .cd-dropdown .mat-form-field-infix input{
+  margin-top: -4px;
+  padding-left: 10px;
+  line-height: 14px;
+}
+ .cd-dropdown .mat-form-field-label-wrapper mat-label{
+  font-size: 15px;
+  font-weight: 400;
+ }
+ .cd-dropdown .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix .mat-form-field-label-wrapper .mat-form-field-label span{
+  font-weight: 400;
+  height: 24px;
+  /* width: 260px; */
+  color: #2E843B;
+  font-family: "Open Sans" !important;
+  font-size: 15px;
+  letter-spacing: 0.14px;
+  line-height: 20px;
+}
+.cd-dropdown mat-label{
+  font-weight: 400 !important;
+  line-height: 20px;
+}
+.page-padding .mat-tab-label .mat-tab-label-content{
+  height: 16px;
+  font-family: "Open Sans" !important;
+  color: rgba(0,0,0,0.6);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.19px;
+  line-height: 16px;
+  text-align: center;
+  opacity: 1;
+}
+.page-container .mat-tab-label-active .mat-tab-label-content{
+  color: #2E843B;
+}
+.page-container .mat-tab-label{
+  opacity: 1;
+}
+.cd-dropdown .mat-select-arrow{
+  margin-top: -12px;
+}
+.page-padding .mat-tab-body-content{
+  // margin-right: 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.ng-invalid,
+  p-multiselect.ng-dirty.ng-invalid > .ui-multiselect,
+  p-chips.ng-dirty.ng-invalid > .ui-chips > ul.ui-inputtext,
+  p-dropdown.ng-dirty.ng-invalid > .ui-dropdown {
+   border-color: #f44336 !important;
+   border-width: 2px !important;
+}
+
+.custom-dialog .mat-dialog-container{
+  padding: 0;
+  overflow: hidden;
+}
+ .ui-calendar .ui-datepicker {
+  min-width: 400px !important;
+}
+.cus-mat-form-field .mat-form-field-label{
+  line-height: 20px;
+}
+.cus-mat-form-field .mat-error{
+  line-height: 22px;
+}
+.mat-slide-enabled {
+  opacity: 1 !important;
+  .mat-slide-toggle-bar{
+    background-color: rgba(46,125,50,.54) !important;
+  }
+  .mat-slide-toggle-thumb{
+    background-color: #2e7d32 !important;
+  }
+}
+.btn-action{
+  color: #2E843B;
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.19px;
+  line-height: 16px;
+}
+.additional-config-dialog .mat-dialog-container{
+  padding: 0;
+  width: 816px;
+  overflow: hidden;
+}
+.flat-exp-panel .mat-expansion-panel-body{
+  padding: 0 !important;
+}
+
+.cus-mat-field{
+  mat-label{
+    font-weight: 500 !important;
+    color: #2E843B;
+  }
+}
+
+.btn{
+  height: 36px;
+  color: #2E843B;
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.19px !important;
+  line-height: 16px;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 4px;
+  background-color: rgba(98,2,238,0);
+}
+.opt-columns .mat-select-arrow-wrapper,
+.opt-columns .mat-select-value{
+  display: none !important;
+}
+.opt-columns .mat-form-field-infix{
+  border: 0;
+  padding: 0;
+}
+.hideChips .mat-chip-list{
+  display: none;
+}
+.more-Filter-Container{
+  max-width: 132px !important;
+  padding-top: 2px;
+  margin-left: 4px;
+  border-radius: 12px;
+}
+.show-As-Button{
+  background-color: #E4E4E4;
+  width: 124px;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 0;
+  padding-bottom: 1px;
+}
+.show-As-Button:hover{
+  background-color: #c9c9c9 !important;
+}
+.show-As-Button .mat-select-trigger{
+  top: 7px;
+}
+.show-As-Button .mat-form-field-wrapper{
+  padding: 5px;
+}
+.show-As-Button .mat-form-field-infix{
+  border: 0;
+  padding: 0 0 0 12px !important;
+  line-height: 8px;
+}
+.show-As-Button .mat-select{
+  width: auto;
+}
+.show-As-Button .mat-select-value{
+  display: none;
+}
+.saved-filter-menu-container{
+  min-height: 50px !important;
+}
+.save-filter-as-container{
+  max-width: 128px !important;
+}
+.saved-filters-container{
+  padding-right: 20px !important;
+}
+.saved-filters-container button{
+  padding-right: 5px;
+}
+.show-As-Button .mat-select-arrow{
+  margin: -4px 0 0 10px !important;
+  color: #2E843B;
+  height: 0 !important;
+  width: 0 !important;
+}
+.df-mat-chip.mat-chip .mat-button{
+  padding: 0;
+}
+.df-mat-chip.mat-chip .mat-button:hover{
+  background-color: transparent !important;
+}
+.df-mat-chip.mat-chip .mat-button:active{
+  background-color: white !important;
+}
+.df-mat-chip.mat-chip .mat-button:focus{
+  background-color: transparent !important;
+}
+.df-mat-chip.mat-chip .mat-button-wrapper{
+  color: rgba(0,0,0,0.87);
+  font-family: "Open Sans";
+  font-size: 12px;
+  letter-spacing: 0.22px;
+  line-height: 36px;
+}
+.mat-chip.mat-standard-chip{
+  background-color: #e4e4e4 !important;
+  margin: 6px 4px !important;
+  border-radius: 12px;
+}
+.df-mat-chip:hover{
+  background-color: #c9c9c9 !important;
+}
+.mat-chip.mat-standard-chip:hover .mat-button{
+  background-color: transparent !important;
+}
+.df-mat-chip .mat-chip-remove{
+  opacity: 0.6 !important;
+}
+.mat-form-field .mat-select-arrow{
+  display: none;
+  border: none;
+  margin: 0 !important;
+}
+.df-mat-chip.mat-standard-chip{
+  color: rgba(0, 0, 0, 0.87);
+  font-family: "Open Sans";
+  font-size: 12px;
+  letter-spacing: 0.22px;
+  line-height: 36px;
+}
+.df-mat-chip .mat-button{
+  min-width: 30px;
+}
+.mat-form-field .mat-select-arrow-wrapper::before{
+  font-family: "Material Icons Round";
+  content: "arrow_drop_down";
+  font-size: 24px;
+}
+.mat-form-field .mat-select-arrow-wrapper{
+  line-height: 10px;
+}
+.mat-search-box{
+  margin-bottom: 0;
+  height: 30px;
+}
+.mat-search-box .mat-form-field-wrapper {
+  margin-top: -15px;
+}
+.mat-search-box .mat-form-field-suffix{
+  margin-top: 32px;
+}
+.mat-search-box .mat-form-field-underline{
+  height: 0px !important;
+}
+.mat-search-box-with-value .mat-form-field-underline{
+  height: 1px !important;
+}
+.mat-search-box .mat-input-element{
+  line-height: 20px;
+}
+.pointer{
+  cursor: pointer !important;
+}
+.cell-desc{
+  max-height: 200px;
+  overflow-y: auto;
+}
+.search-box-empty .mat-form-field-underline{
+  height: 0px !important;
+}
+.search-box-with-value .mat-form-field-underline {
+  height: 1px !important;
+}
+.btn-logs{
+  margin-top: -10px;
+  width:112px;
+  height:36px;
+  color: #2E843B;
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.19px;
+  line-height: 16px;
+  text-align: center;
+}
+.cus-tab-name .mat-tab-label:focus:not(.mat-tab-disabled){
+  opacity: 1 !important;
+  }
+
+.cus-tab-name .mat-tab-label-active{
+  color: #2E843B;
+  opacity: 1 !important;
+}
+
+.cus-tab-name .mat-tab-label-active .mat-tab-label-content{
+  opacity: 1 !important;
+  color: #2E843B !important;
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.19px;
+  line-height: 16px;
+  text-align: center;
+}
+.cus-tab-name .mat-tab-label{
+  color: rgba(0,0,0,0.6);
+  opacity: 1 !important;
+}
+.cus-tab-name .mat-tab-label .mat-tab-label-content{
+  color: rgba(0,0,0,0.6);
+  font-family: "Open Sans";
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.19px;
+  line-height: 16px;
+  text-align: center;
+}
+.cus-tab-name .mat-tab-header{
+  padding: 16px 10px 30px 20px;
+}

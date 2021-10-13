@@ -1,0 +1,240 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2021"><meta name="DC.rights.owner" content="(C) Copyright 2021"><meta name="DC.Type" content="task"><meta name="description" content="Use this task to create a system security profile which includes the PKI certificate parameters required for server authentication."><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/Create_Sys_Security_Profile.html"><meta name="prodname" content=""><meta name="prodname" content="PW EMS"><meta name="version" content="6"><meta name="version" content="6"><meta name="release" content="1.1"><meta name="release" content="1"><meta name="modification" content="1"><meta name="series" content=""><meta name="DC.Creator" content="DMcAlpine"><meta name="DC.Publisher" content="Parallel Wireless Inc. Proprietary and Confidential"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7"><meta name="DC.Language" content="en-US"><link rel="stylesheet" type="text/css" href="../../commonltr.css"><title>Configure a PKI Security Profile</title></head><body id="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Configure a PKI Security Profile</h1>
+    
+    
+    <div class="body taskbody"><p class="shortdesc">Use this task to create a system security profile which includes the PKI certificate
+        parameters required for server authentication.</p>
+        <ol class="ol steps" id="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__steps_zwr_14d_q4b"><li class="li step stepexpand">
+                <span class="ph cmd">In the navigation bar, click <strong class="ph b">Profiles</strong> &gt; <strong class="ph b">Summary</strong>.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">In the <strong class="ph b">Profiles</strong> window, click the <strong class="ph b">System Profiles</strong> tab.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">+Create</strong>.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">In the <strong class="ph b">Create System Profile</strong> window, enter the name of this profile in
+                    the <strong class="ph b">Profile Name</strong> field.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Select <strong class="ph b">PkiSecurity</strong> from the <strong class="ph b">Profile Type</strong> and complete the
+                    following fields:</span>
+                <div class="itemgroup info">
+                    <div class="note note note_note"><span class="note__title">NOTE:</span> Use the Name field to search for a specific parameter on this page.</div>
+                </div>
+                <div class="itemgroup info">
+                    <table class="table" id="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b"><caption></caption><colgroup><col><col></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1">
+                                        <p class="p">Field</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">Security Profile Name</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">Enter the PKI security profle name with a maximum of 128
+                                        characters.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 ">
+                                        <strong class="ph b">Factory Domain</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Enter <strong class="ph b">restrict.parallelwireless.com</strong> as
+                                        the domain name for access devices to obtain IPSec Factory
+                                        certificates in conjunction with the PKI
+                                        infrastructure.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 ">
+                                        <strong class="ph b">OperDomain</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Enter the Fully Qualified Domain Name (FQDN)
+                                        as the operational domain in 4 to 64 characters [host
+                                        name.[domain].[tid] for access devices obtain an Operational
+                                        certificate in conjunction with the PKI
+                                        infrastructure.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 ">
+                                        <strong class="ph b">OperCACert</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Paste the CA certificate file from a local
+                                        system directory. A maximum of 4096 characters is permitted
+                                        for this string.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 ">
+                                        <strong class="ph b">RenewalThreshold</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Specify the number of seconds from 50 to 99
+                                        for the X.509 digital certificate renewal threshold. The
+                                        default threshold is 80 seconds.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 ">
+                                        <strong class="ph b">Validity Timer</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Specify the End Entity (EE) certificate
+                                        validity time from 10 to 3600 minutes. The default EE
+                                        certificate validity value is 60 minutes.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 ">
+                                        <strong class="ph b">KurEnabled</strong> checkbox</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) The Key Update Request (KUR) checkbox is
+                                        disabled by default. Check the checkbox to allow the end
+                                        entity to request a key update when a key pair is due to
+                                        expire automatically. </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">SrvlpAddr</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Specify a valid CMPv2 server IP
+                                        address.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">srvPort Number</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Specify the server HTTP (80) or HTTPS (443)
+                                        port from 0 to 65535. The default port is 80.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">SrvDirPath</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Specify the directory path of the server from
+                                        3 to 200 char-acters. If configured, this path is considered
+                                        in the formation of the URL.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">SrvUrl</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Specify the CMPv2 server URL.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">AuthType</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">Enter the 128 character RSA public-key algorithm
+                                        authentication for the Certificate Management Protocol
+                                        (CMPv2) server.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">UserName</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Specify the valid CMPv2 server-supplied user
+                                        name using a unique alpha-numeric string for server
+                                        authentication.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">Password</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Specify the valid CMPv2 server authentication
+                                        password using a unique alphanumeric string.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">RevokePassword</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Specify the valid CMPv2 server-supplied
+                                        revocation password (a unique alphanumeric string).</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">CaCertHsh</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Specify the type of CA certificate fingerprint
+                                        hash algorithm type. That is: MD5 message-digest algorithm
+                                        (md5 which is the default), SHA-1 (Secure Hash Algorithm 1)
+                                        (sha1), or SHA-2 (Secure Hash Algorithm 2) (sha2).</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">CaCertUrl</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">Enter the URL of the CA certificate, which is an IPv4
+                                        address in the format http://&lt;url&gt;</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">CaCertType</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Specify the type of CA certificate fingerprint
+                                        hash algorithm type. That is: MD5 message-digest algorithm
+                                        (md5 which is the default), SHA-1 (Secure Hash Algorithm 1)
+                                        (sha1), or SHA-2 (Secure Hash Algorithm 2) (sha2).</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">Years</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">Specify the number of years from 0 to 20 for which the EE
+                                        certificate is valid.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">Days</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">Specify the number of days from 0 to 365 for which the EE
+                                        certificate is valid.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">Hours</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">Specify the number of hours from 0 to 23 for which the EE
+                                        certificate is valid.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">Minutes</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">Specify the number of minutes from 0 to 59 for which the
+                                        EE certificate is valid.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b"><strong class="ph b">PkcAlgo</strong></strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">The default RSA (Rivest–Shamir–Adleman) public-key
+                                        algorithm that is used for secure data transmission size is
+                                        a numeric value of  101. A value between 101 and 106 can be
+                                        entered if you want to change the default value.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">PKcKeySize</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">The default RSA (Rivest–Shamir–Adleman) public-key size
+                                        that is used for secure data transmission is 1024. A value
+                                        of  2048 or 4096 can be entered if you need to change the
+                                        default value.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">CountryName</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Specify a unique alphanumeric EE Distinguished
+                                        Name (DN) for the country (C) designation. For example,
+                                        USA</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">StateName</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Specify a unique alphanumeric EE DN for the
+                                        province or state (ST). For example: MA</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">LocalityName</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Specify a unique alphanumeric EE DN for the
+                                        locality (L) designation. For example, Boston</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">OrgName</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Specify a unique alphanumeric EE DN for the
+                                        organization (O) designation. For example: Company.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">OrgUnitName</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Specify a unique alphanumeric EE DN for the
+                                        organizational unit (OU) designation. For example:
+                                        Security</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">SubAltNameIp</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Enter a subject alternative name host IP
+                                        address to be pro-tected by this certificate.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">SubAltNameDns1</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Specify the Subject Alternative Name (SAN)
+                                        (DNS1) FQDN 1 that allows an additional host name to be
+                                        protected by this certificate. The SAN is part of X.509v3
+                                        extensions in a digital certificate and is used during
+                                        authentication of the HetNet Gateway (HNG). An EE Subject
+                                        can have multiple alternate names; therefore, there is a
+                                        need to have unique identification for IPsec tunnels
+                                        connecting to an IPsec server.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__1 "><strong class="ph b">SubAltNameDns2</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_c555f559150a1223--39ba6df5-1790a06c3e2--7fe7__table_wg5_dmd_q4b__entry__2 ">(Optional) Enter the SAN 2 (DNS2) FQDN 2 allows a second
+                                        additional host name to be protected by this
+                                        certificate.</td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">Create+</strong>.</span>
+            </li></ol>
+    </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../Common/Topics/Create_Sys_Security_Profile.html" title="A system security profile is configured for the access network. Public Key Infrastructure (PKI) is used as a backhaul solution to provide authentication and manage security certificates within a service provider network so that data and voice traffic can be transmitted securely.">Create a System Security Profile</a></div></div></nav></article></main></body></html>

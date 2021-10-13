@@ -1,0 +1,48 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2021"><meta name="DC.rights.owner" content="(C) Copyright 2021"><meta name="DC.Type" content="concept"><meta name="description" content="The Parallel Wireles Element Management System (PW EMS) is a suite of Web-based applications used for management and monitoring of all Parallel Wireless network elements that can be deployed in a virtualized or cloud-native environment."><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/Web_spprt.html"><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/Access_Devices.html"><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/SON_PW_EMS.html"><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/REST_API.html"><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/PW_EMS_Prerequisites.html"><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/High_Availability.html"><meta name="prodname" content=""><meta name="prodname" content="PW EMS"><meta name="version" content="6"><meta name="version" content="6"><meta name="release" content="1.1"><meta name="release" content="1"><meta name="modification" content="1"><meta name="series" content=""><meta name="DC.Creator" content="DMcAlpine"><meta name="DC.Publisher" content="Parallel Wireless Inc. Proprietary and Confidential"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Overview"><meta name="DC.Language" content="en-US"><link rel="stylesheet" type="text/css" href="../../commonltr.css"><title>Overview</title></head><body id="Overview"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Overview</h1>
+    
+    
+    <div class="body conbody"><p class="shortdesc">The Parallel Wireles Element Management System (PW EMS) is a suite of Web-based
+        applications used for management and monitoring of all Parallel Wireless network elements
+        that can be deployed in a virtualized or cloud-native environment.</p>
+        <p class="p"></p>
+        <p class="p">The PW EMS provides the following functionality:</p>
+        <ul class="ul" id="Overview__ul_pgj_sq2_x4b">
+            <li class="li">Devices can be configured and managed, which includes the logical grouping of
+                multiple cells and optionally applying a defined configuration to multiple cells.
+                Also, changes to multiple cells can be triggered, based on configuration
+                updates.</li>
+            <li class="li">Full support for fault management, configuration management, accounting,
+                performance, and security (FCAPS).</li>
+            <li class="li">Enables configuration of the Virtual Baseband Unit (vBBU) and provides network
+                monitoring and fault management for both the vBBU and HetNet Gateway (HNG).</li>
+            <li class="li">Integrated support for existing Northbound Operations Support Systems (OSS)
+                functions for alarms (through SNMP), statistics (REST API), inventory information,
+                device health status, and counter management for all managed devices.</li>
+            <li class="li">Supports Self-Organizing Network (SON) system functions for Automatic Neighbor
+                Relation (ANR) management of cells based on the X2 gateway service (HNG) and user
+                equipment (UE) measurement reports.</li>
+            <li class="li">Access control is provided to support the following administrative abilities:<ul class="ul" id="Overview__ul_a3d_cnr_lpb">
+                    <li class="li">Use Role-Based Access Control (RBAC) to create multiple groups of users and
+                        organizations with designated security permissions to allow granular access
+                        control for each role or user group.</li>
+                    <li class="li">LDAP integration for centralizing user authentication and
+                        authorization.</li>
+                    <li class="li">Audit logging to track each RBAC operation that is performed on the
+                        system.</li>
+                </ul></li>
+            <li class="li">Operators can do performance management through PW EMS Network Monitoring. Flexible
+                dashboards can be configured, customized and used to monitor Key Performance
+                Indicators (KPIs) that provide an in-depth analysis of the network. Configured
+                thresholds in this application can be used to alert operators to performance changes
+                on their network.</li>
+            <li class="li">Upgrade devices and track the status of these upgrades in real time.</li>
+        </ul>
+        <p class="p page-break-before">The service provider network elements shown below are managed
+            and controlled by the PW EMS. Some of the elements shown below are described in greater
+            detail in the following sections:</p>
+        <p class="p"><img class="image" id="Overview__image_qsl_btr_lpb" src="../../Other/HNG_ORAN_Arch.-Main.png" width="624"></p>
+    </div>
+<nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="../../Common/Topics/Web_spprt.html">Web Support</a></strong><br>The PW EMS is a graphical user interface (GUI) that presents key information through         an intuitive point-and-click interface that is supported in web browsers such as Google         Chrome™ or Mozilla FireFox®.</li><li class="link ulchildlink"><strong><a href="../../Common/Topics/Access_Devices.html">Access Devices</a></strong><br>Access network devices are managed and auto-configured by the PW EMS.</li><li class="link ulchildlink"><strong><a href="../../Common/Topics/SON_PW_EMS.html">SON and the PW EMS</a></strong><br>The following sections provide information to understand how SON is used with the PW         EMS.</li><li class="link ulchildlink"><strong><a href="../../Common/Topics/REST_API.html">REST API</a></strong><br></li><li class="link ulchildlink"><strong><a href="../../Common/Topics/PW_EMS_Prerequisites.html">PW EMS Prerequisites</a></strong><br>The installation of the Kubernetes virtual platform, PW EMS server, HetNet Gateway         (HNG), and the provisioning of the vBBU and its vNodes must be completed before using the PW         EMS. Refer to the <span class="ph"><em class="ph i">Software Installation and Upgrade Guide</em></span> and <span class="ph"><em class="ph i">Virtual Baseband Unit Server Commissioning Guide</em></span> for more information.</li><li class="link ulchildlink"><strong><a href="../../Common/Topics/High_Availability.html">High Availability</a></strong><br>High Availability (HA) redundancy is provided for the PW EMS through the Kubernetes         virtual platform on which it runs.</li></ul></nav></article></main></body></html>
