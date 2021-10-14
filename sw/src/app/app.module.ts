@@ -20,6 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
+import { _TrackingComponent } from './tracking/_tracking/_tracking.component';
 import { SingleShipmentComponent } from './tracking/single-shipment/single-shipment.component';
 import { MultipleShipmentComponent } from './tracking/multiple-shipment/multiple-shipment.component';
 import { UploadComponent } from './batching/upload/upload.component';
@@ -30,6 +31,7 @@ import { DownloadComponent } from './batching/download/download.component';
     AppComponent,
     LoginComponent,
     MainComponent,
+    _TrackingComponent,
     SingleShipmentComponent,
     MultipleShipmentComponent,
     UploadComponent,

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainComponent } from './main.component';
+import { _TrackingComponent } from './_tracking.component';
 
 describe('MainComponent', () => {
-  let component: MainComponent;
-  let fixture: ComponentFixture<MainComponent>;
+  let component: _TrackingComponent;
+  let fixture: ComponentFixture<_TrackingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainComponent ]
+      declarations: [ _TrackingComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MainComponent);
+    fixture = TestBed.createComponent(_TrackingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -81,3 +81,8 @@
   .login-error-actions button{
     min-width: 100px;
   }
+
+  /* This removes the underline to the mat-input-filed */
+  ::ng-deep .mat-form-field-underline {
+    display: none;
+  }

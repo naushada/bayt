@@ -1,1 +1,44 @@
-<p>multiple-shipment works!</p>
+<div class='sw-app-theme' >
+    <div class="login-card surface">
+        <div fxLayout="column" fxLayoutAlign="center center">
+            <div fxLayout="column">
+                <img src="../assets/bayt_logo.jpg" class="logo-image-sm" alt="Bayt Control logo">
+            </div>
+            <div fxLayout="column">
+                <label class="app-name">Bayt Al Riyadah Tracking Shipment</label>
+            </div>
+        </div>
+    <div>
+    <div fxLayout="column">
+        <div class="dialog-title sign-in">Multiple Shipment Tracking</div>
+        <div class='dialog-prompt'>
+          Enter Tracking or Reference Number.
+        </div>
+    </div>
+  
+    <form [formGroup]="multipleTrackingForm" class='text-center user-details' (ngSubmit)="onSubmit()">
+        <div fxLayout="column" formGroupName="multipleTracking">
+            <mat-form-field class="full-width max-width login-ctrl">
+                <mat-label for="Tracking Number">List of Tracking or Reference Number</mat-label>
+                <textarea matInput type="text" class="form-control max-height" formControlName="trackingNo" id="trackingNo">
+                </textarea>
+                <mat-icon matSuffix>search</mat-icon>
+                <mat-hint class="hint" style="display: none;">Enter Tracking or Reference Number</mat-hint>
+            </mat-form-field>
+            
+            <div fxLayout="row" fxLayoutGap="10px" class="form-group" style="text-align: left; padding-top: 6px;">
+                <button mat-raised-button color="primary"  class="btn-search-in">
+                    <!-- <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> -->
+                    Get Status
+                </button>
+                <button mat-raised-button color="primary"  class="btn-search-in">
+                    <!-- <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> -->
+                    Clear
+                </button>
+            </div>
+        </div>
+    </form>
+  </div>
+  
+
+

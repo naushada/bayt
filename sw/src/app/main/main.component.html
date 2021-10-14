@@ -28,7 +28,7 @@
         <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
       </button>
       
-      <button class="card card-small" tabindex="2" (click)="options='_track_single_shipment'">
+      <button class="card card-small" tabindex="2" (click)="options='_track_shipment'">
         <mat-icon aria-hidden="true">search</mat-icon>
         <span>Track Shipment</span>
         <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
@@ -37,5 +37,6 @@
     </div>
   
     <app-login *ngIf="options === '_login'"></app-login>
+    <app-_tracking *ngIf="options === '_track_shipment'"></app-_tracking>
   
   
