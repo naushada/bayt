@@ -1,0 +1,80 @@
+<div class='sw-app-theme' >
+    <div class="login-card surface">
+    <div>
+    <div fxLayout="column">
+        <div class="dialog-title sign-in">Tracking Entry</div>
+    </div>
+  
+    <form [formGroup]="trackingEntryForm" class='text-center user-details' (ngSubmit)="onSubmit()">
+        <div fxLayout="column" formGroupName="trackingEntry">
+            <mat-form-field class="full-width max-width login-ctr">
+                <mat-label for="event">Event</mat-label>
+                <mat-select formControlName="evt" >
+                   <mat-option *ngFor="let _event of Events" [value]="_event">{{_event}}</mat-option>
+                </mat-select>
+                <mat-hint class="hint" style="display: none;">Select the Tracking Event</mat-hint>
+            </mat-form-field>
+            <mat-form-field class="full-width max-width login-ctrl">
+                <mat-label for="date">Date (dd/mm/yyyy)</mat-label>
+                <input matInput type="text" class="form-control" formControlName="date" id="date">
+                <mat-icon matSuffix>account_circle</mat-icon>
+                <mat-hint class="hint" style="display: none;">Date Format(dd/mm/yyyy)</mat-hint>
+            </mat-form-field>
+            <mat-form-field class="full-width max-width login-ctrl">
+                <mat-label for="time">Time hh:mm (24 hours format)</mat-label>
+                <input matInput type="text" class="form-control" formControlName="time" id="time">
+                <mat-icon matSuffix>account_circle</mat-icon>
+                <mat-hint class="hint" style="display: none;">hh:mm (24 hours format)</mat-hint>
+            </mat-form-field>
+            <mat-form-field class="full-width max-width login-ctrl">
+                <mat-label for="notes">Notes</mat-label>
+                <input matInput type="text" class="form-control" formControlName="notes" id="notes">
+                <mat-icon matSuffix>account_circle</mat-icon>
+                <mat-hint class="hint" style="display: none;">hh:mm (24 hours format)</mat-hint>
+            </mat-form-field>
+            <mat-form-field class="full-width max-width login-ctrl">
+                <mat-label for="connote">Connote</mat-label>
+                <input matInput type="text" class="form-control" formControlName="connote" id="connote">
+                <mat-icon matSuffix>account_circle</mat-icon>
+                <mat-hint class="hint" style="display: none;">hh:mm (24 hours format)</mat-hint>
+            </mat-form-field>
+            <mat-radio-group fxLayout='row' fxLayoutGap="25px" aria-label="AssignTo" formControlName="assignTo">
+                <mat-radio-button value="auto" >Auto Assign</mat-radio-button>
+                <mat-radio-button value="manual">Manual Assign</mat-radio-button>
+            </mat-radio-group>
+            <mat-form-field class="full-width max-width login-ctrl">
+                <mat-label for="eventLocation">Event Location</mat-label>
+                <input matInput type="text" class="form-control" formControlName="eventLocation" id="eventLocation">
+                <mat-icon matSuffix>account_circle</mat-icon>
+                <mat-hint class="hint" style="display: none;">Event Location</mat-hint>
+            </mat-form-field>
+            <mat-radio-group fxLayout='row' fxLayoutGap="25px" aria-label="EventLocation" formControlName="defaultEventLocation">
+                <mat-radio-button value="Default" >Default Event Location</mat-radio-button>
+            </mat-radio-group>
+            <mat-form-field class="full-width max-width login-ctrl">
+                <mat-label for="attachment">Attachment</mat-label>
+                <input matInput class="form-control" formControlName="attachment" id="attachment">
+                <mat-icon matSuffix>folder</mat-icon>
+                <mat-hint class="hint" style="display: none;">Attachment</mat-hint>
+            </mat-form-field>
+            <mat-form-field class="full-width max-width login-ctrl">
+                <mat-label for="enteredBy">Entered By</mat-label>
+                <input matInput class="form-control" formControlName="enteredBy" id="enteredBy">
+                <mat-icon matSuffix>folder</mat-icon>
+                <mat-hint class="hint" style="display: none;">Entered By</mat-hint>
+            </mat-form-field>
+            <div fxLayout="row" fxLayoutGap="5%" class="form-group" style="text-align: left; padding-top: 6px;">
+                <button mat-raised-button color="primary"  class="btn-sign-in">
+                    <!-- <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> -->
+                    Submit
+                </button>
+                <button mat-raised-button color="primary"  class="btn-sign-in">
+                    <!-- <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> -->
+                    Reset
+                    </button>
+            </div>
+        </div>
+    </form>
+  </div>
+
+   

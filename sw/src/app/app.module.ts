@@ -15,6 +15,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatSelectModule} from '@angular/material/select';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +28,7 @@ import { SingleShipmentComponent } from './tracking/single-shipment/single-shipm
 import { MultipleShipmentComponent } from './tracking/multiple-shipment/multiple-shipment.component';
 import { UploadComponent } from './batching/upload/upload.component';
 import { DownloadComponent } from './batching/download/download.component';
+import { EntryComponent } from './tracking/entry/entry.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,8 @@ import { DownloadComponent } from './batching/download/download.component';
     SingleShipmentComponent,
     MultipleShipmentComponent,
     UploadComponent,
-    DownloadComponent
+    DownloadComponent,
+    EntryComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +56,10 @@ import { DownloadComponent } from './batching/download/download.component';
     FlexLayoutModule,
     DragDropModule,
     MatBadgeModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
