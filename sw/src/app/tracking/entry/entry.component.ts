@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./entry.component.scss']
 })
 export class EntryComponent implements OnInit {
+
+  @Input() showMePartially!: boolean;
 
   trackingEntryForm:FormGroup;
   Events:Array<string> = ["Event1", "Event2", "Event3"];
@@ -32,4 +34,8 @@ export class EntryComponent implements OnInit {
   onSubmit() : void {}
 
   onClick(): void {}
+
+  onCloseDialog(): void {
+
+  }
 }
