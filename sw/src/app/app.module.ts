@@ -31,6 +31,14 @@ import { DownloadComponent } from './batching/download/download.component';
 import { EntryComponent } from './tracking/entry/entry.component';
 import { AccountComponent } from './account/account.component';
 import { EnquiryComponent } from './tracking/enquiry/enquiry.component';
+import { ResponseComponent } from './enquiry/response/response.component';
+import { NewShippingComponent } from './shipping/new-shipping/new-shipping.component';
+import { AltrefUpdateComponent } from './shipping/altref-update/altref-update.component';
+import { JobSchedulingComponent } from './shipping/job-scheduling/job-scheduling.component';
+import { ManifestingComponent } from './shipping/manifesting/manifesting.component';
+import { SuppliesComponent } from './shipping/supplies/supplies.component';
+import { ShipmentPricingComponent } from './shipping/shipment-pricing/shipment-pricing.component';
+import { ShipmentHistoryComponent } from './reporting/shipment-history/shipment-history.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +52,15 @@ import { EnquiryComponent } from './tracking/enquiry/enquiry.component';
     DownloadComponent,
     EntryComponent,
     AccountComponent,
-    EnquiryComponent
+    EnquiryComponent,
+    ResponseComponent,
+    NewShippingComponent,
+    AltrefUpdateComponent,
+    JobSchedulingComponent,
+    ManifestingComponent,
+    SuppliesComponent,
+    ShipmentPricingComponent,
+    ShipmentHistoryComponent
   ],
   imports: [
     BrowserModule,
