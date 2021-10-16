@@ -30,6 +30,7 @@ import { UploadComponent } from './batching/upload/upload.component';
 import { DownloadComponent } from './batching/download/download.component';
 import { EntryComponent } from './tracking/entry/entry.component';
 import { AccountComponent } from './account/account.component';
+import { EnquiryComponent } from './tracking/enquiry/enquiry.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { AccountComponent } from './account/account.component';
     UploadComponent,
     DownloadComponent,
     EntryComponent,
-    AccountComponent
+    AccountComponent,
+    EnquiryComponent
   ],
   imports: [
     BrowserModule,

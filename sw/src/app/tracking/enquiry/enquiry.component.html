@@ -1,0 +1,24 @@
+
+    <div>
+        <fieldset>
+            <legend>
+                Shipment Enquiry
+            </legend>
+            <p>Enter reference number to track.Both tracking number and/or alternate reference number will be searched.</p>
+            <p>To track multiple shipments.<button color="primary" class="card card-small" (click)="onClickEvent('_multiple_shipments')">click here</button>.
+            View <button color="primary" class="card card-small" (click)="onClickEvent('_tracking_history')">tracking history</button> </p>
+            <!--
+            <mat-form-field *ngIf="enquiryOption==='_single_shipment'">
+                <mat-label>Enter reference or alternate reference number</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <div fxLayout="row" fxLayoutGap="1%">
+                <button class ="card card-small">Search</button>
+                <button class="card card-small">Tracking Entry</button>
+            </div>
+        -->
+        <!--<app-single-shipment *ngIf="enquiryOption==='_single_shipment'"></app-single-shipment>-->
+        <app-single-shipment ></app-single-shipment>
+        <app-multiple-shipment *ngIf="enquiryOption==='_multiple_shipments'"></app-multiple-shipment>
+        </fieldset>
+    </div>

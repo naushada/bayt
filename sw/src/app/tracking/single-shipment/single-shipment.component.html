@@ -1,4 +1,6 @@
-<div class='sw-app-theme' >
+
+<!--
+    <div class='sw-app-theme' >
     <div class="login-card surface">
         <div fxLayout="column" fxLayoutAlign="center center">
             <div fxLayout="column">
@@ -27,7 +29,6 @@
             
             <div class="form-group" style="text-align: left; padding-top: 6px;">
                 <button mat-raised-button color="primary"  class="btn-search-in">
-                    <!-- <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> -->
                     Get Shipment Status
                 </button>
             </div>
@@ -35,4 +36,18 @@
     </form>
   </div>
   
+-->
 
+<form [formGroup]="singleTrackingForm" (ngSubmit)= "onSubmit()" >
+    <div class="example-container" formGroupName="tracking">
+      <mat-form-field>
+        <mat-label>Tracking or Reference Number</mat-label>
+        <input matInput type="text" required formControlName="trackingNo">
+      </mat-form-field>
+    </div>
+  
+    <div fxLayout="row" fxLayoutGap="5%">
+      <button mat-raised-button color="primary" class="btn-search-in">Search</button>
+      <button mat-raised-button color="primary" class="btn-search-in">Tracking Entry</button>
+    </div>
+</form>

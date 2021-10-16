@@ -1,4 +1,6 @@
-<div class='sw-app-theme' >
+
+<!--
+    <div class='sw-app-theme' >
     <div class="login-card surface">
         <div fxLayout="column" fxLayoutAlign="center center">
             <div fxLayout="column">
@@ -28,17 +30,34 @@
             
             <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end" class="form-group" style="text-align: left; padding-top: 6px;">
                 <button mat-raised-button color="primary"  class="btn-search-in">
-                    <!-- <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> -->
                     Get Status
                 </button>
                 <button mat-raised-button color="primary"  class="btn-search-in">
-                    <!-- <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> -->
                     Clear
                 </button>
             </div>
         </div>
     </form>
   </div>
-  
+-->  
 
+ 
+    <form [formGroup]="multipleTrackingForm" (ngSubmit)="onSubmit()">
+        <div class="example-container" formGroupName="multipleTracking">
+            <mat-form-field >
+                <mat-label for="Tracking Number">List of Tracking or Reference Number</mat-label>
+                <textarea matInput type="text" formControlName="trackingNo" required id="trackingNo">
+                </textarea>
+            </mat-form-field>
+            
+            <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start" >
+                <button mat-raised-button color="primary"  class="btn-search-in">
+                    Get Status
+                </button>
+                <button mat-raised-button color="primary"  class="btn-search-in">
+                    Clear
+                </button>
+            </div>
+        </div>
+    </form>
 

@@ -18,8 +18,8 @@ export class SingleShipmentComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit() : void {
-    console.log(this.singleTrackingForm.value.tracking.value);
-    alert(this.singleTrackingForm.value.tracking.value);
+    console.log(this.singleTrackingForm.value.tracking.trackingNo.value);
+    alert(this.singleTrackingForm.value.tracking.trackingNo.value);
   }
 
 }
