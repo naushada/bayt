@@ -29,6 +29,7 @@ import { MultipleShipmentComponent } from './tracking/multiple-shipment/multiple
 import { UploadComponent } from './batching/upload/upload.component';
 import { DownloadComponent } from './batching/download/download.component';
 import { EntryComponent } from './tracking/entry/entry.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { EntryComponent } from './tracking/entry/entry.component';
     MultipleShipmentComponent,
     UploadComponent,
     DownloadComponent,
-    EntryComponent
+    EntryComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
