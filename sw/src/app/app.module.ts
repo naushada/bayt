@@ -39,6 +39,9 @@ import { ManifestingComponent } from './shipping/manifesting/manifesting.compone
 import { SuppliesComponent } from './shipping/supplies/supplies.component';
 import { ShipmentPricingComponent } from './shipping/shipment-pricing/shipment-pricing.component';
 import { ShipmentHistoryComponent } from './reporting/shipment-history/shipment-history.component';
+import { CustomerComponent } from './_customer/customer/customer.component';
+import { AgentViewComponent } from './_customer/agent-view/agent-view.component';
+import { EmployeeViewComponent } from './_customer/employee-view/employee-view.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,10 @@ import { ShipmentHistoryComponent } from './reporting/shipment-history/shipment-
     ManifestingComponent,
     SuppliesComponent,
     ShipmentPricingComponent,
-    ShipmentHistoryComponent
+    ShipmentHistoryComponent,
+    CustomerComponent,
+    AgentViewComponent,
+    EmployeeViewComponent
   ],
   imports: [
     BrowserModule,
