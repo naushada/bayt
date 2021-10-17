@@ -42,6 +42,7 @@ import { ShipmentHistoryComponent } from './reporting/shipment-history/shipment-
 import { CustomerComponent } from './_customer/customer/customer.component';
 import { AgentViewComponent } from './_customer/agent-view/agent-view.component';
 import { EmployeeViewComponent } from './_customer/employee-view/employee-view.component';
+import { MainViewComponent } from './shipping/main-view/main-view.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { EmployeeViewComponent } from './_customer/employee-view/employee-view.c
     ShipmentHistoryComponent,
     CustomerComponent,
     AgentViewComponent,
-    EmployeeViewComponent
+    EmployeeViewComponent,
+    MainViewComponent
   ],
   imports: [
     BrowserModule,
