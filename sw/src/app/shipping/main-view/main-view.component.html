@@ -20,19 +20,32 @@
         <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
       </button>
       
-      <button class="card card-small" tabindex="1" (click)="options='_bulk_update'">
-        <mat-icon aria-hidden="true">add_circle</mat-icon>
-        <span>Bulk Update</span>
+      <button class="card card-small" tabindex="1" (click)="options='_shipment_list'">
+        <mat-icon aria-hidden="true">person</mat-icon>
+        <span>Shipment List</span>
         <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
       </button>
+
+      <button class="card card-small" tabindex="2" (click)="options='_docket_list'">
+        <mat-icon aria-hidden="true">person</mat-icon>
+        <span>Docket List</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+
+      <button class="card card-small" tabindex="3" (click)="options='_shipment_batch_import'">
+        <mat-icon aria-hidden="true">add_circle</mat-icon>
+        <span>Shipment Batch Import</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+
       
-      <button class="card card-small" tabindex="2" (click)="options='_bulk_download'">
+      <button class="card card-small" tabindex="4" (click)="options='_bulk_download'">
         <mat-icon aria-hidden="true">search</mat-icon>
         <span>Bulk Download</span>
         <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
       </button>
  
-      <button class="card card-small" tabindex="2" (click)="onClickBackToMainPage()">
+      <button class="card card-small" tabindex="5" (click)="onClickBackToMainPage()">
         <mat-icon aria-hidden="true">search</mat-icon>
         <span>Back To Main Page</span>
         <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>

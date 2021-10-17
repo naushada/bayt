@@ -2,7 +2,7 @@
     <form [formGroup]="newShippingForm" (ngSubmit)="onSubmit()">
         <fieldset>
             <legend>New Shipment</legend>
-            <div fxLayout="row" fxLayoutGap="1%">
+            <div fxLayout="row" fxLayoutGap="2%">
                 <mat-form-field >
                     <mat-label for="shipmentNo">Shipment#</mat-label>
                     <input matInput type="text" formControlName="shipmentNo" id="shipmentNo" required>
@@ -15,21 +15,15 @@
                 </mat-form-field>
                 <a>Retrieve</a>
             </div>
-            <div fxLayout = "row">
+            <div fxLayout = "column" fxLayoutGap="2%">
                 <fieldset>
                     <legend>Sender Informarion</legend>
-                    <div fxLayout="row wrap" fxLayoutGap="1%" formGroupName="senderInformation">
+                    <div fxLayout="row wrap" fxLayoutGap="1em" formGroupName="senderInformation">
                         <mat-form-field >
                             <mat-label for="billTo">Bill To</mat-label>
                             <input matInput type="text" formControlName="billTo" id="billTo" required>
                         </mat-form-field>
 
-                        <mat-form-field >
-                            <mat-label for="addressBook">Address Book</mat-label>
-                            <mat-select formControlName="addressBook" >
-                                <mat-option></mat-option>
-                            </mat-select>
-                        </mat-form-field>
                         <mat-form-field >
                             <mat-label for="name">Name</mat-label>
                             <input matInput type="text" formControlName="name" id="name" required>
@@ -37,10 +31,10 @@
                         <mat-form-field >
                             <mat-label for="country">Country</mat-label>
                             <mat-select formControlName="country" required>
-                                <mat-option></mat-option>
+                                <mat-option *ngFor="let _cnt of Country" [value]="_cnt">{{_cnt}}</mat-option>
                             </mat-select>
                         </mat-form-field>
-                        <mat-form-field >
+                        <mat-form-field class="box">
                             <mat-label for="address">Address</mat-label>
                             <textarea matInput formControlName="address" id="address" required></textarea>
                         </mat-form-field>
@@ -77,13 +71,14 @@
                 </fieldset>
                 <fieldset>
                     <legend>Shipment Information</legend>
-                        <div  formGroupName="shipmentInformation">
+                        <div  formGroupName="shipmentInformation" fxLayoutGap="1em">
                             <mat-form-field >
                                 <mat-label for="service">Service</mat-label>
-                                <mat-select matInput type="text" formControlName="service" id="service" required> </mat-select>
+                                <mat-select matInput type="text" formControlName="service" id="service" required> 
                                     <mat-option></mat-option>
+                                </mat-select>
                             </mat-form-field>
-                            <div fxLayout="row" fxLayoutGap="2%">
+                            <div fxLayout="row" fxLayoutGap="1em">
                             <mat-checkbox>Security Value</mat-checkbox>
                             <mat-checkbox>Insurance Value</mat-checkbox>
                             </div>
@@ -99,27 +94,37 @@
                                 <mat-label for="harmonisedCode">Harmonised Code</mat-label>
                                 <input matInput type="text" formControlName="harmonisedCode" id="harmonisedCode">
                             </mat-form-field>
-                            <div fxLayout="row">
                             <mat-form-field >
                                 <mat-label for="weight">Weight Code</mat-label>
                                 <input matInput type="text" formControlName="weight" id="weight" required>
                             </mat-form-field>
-                            <mat-select matInput type="text" formControlName="unit" id="unit" required> </mat-select>
-                            <mat-option value="KG">KG</mat-option>
-                            </div>
+                            <mat-form-field>
+                                <mat-label for="_unit">Unit</mat-label>
+                                <mat-select formControlName="_unit">
+                                    <mat-option *ngFor="let _unit of Units" [value]="_unit">{{_unit}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <mat-form-field >
+                                <mat-label for="cubic_weight">Cubic Weight (LxWxH) in KG</mat-label>
+                                <input matInput type="text" formControlName="cw" id="cw">
+                            </mat-form-field>
+                            <mat-form-field >
+                                <mat-label for="cod">COD Amount</mat-label>
+                                <input matInput type="text" formControlName="cod" id="cod">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <mat-label for="currency">Currency</mat-label>
+                                <mat-select formControlName="currency">
+                                    <mat-option *ngFor="let _currency of Currency" [value]="_currency">{{_currency}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
                         </div>
                 </fieldset>
             </div>
             <div formGroupName="receiverInformation">
                 <fieldset>
                     <legend>Receiver Informarion</legend>
-                    <div fxLayoutGap="2%">
-                        <mat-form-field >
-                            <mat-label for="addressBook">Address Book</mat-label>
-                            <mat-select formControlName="addressBook" >
-                              <mat-option></mat-option>
-                        </mat-select>
-                        </mat-form-field>
+                    <div fxLayoutGap="1em">
                         <mat-form-field >
                             <mat-label for="name">Name</mat-label>
                             <input matInput type="text" formControlName="name" id="name" required>
@@ -127,10 +132,10 @@
                         <mat-form-field >
                             <mat-label for="country">Country</mat-label>
                             <mat-select formControlName="country" required>
-                                <mat-option></mat-option>
+                                <mat-option *ngFor="let _cnt of Country" [value]="_cnt">{{_cnt}}</mat-option>
                             </mat-select>
                         </mat-form-field>
-                        <mat-form-field >
+                        <mat-form-field class="box">
                             <mat-label for="address">Address</mat-label>
                             <textarea matInput formControlName="address" id="address" required></textarea>
                         </mat-form-field>

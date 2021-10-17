@@ -8,6 +8,16 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class NewShippingComponent implements OnInit {
 
+  /* Weight Unit */
+  Units:Array<string> = ["KG", "g"];
+  Currency: Array<string> = ["UAE - Dirham",
+                             "Saudi - Riyal",
+                             "Kuwait - Dinar",
+                             "Omani - Rial",
+                             "Baharaini - Dinar",
+                             "Qatar - Riyal"];
+  Country: Array<string> = ["UAE", "Saudi", "Kuwait", "Oman", "Baharain", "Qatar"];
+
   newShippingForm:FormGroup;
   constructor(private fb: FormBuilder) { 
     this.newShippingForm = this.fb.group({
@@ -15,7 +25,6 @@ export class NewShippingComponent implements OnInit {
       altrefNo:'',
       senderInformation: this.fb.group({
         billTo:'',
-        addressBook:'',
         name:'',
         country:'',
         address:'',
@@ -33,10 +42,12 @@ export class NewShippingComponent implements OnInit {
         description:'',
         harmonisedCode:'',
         weight:'',
-        unit:'',
+        _unit:'',
+        cw:'',
+        cod:'',
+        currency:'',
       }),
       receiverInformation: this.fb.group({
-        addressBook:'',
         name:'',
         country:'',
         address:'',
