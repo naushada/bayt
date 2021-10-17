@@ -1,1 +1,47 @@
-<p>main-view works!</p>
+  <!-- Toolbar -->
+<div class="toolbar" role="banner">
+    <img
+      width="40"
+      alt="Angular Logo"
+      src="assets/bayt_logo.jpg"
+    />
+    <span>Welcome To Bayt Al Riyadah Est.</span>
+      <div class="spacer"></div>
+</div>
+ 
+  <div class="content" role="main">
+  
+    <!-- Highlight Card -->
+    
+    <div class="card-container">
+      <button class="card card-small" tabindex="0" (click)="options='_new_shipping'">
+        <mat-icon aria-hidden="true">person</mat-icon>
+        <span>New Shipping</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+      
+      <button class="card card-small" tabindex="1" (click)="options='_bulk_update'">
+        <mat-icon aria-hidden="true">add_circle</mat-icon>
+        <span>Bulk Update</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+      
+      <button class="card card-small" tabindex="2" (click)="options='_bulk_download'">
+        <mat-icon aria-hidden="true">search</mat-icon>
+        <span>Bulk Download</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+ 
+      <button class="card card-small" tabindex="2" (click)="onClickBackToMainPage()">
+        <mat-icon aria-hidden="true">search</mat-icon>
+        <span>Back To Main Page</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+    </div>
+  
+    <!--<app-_tracking *ngIf="options === '_track_shipment'"></app-_tracking>-->
+    <app-new-shipping *ngIf="options === '_new_shipping'"></app-new-shipping>
+
+    </div>
+  
+  

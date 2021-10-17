@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee-view',
@@ -8,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class EmployeeViewComponent implements OnInit {
 
   options: string = "";
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  onClickShipping(): void {
+    this.router.navigate(["shipping/mainView"])
+  }
 }

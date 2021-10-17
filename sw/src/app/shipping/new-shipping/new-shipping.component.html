@@ -1,1 +1,173 @@
-<p>new-shipping works!</p>
+<div class="content" role="main">
+    <form [formGroup]="newShippingForm" (ngSubmit)="onSubmit()">
+        <fieldset>
+            <legend>New Shipment</legend>
+            <div fxLayout="row" fxLayoutGap="1%">
+                <mat-form-field >
+                    <mat-label for="shipmentNo">Shipment#</mat-label>
+                    <input matInput type="text" formControlName="shipmentNo" id="shipmentNo" required>
+                </mat-form-field>
+                <a>Retrieve</a>
+                <mat-checkbox>Autogenerate</mat-checkbox>
+                <mat-form-field >
+                    <mat-label for="altrefNo">ALT. Ref</mat-label>
+                    <input matInput type="text" formControlName="altrefNo" id="altrefNo">
+                </mat-form-field>
+                <a>Retrieve</a>
+            </div>
+            <div fxLayout = "row">
+                <fieldset>
+                    <legend>Sender Informarion</legend>
+                    <div fxLayout="row wrap" fxLayoutGap="1%" formGroupName="senderInformation">
+                        <mat-form-field >
+                            <mat-label for="billTo">Bill To</mat-label>
+                            <input matInput type="text" formControlName="billTo" id="billTo" required>
+                        </mat-form-field>
+
+                        <mat-form-field >
+                            <mat-label for="addressBook">Address Book</mat-label>
+                            <mat-select formControlName="addressBook" >
+                                <mat-option></mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field >
+                            <mat-label for="name">Name</mat-label>
+                            <input matInput type="text" formControlName="name" id="name" required>
+                        </mat-form-field>
+                        <mat-form-field >
+                            <mat-label for="country">Country</mat-label>
+                            <mat-select formControlName="country" required>
+                                <mat-option></mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field >
+                            <mat-label for="address">Address</mat-label>
+                            <textarea matInput formControlName="address" id="address" required></textarea>
+                        </mat-form-field>
+                        <mat-form-field >
+                            <mat-label for="city">City/Town</mat-label>
+                            <input matInput type="text" formControlName="city" id="city" required>
+                        </mat-form-field>
+                        <mat-form-field >
+                            <mat-label for="state">State</mat-label>
+                            <input matInput type="text" formControlName="state" id="state">
+                        </mat-form-field>
+                        <mat-form-field >
+                            <mat-label for="postcode">Postcode</mat-label>
+                            <input matInput type="text" formControlName="postcode" id="postcode">
+                        </mat-form-field>
+                        <mat-form-field >
+                            <mat-label for="contact">Contact</mat-label>
+                            <input matInput type="text" formControlName="contact" id="contact" required>
+                        </mat-form-field>
+                        <mat-form-field >
+                            <mat-label for="phone">Phone</mat-label>
+                            <input matInput type="text" formControlName="phone" id="phone" required>
+                        </mat-form-field>
+                        <mat-form-field >
+                            <mat-label for="email">Email</mat-label>
+                            <input matInput type="text" formControlName="email" id="email"> 
+                        </mat-form-field>
+                        <mat-checkbox>Alert</mat-checkbox>
+                        <mat-form-field >
+                            <mat-label for="receivingCountryTaxId">Receiving Country Tax ID</mat-label>
+                            <input matInput type="text" formControlName="receivingCountryTaxId" id="receivingCountryTaxId"> 
+                        </mat-form-field>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Shipment Information</legend>
+                        <div  formGroupName="shipmentInformation">
+                            <mat-form-field >
+                                <mat-label for="service">Service</mat-label>
+                                <mat-select matInput type="text" formControlName="service" id="service" required> </mat-select>
+                                    <mat-option></mat-option>
+                            </mat-form-field>
+                            <div fxLayout="row" fxLayoutGap="2%">
+                            <mat-checkbox>Security Value</mat-checkbox>
+                            <mat-checkbox>Insurance Value</mat-checkbox>
+                            </div>
+                            <mat-form-field >
+                                <mat-label for="noOfItems">Number Of Item</mat-label>
+                                    <input matInput type="text" formControlName="numberOfItems" id="numberOfItems" required>
+                            </mat-form-field>
+                            <mat-form-field >
+                                <mat-label for="description">Description</mat-label>
+                                <input matInput type="text" formControlName="description" id="description" required>
+                            </mat-form-field>
+                            <mat-form-field >
+                                <mat-label for="harmonisedCode">Harmonised Code</mat-label>
+                                <input matInput type="text" formControlName="harmonisedCode" id="harmonisedCode">
+                            </mat-form-field>
+                            <div fxLayout="row">
+                            <mat-form-field >
+                                <mat-label for="weight">Weight Code</mat-label>
+                                <input matInput type="text" formControlName="weight" id="weight" required>
+                            </mat-form-field>
+                            <mat-select matInput type="text" formControlName="unit" id="unit" required> </mat-select>
+                            <mat-option value="KG">KG</mat-option>
+                            </div>
+                        </div>
+                </fieldset>
+            </div>
+            <div formGroupName="receiverInformation">
+                <fieldset>
+                    <legend>Receiver Informarion</legend>
+                    <div fxLayoutGap="2%">
+                        <mat-form-field >
+                            <mat-label for="addressBook">Address Book</mat-label>
+                            <mat-select formControlName="addressBook" >
+                              <mat-option></mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                        <mat-form-field >
+                            <mat-label for="name">Name</mat-label>
+                            <input matInput type="text" formControlName="name" id="name" required>
+                        </mat-form-field>
+                        <mat-form-field >
+                            <mat-label for="country">Country</mat-label>
+                            <mat-select formControlName="country" required>
+                                <mat-option></mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-form-field >
+                            <mat-label for="address">Address</mat-label>
+                            <textarea matInput formControlName="address" id="address" required></textarea>
+                        </mat-form-field>
+                        <mat-form-field >
+                            <mat-label for="city">City/Town</mat-label>
+                            <input matInput type="text" formControlName="city" id="city" required>
+                        </mat-form-field>
+                        <mat-form-field >
+                            <mat-label for="state">State</mat-label>
+                            <input matInput type="text" formControlName="state" id="state">
+                        </mat-form-field>
+                        <mat-form-field >
+                            <mat-label for="postcode">Postcode</mat-label>
+                            <input matInput type="text" formControlName="postcode" id="postcode">
+                        </mat-form-field>
+                        <mat-form-field >
+                            <mat-label for="contact">Contact</mat-label>
+                            <input matInput type="text" formControlName="contact" id="contact" required>
+                        </mat-form-field>
+                        <mat-form-field >
+                            <mat-label for="phone">Phone</mat-label>
+                            <input matInput type="text" formControlName="phone" id="phone" required>
+                        </mat-form-field>
+                        <mat-form-field >
+                            <mat-label for="email">Email</mat-label>
+                            <input matInput type="text" formControlName="email" id="email"> 
+                        </mat-form-field>
+                        <mat-checkbox>Alert</mat-checkbox>
+                    </div>
+                </fieldset>
+            </div>
+            <div fxLayout="row" fxLayoutGap="1%" >
+                <button mat-raised-button color="primary"  class="btn-sign-in">Submit </button>
+                <button mat-raised-button color="primary"  class="btn-sign-in" mat-dialog-close>Close</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+   
+

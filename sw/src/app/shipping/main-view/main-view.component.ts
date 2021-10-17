@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-view',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainViewComponent implements OnInit {
 
-  constructor() { }
+  options: string= "";
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
+  onClickBackToMainPage():void {
+    this.router.navigate(["customer/employeeView"]);
+  }
 }

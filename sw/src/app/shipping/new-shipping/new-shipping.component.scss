@@ -1,0 +1,123 @@
+.login-card {
+    /* min-width: 200px; */
+    width: 35%;
+    margin: 5px auto;
+    margin-top: 60px;
+    text-align: left;
+    min-width: 400px;
+    max-width: 400px;
+    padding: 36px 32px 86px 40px;
+  }
+  
+  .logo-image-sm {
+    height: 80px;
+    width: 80px;
+    /* border: 1px solid red; */
+  }
+  .app-name{
+    height: 22px;
+    width: 234px;
+    color: #2E843B;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.12px;
+    line-height: 22px;
+    padding-top: 16px;
+  }
+  .sign-in{
+    padding-top: 60px;
+  }
+  .dialog-prompt{
+    padding-bottom: 15px;
+  }
+  .user-details{
+    padding-top: 31px;
+  }
+  .invalid-feedback {
+      display: block;
+      border: 1px solid  rgb(243, 116, 116);
+      font-size:  10;
+  }
+  
+  .invalid-feedback-errorMsg {
+      display: block;
+      //border: 1px solid  rgb(243, 116, 116);
+      font-size:  11;
+      background-color: #f37474;
+      color: white;
+      padding: 10px;
+      border-radius: 4px;
+  }
+  .hint{
+    padding-bottom: 2px;
+  }
+  .max-width{
+    width: 100%;
+  }
+  .login-logo{
+    padding: 20px 0 45px 0;
+    width: 180px;
+    margin-left: -8px;
+  }
+  .btn-sign-in{
+    letter-spacing: 1px;
+    width: 96px;
+    margin-top: 6px;
+  }
+  .change-pwd-container{
+    min-width: 352px;
+  }
+  .change-pwd{
+    padding: 12px 8px 62px 16px;
+  }
+  .login-error-title{
+    padding-top: 48px;
+  }
+  .login-error-actions{
+    padding-top: 12px;
+    padding-bottom: 48px;
+  }
+  .login-error-actions button{
+    min-width: 100px;
+  }
+
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+.example-container {
+    //width: 500px;
+    width: auto;
+    //height: 300px;
+    height: auto;
+    //border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+ 
+  .w-90 {
+    width: 90%;
+  }
+
+  .w-100 {
+    width: 100%;
+  }
+  
+  .w-30 {
+    width: 30%;
+  }
+
+.mb-0 {
+    margin-bottom: unset !important;
+}
+
+.mb-1 {
+    margin-bottom: 1% 
+}
+
+.mb-5 {
+  margin-bottom: 5%;
+}
+.card.card-small {
+    height: 30px;
+    width: 200px;
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
