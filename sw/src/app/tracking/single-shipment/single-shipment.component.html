@@ -40,9 +40,10 @@
 
 <form [formGroup]="singleTrackingForm" (ngSubmit)= "onSubmit()" >
     <div class="example-container" formGroupName="tracking">
-      <mat-form-field>
+      <mat-form-field appearance="fill">
         <mat-label>Tracking or Reference Number</mat-label>
         <input matInput type="text" required formControlName="trackingNo">
+        <mat-hint>Single Way Bill Number</mat-hint>
       </mat-form-field>
     </div>
   

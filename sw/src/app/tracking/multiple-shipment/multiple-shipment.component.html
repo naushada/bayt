@@ -44,10 +44,10 @@
  
     <form [formGroup]="multipleTrackingForm" (ngSubmit)="onSubmit()">
         <div class="example-container" formGroupName="multipleTracking">
-            <mat-form-field >
+            <mat-form-field appearance="fill">
                 <mat-label for="Tracking Number">List of Tracking or Reference Number</mat-label>
-                <textarea matInput type="text" formControlName="trackingNo" required id="trackingNo">
-                </textarea>
+                <textarea matInput type="text" formControlName="trackingNo" required id="trackingNo"></textarea>
+                <mat-hint>Multiple Way Bill Number</mat-hint>
             </mat-form-field>
             
             <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="start" >

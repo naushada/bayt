@@ -14,7 +14,8 @@ export class AccountComponent implements OnInit {
       accountInformation: this.fb.group({
         existingCustomer: '',
         accountCode:'',
-        companyName:''
+        companyName:'',
+        role:''
       }),
       contactInformation: this.fb.group({
         title:'',

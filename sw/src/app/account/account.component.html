@@ -10,63 +10,71 @@
           <mat-radio-button value="no">No</mat-radio-button>
         </mat-radio-group>
         </span>
-      <mat-form-field>
+      <mat-form-field appearance="fill">
         <mat-label>Account Code</mat-label>
         <input matInput type="text" required formControlName="accountCode">
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field appearance="fill">
         <mat-label>Company Name</mat-label>
         <input matInput type="text" requiired formControlName="companyName">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Role</mat-label>
+        <mat-select formControlName="role" required>
+          <mat-option value="Employee">Employee</mat-option>
+          <mat-option value="Agent">Agent</mat-option>
+          <mat-option value="Customer">Customer</mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
   </fieldset>
   <fieldset class="w-100">
       <legend>Contact Information</legend>
       <div fxLayoutGap="5%" class="example-container" formGroupName="contactInformation">
-        <mat-form-field>
+        <mat-form-field appearance="fill">
           <mat-label>Title</mat-label>
           <input matInput type="text" formControlName="title">
         </mat-form-field>
-      <mat-form-field>
+      <mat-form-field appearance="fill">
         <mat-label>Name</mat-label>
         <input matInput type="text" required formControlName="name">
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field appearance="fill">
         <mat-label>Atreet Address</mat-label>
         <textarea matInput type="text" required formControlName="streetAddress"></textarea>
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field appearance="fill">
         <mat-label>City/Town</mat-label>
         <input matInput type="text" formControlName="city">
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field appearance="fill">
         <mat-label>State/Province</mat-label>
         <input matInput type="text" formControlName="state">
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field appearance="fill">
         <mat-label>Postal Code</mat-label>
         <input matInput type="text" formControlName="postalCode">
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field appearance="fill">
         <mat-label>Country</mat-label>
-        <mat-select matInput type="text" required formControlName="country">
+        <mat-select matInput type="text" required formControlName="country" appearance="fill">
           <mat-option></mat-option>
           </mat-select>
       </mat-form-field>
         <mat-checkbox required formControlName="residentialAddress"> Residential Address</mat-checkbox>
-      <mat-form-field>
+      <mat-form-field appearance="fill">
         <mat-label>Telephone</mat-label>
         <input matInput type="text" required formControlName="telephone">
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field appearance="fill">
         <mat-label>E-mail</mat-label>
         <input matInput type="text" required formControlName="email">
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field appearance="fill">
         <mat-label>Remarks</mat-label>
         <textarea matInput type="text" formControlName="remarks"></textarea>
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field appearance="fill">
         <mat-label>Where did you hear about us?</mat-label>
         <textarea matInput type="text" formControlName="info"></textarea>
       </mat-form-field>
