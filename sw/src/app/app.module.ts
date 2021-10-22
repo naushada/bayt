@@ -20,6 +20,9 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatMomentDateModule} from '@angular/material-moment-adapter';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -45,6 +48,8 @@ import { CustomerComponent } from './_customer/customer/customer.component';
 import { AgentViewComponent } from './_customer/agent-view/agent-view.component';
 import { EmployeeViewComponent } from './_customer/employee-view/employee-view.component';
 import { MainViewComponent } from './shipping/main-view/main-view.component';
+import { GenericMenubarComponent } from './menubar/generic-menubar/generic-menubar.component';
+import { SpecificMenubarComponent } from './menubar/specific-menubar/specific-menubar.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +75,9 @@ import { MainViewComponent } from './shipping/main-view/main-view.component';
     CustomerComponent,
     AgentViewComponent,
     EmployeeViewComponent,
-    MainViewComponent
+    MainViewComponent,
+    GenericMenubarComponent,
+    SpecificMenubarComponent
   ],
   imports: [
     BrowserModule,
@@ -92,7 +99,10 @@ import { MainViewComponent } from './shipping/main-view/main-view.component';
     MatCheckboxModule,
     MatDialogModule,
     MatDatepickerModule,
-    MatMomentDateModule
+    MatMomentDateModule,
+    MatSidenavModule,
+    MatMenuModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

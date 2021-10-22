@@ -1,3 +1,4 @@
+import { JsonpClientBackend } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
@@ -22,7 +23,10 @@ export class MultipleShipmentComponent implements OnInit {
 
   onSubmit(): void {
     console.log(this.multipleTrackingForm.value.tracking.value);
-    alert(this.multipleTrackingForm.value.tracking.value);
+    alert(this.multipleTrackingForm.value);
   }
 
+  onClear() : void {
+    this.multipleTrackingForm.reset();
+  }
 }

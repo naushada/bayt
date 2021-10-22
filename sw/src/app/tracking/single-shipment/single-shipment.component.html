@@ -39,16 +39,16 @@
 -->
 
 <form [formGroup]="singleTrackingForm" (ngSubmit)= "onSubmit()" >
+    <p>Enter reference number to track.Both tracking reference number and/or alternate reference number will be searched.</p>
     <div class="example-container" formGroupName="tracking">
-      <mat-form-field appearance="fill">
-        <mat-label>Tracking or Reference Number</mat-label>
-        <input matInput type="text" required formControlName="trackingNo">
-        <mat-hint>Single Way Bill Number</mat-hint>
+      <mat-form-field appearance="fill" class="w-50">
+        <mat-label for="trackingNo">Tracking or Reference Number</mat-label>
+        <input matInput type="text" required formControlName="trackingNo" >
       </mat-form-field>
     </div>
   
     <div fxLayout="row" fxLayoutGap="5%">
-      <button mat-raised-button color="primary" class="btn-search-in">Search</button>
-      <button mat-raised-button color="primary" class="btn-search-in" (click)="openDialog()">Tracking Entry</button>
+      <button mat-raised-button color="primary" type="submit" class="btn-search-in">Search</button>
+      <button mat-raised-button color="primary" class="btn-search-in" (click)="onClear()">Clear</button>
     </div>
 </form>

@@ -90,8 +90,8 @@
 }
 */
 .example-container {
-    //width: 500px;
-    width: auto;
+    width: 100%;
+    //width: auto;
     //height: 300px;
     height: auto;
     //border: 1px solid rgba(0, 0, 0, 0.5);
@@ -109,6 +109,9 @@
     width: 30%;
   }
 
+  .w-50 {
+    width:50% ;
+  }
 .mb-0 {
     margin-bottom: unset !important;
 }

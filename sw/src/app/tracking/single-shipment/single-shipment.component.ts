@@ -34,4 +34,7 @@ export class SingleShipmentComponent implements OnInit {
     console.log(this.singleTrackingForm.value.tracking.trackingNo.value);
   }
 
+  onClear(): void {
+    this.singleTrackingForm.reset();
+  }
 }

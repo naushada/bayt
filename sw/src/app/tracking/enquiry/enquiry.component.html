@@ -1,4 +1,5 @@
 
+<!--
 <div>
   <fieldset>
     <legend>
@@ -7,8 +8,45 @@
     <p>Enter reference number to track.Both tracking number and/or alternate reference number will be searched.</p>
     <p>To track multiple shipments.<button color="primary" class="card card-small" (click)="onClickEvent('_multiple_shipments')">click here</button>.
        View <button color="primary" class="card card-small" (click)="onClickEvent('_tracking_history')">tracking history</button> </p>
-       <!--<app-single-shipment *ngIf="enquiryOption==='_single_shipment'"></app-single-shipment>-->
+       <app-single-shipment *ngIf="enquiryOption==='_single_shipment'"></app-single-shipment>
     <app-single-shipment></app-single-shipment>
     <app-multiple-shipment *ngIf="enquiryOption==='_multiple_shipments'"></app-multiple-shipment>
   </fieldset>
 </div>
+-->
+
+  <mat-sidenav-container>
+    <mat-sidenav  mode="side" opened>
+        <button mat-button class="menu-button" (click)="enquiryOption='_single_shipment'">
+            <mat-icon>search</mat-icon>
+            <span style="margin-left: 8px;margin-top: 5px;">Single Shipment</span>
+        </button>
+        <button mat-button class="menu-button" (click)="enquiryOption='_multiple_shipments'">
+            <mat-icon>search</mat-icon>
+            <span style="margin-left: 8px;margin-top: 5px;">Multiple Shipment</span>
+        </button>
+        <button mat-button class="menu-button" (click)="enquiryOption='_update_shipment_status'">
+            <mat-icon>edit</mat-icon>
+            <span style="margin-left: 8px;margin-top: 5px;">Update Shipment Status</span>
+        </button>
+    
+        <mat-divider color="primary"></mat-divider>
+    
+        <button mat-button class="menu-button">
+            <mat-icon>help</mat-icon>
+            <span>Help</span>
+        </button>
+    
+    </mat-sidenav>
+    
+    <mat-sidenav-content class="content">
+        <div style="margin-left: 50px; margin-top:50px;">
+        <app-single-shipment *ngIf="enquiryOption==='_single_shipment'"></app-single-shipment>
+        <app-multiple-shipment *ngIf="enquiryOption==='_multiple_shipments'"></app-multiple-shipment>
+        <app-entry *ngIf="enquiryOption==='_update_shipment_status'" ></app-entry>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+

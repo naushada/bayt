@@ -1,9 +1,7 @@
 <div class="content" role="main">
 <form [formGroup]="trackingEntryForm" (ngSubmit)="onSubmit()">
-  <fieldset>
-    <legend>Tracking Entry</legend>
     <div fxLayoutGap="2%" formGroupName="trackingEntry">
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="w-50">
         <mat-label for="event">Event</mat-label>
         <mat-select formControlName="evt" required>
           <mat-option *ngFor="let _event of Events" [value]="_event">{{_event}}</mat-option>
@@ -19,43 +17,53 @@
         <mat-label for="time">Time hh:mm (24 hours format)</mat-label>
         <input matInput type="text" formControlName="time" id="time">
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="w-30">
         <mat-label for="notes">Notes</mat-label>
-        <textarea matInput type="text" formControlName="notes" id="notes" required></textarea>
+        <textarea matInput rows="5" type="text" formControlName="notes" id="notes" required></textarea>
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="w-30">
         <mat-label for="connote">Connote</mat-label>
-        <textarea matInput type="text" formControlName="connote" id="connote" required></textarea>
+        <textarea matInput rows="5" type="text" formControlName="connote" id="connote" required ></textarea>
       </mat-form-field>
-      <mat-radio-group fxLayout='row' fxLayoutGap="25px" aria-label="AssignTo" formControlName="assignTo">
-        <mat-radio-button value="auto" >Auto Assign</mat-radio-button>
+
+      <div fxLayout="row" fxLayoutGap="8%" style="height:50px;">
+      <mat-radio-group aria-label="AssignTo" formControlName="assignTo" >
+        <mat-radio-button value="auto">Auto Assign</mat-radio-button>
         <mat-radio-button value="manual">Manual Assign</mat-radio-button>
       </mat-radio-group>
+      <!--
       <mat-form-field appearance="fill">
         <mat-label for="eventLocation">Event Location</mat-label>
         <input matInput type="text" formControlName="eventLocation" id="eventLocation">
       </mat-form-field>
-      <mat-radio-group fxLayout='row' fxLayoutGap="25px" aria-label="EventLocation" formControlName="defaultEventLocation">
-        <mat-radio-button value="Default" >Default Event Location</mat-radio-button>
+    -->
+      <mat-radio-group aria-label="EventLocation" formControlName="defaultEventLocation" >
+        <mat-radio-button value="Default">Default Event Location</mat-radio-button>
       </mat-radio-group>
-      <mat-form-field appearance="fill">
+    </div>
+      <mat-form-field appearance="fill" >
         <mat-label for="attachment">Attachment</mat-label>
         <input matInput formControlName="attachment" id="attachment">
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="w-30">
         <mat-label for="enteredBy">Entered By</mat-label>
         <input matInput formControlName="enteredBy" id="enteredBy">
       </mat-form-field>
+
+      <mat-form-field appearance="fill" class="w-30">
+        <mat-label for="driverName">Driver Name By</mat-label>
+        <input matInput formControlName="driverName" id="driverName">
+      </mat-form-field>
+
       <div fxLayout="row" fxLayoutGap="1%" >
-        <button mat-raised-button color="primary"  class="btn-sign-in">
+        <button mat-raised-button  type="submit" color="primary"  class="btn-sign-in">
           Submit
         </button>
-        <button mat-raised-button color="primary"  class="btn-sign-in" mat-dialog-close>
-          Close
+        <button mat-raised-button color="primary"  class="btn-sign-in" (click)="onClear()">
+          Reset
         </button>
       </div>
     </div>
-  </fieldset>
 </form>
 </div>
    

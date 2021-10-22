@@ -36,11 +36,11 @@ export class EntryComponent implements OnInit {
       time:'',
       notes:'',
       connote:'',
-      assignTo:'',
-      eventLocation:'',
-      defaultEventLocation:'',
+      assignTo:'auto',
+      defaultEventLocation:'Default',
       attachment:'',
-      enteredBy:''
+      enteredBy:'',
+      driverName:''
     })
     });
   }
@@ -54,5 +54,9 @@ export class EntryComponent implements OnInit {
 
   onCloseDialog(): void {
 
+  }
+
+  onClear(): void {
+    this.trackingEntryForm.reset();
   }
 }

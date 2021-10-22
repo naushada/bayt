@@ -1,5 +1,5 @@
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
+<div class="toolbar mat-elevation-z10" role="banner">
     <img
       width="40"
       alt="Angular Logo"
@@ -8,8 +8,8 @@
     <span>Welcome To Bayt Al Riyadah Est.</span>
       <div class="spacer"></div>
 </div>
-  
-  <div class="content" role="main">
+
+<div class="content" role="main">
   
     <!-- Highlight Card -->
     
@@ -79,6 +79,7 @@
   
     <app-account *ngIf="options === '_create_account'"></app-account>
     <app-enquiry *ngIf="options==='_track_shipment'"></app-enquiry>
+    <!--<app-_tracking *ngIf="options==='_track_shipment'"></app-_tracking>-->
     <app-main-view *ngIf="options==='_shipping'"></app-main-view>
 
     </div>
