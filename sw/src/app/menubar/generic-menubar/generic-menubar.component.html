@@ -1,0 +1,32 @@
+<div class="toolbar mat-elevation-z10" role="banner">
+    <img
+      width="40"
+      alt="Angular Logo"
+      src="assets/bayt_logo.jpg"
+    />
+    <span>Welcome To Bayt Al Riyadah Est.</span>
+      <div class="spacer"></div>
+</div>
+<div fxFlex  style="margin-top: 50px;" >
+<mat-toolbar style="font-weight:150;background-color: rgb(24, 117, 240); color:white" class="mat-elevation-z2" >
+    <div style="margin-left: 20%;">
+    <button mat-button (click)="options = '_create_account'"><mat-icon>manage_accounts</mat-icon>Create Account</button>
+    <button mat-button (click)="options = '_shipping'">Shipping</button>
+    <button mat-button (click)="options = '_tracking'">Tracking</button>
+    <button mat-button (click)="options = '_reporting'">Reporting</button>
+    </div>
+    <span class="spacer"></span>
+    <div fxLayoutGap="2%">
+        <mat-label>Mohd. Naushad Ahmed</mat-label>
+        <mat-icon aria-hidden="false" aria-label="loggedin">account_circle</mat-icon>
+        <mat-icon aria-hidden="false" aria-label="logout">logout</mat-icon>
+    </div>
+</mat-toolbar>
+<div>
+    <app-account *ngIf="options === '_create_account'"></app-account>
+    <app-enquiry *ngIf="options==='_track_shipment'"></app-enquiry>
+    <!--<app-_tracking *ngIf="options==='_track_shipment'"></app-_tracking>-->
+    <app-enquiry *ngIf="options==='_tracking'"></app-enquiry>
+    <app-main-view *ngIf="options==='_shipping'"></app-main-view>
+ </div>
+</div>

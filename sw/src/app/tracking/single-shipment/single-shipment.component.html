@@ -1,1 +1,54 @@
-<p>single-shipment works!</p>
+
+<!--
+    <div class='sw-app-theme' >
+    <div class="login-card surface">
+        <div fxLayout="column" fxLayoutAlign="center center">
+            <div fxLayout="column">
+                <img src="../assets/bayt_logo.jpg" class="logo-image-sm" alt="Bayt Control logo">
+            </div>
+            <div fxLayout="column">
+                <label class="app-name">Bayt Al Riyadah Tracking Shipment</label>
+            </div>
+        </div>
+    <div>
+    <div fxLayout="column">
+        <div class="dialog-title sign-in">Single Shipment Tracking</div>
+        <div class='dialog-prompt'>
+          Enter Tracking or Reference Number.
+        </div>
+    </div>
+  
+    <form [formGroup]="singleTrackingForm" class='text-center user-details' (ngSubmit)="onSubmit()">
+        <div fxLayout="column" formGroupName="tracking">
+            <mat-form-field class="full-width max-width login-ctrl">
+                <mat-label for="Tracking Number">Tracking or Reference Number</mat-label>
+                <input matInput type="text" class="form-control" formControlName="trackingNo" id="trackingNo">
+                <mat-icon matSuffix>search</mat-icon>
+                <mat-hint class="hint" style="display: none;">Enter Tracking or Reference Number</mat-hint>
+            </mat-form-field>
+            
+            <div class="form-group" style="text-align: left; padding-top: 6px;">
+                <button mat-raised-button color="primary"  class="btn-search-in">
+                    Get Shipment Status
+                </button>
+            </div>
+        </div>
+    </form>
+  </div>
+  
+-->
+
+<form [formGroup]="singleTrackingForm" (ngSubmit)= "onSubmit()" >
+    <p>Enter reference number to track.Both tracking reference number and/or alternate reference number will be searched.</p>
+    <div class="example-container" formGroupName="tracking">
+      <mat-form-field appearance="fill" class="w-50">
+        <mat-label for="trackingNo">Tracking or Reference Number</mat-label>
+        <input matInput type="text" required formControlName="trackingNo" >
+      </mat-form-field>
+    </div>
+  
+    <div fxLayout="row" fxLayoutGap="5%">
+      <button mat-raised-button color="primary" type="submit" class="btn-search-in">Search</button>
+      <button mat-raised-button color="primary" class="btn-search-in" (click)="onClear()">Clear</button>
+    </div>
+</form>

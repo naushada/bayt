@@ -26,7 +26,7 @@
     padding-top: 16px;
   }
   .sign-in{
-    padding-top: 60px;
+    padding-top: 80px;
   }
   .dialog-prompt{
     padding-bottom: 15px;
@@ -80,4 +80,46 @@
   }
   .login-error-actions button{
     min-width: 100px;
+  }
+
+  /* This removes the underline to the mat-input-filed */
+  ::ng-deep .mat-form-field-underline {
+    display: none;
+  }
+
+.example-container {
+    //width: 500px;
+    width: auto;
+    //height: 300px;
+    height: auto;
+    //border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+ 
+  .w-90 {
+    width: 90%;
+  }
+
+  .w-100 {
+    width: 100%;
+  }
+  
+  .w-30 {
+    width: 30%;
+  }
+
+.mb-0 {
+    margin-bottom: unset !important;
+}
+
+.mb-1 {
+    margin-bottom: 1% 
+}
+
+.mb-5 {
+  margin-bottom: 5%;
+}
+.card.card-small {
+    height: 30px;
+    width: 200px;
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }

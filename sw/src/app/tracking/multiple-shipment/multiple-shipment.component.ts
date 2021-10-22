@@ -1,4 +1,6 @@
+import { JsonpClientBackend } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-multiple-shipment',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MultipleShipmentComponent implements OnInit {
 
-  constructor() { }
+  multipleTrackingForm:FormGroup;
+  constructor(private fb: FormBuilder) { 
+    this.multipleTrackingForm = this.fb.group({
+      multipleTracking: this.fb.group({
+      trackingNo: ['']
+      })
+    })
+  }
 
   ngOnInit(): void {
   }
 
+  onSubmit(): void {
+    console.log(this.multipleTrackingForm.value.tracking.value);
+    alert(this.multipleTrackingForm.value);
+  }
+
+  onClear() : void {
+    this.multipleTrackingForm.reset();
+  }
 }

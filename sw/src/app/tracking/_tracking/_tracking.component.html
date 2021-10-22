@@ -1,0 +1,30 @@
+
+<div class="content" role="main">
+  
+    <!-- Highlight Card -->
+    
+    <div class="card-container">
+      
+      <button class="card card-small" tabindex="2" (click)="trackOptions='_track_single_shipment'">
+        <mat-icon aria-hidden="true">search</mat-icon>
+        <span>Track Single Shipment</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+
+      <button class="card card-small" tabindex="2" (click)="trackOptions='_track_multiple_shipment'">
+        <mat-icon aria-hidden="true">search</mat-icon>
+        <span>Track Multiple Shipment</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+  
+      <button class="card card-small" tabindex="2" (click)="trackOptions='_tracking_entry'">
+        <mat-icon aria-hidden="true">search</mat-icon>
+        <span>Tracking Entry</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+    </div>
+</div>
+  
+<app-single-shipment *ngIf="trackOptions==='_track_single_shipment'"></app-single-shipment>
+<app-multiple-shipment *ngIf="trackOptions==='_track_multiple_shipment'"></app-multiple-shipment>
+<app-entry *ngIf="trackOptions==='_tracking_entry'"></app-entry>

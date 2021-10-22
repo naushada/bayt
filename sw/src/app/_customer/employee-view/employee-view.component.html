@@ -1,0 +1,87 @@
+<!-- Toolbar -->
+<div class="toolbar mat-elevation-z10" role="banner">
+    <img
+      width="40"
+      alt="Angular Logo"
+      src="assets/bayt_logo.jpg"
+    />
+    <span>Welcome To Bayt Al Riyadah Est.</span>
+      <div class="spacer"></div>
+</div>
+
+<div class="content" role="main">
+  
+    <!-- Highlight Card -->
+    
+    <div class="card-container">
+            
+      <button class="card card-small" tabindex="1" (click)="options='_create_account'">
+        <mat-icon aria-hidden="true">add_circle</mat-icon>
+        <span>Create Account</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+      
+      <button class="card card-small" tabindex="2" (click)="options='_track_shipment'">
+        <mat-icon aria-hidden="true">search</mat-icon>
+        <span>Track Shipment</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+  
+      <button class="card card-small" tabindex="2" (click)="onClickShipping()">
+        <mat-icon aria-hidden="true">local_shipping</mat-icon>
+        <span>Shipping</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+      <button class="card card-small" tabindex="2" (click)="options='_altref_update'">
+        <mat-icon aria-hidden="true">edit</mat-icon>
+        <span>ALTREF Update</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+      <button class="card card-small" tabindex="2" (click)="options='_manifesting'">
+        <mat-icon aria-hidden="true">edit</mat-icon>
+        <span>Manifesting</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+      <button class="card card-small" tabindex="2" (click)="options='_supplies'">
+        <mat-icon aria-hidden="true">edit</mat-icon>
+        <span>Supplies</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+      <button class="card card-small" tabindex="2" (click)="options='_shipment_pricing'">
+        <mat-icon aria-hidden="true">attach_money</mat-icon>
+        <span>Shipment Pricing</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+      <button class="card card-small" tabindex="2" (click)="options='_job_scheduling'">
+        <mat-icon aria-hidden="true">schedule</mat-icon>
+        <span>Job Scheduling</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+
+      <button class="card card-small" tabindex="2" (click)="options='_shipment_history_report'">
+        <mat-icon aria-hidden="true">history</mat-icon>
+        <span>Shipment History Report</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+
+      <button class="card card-small" tabindex="2" (click)="options='_delivery_run_manifest'">
+        <mat-icon aria-hidden="true">delivery_dining</mat-icon>
+        <span>Delivery Run Manifest</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+
+      <button class="card card-small" tabindex="2" (click)="options='_operation_discrepency_report'">
+        <mat-icon aria-hidden="true">job</mat-icon>
+        <span>Operations Discrepency Report</span>
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+    </div>
+  
+    <app-account *ngIf="options === '_create_account'"></app-account>
+    <app-enquiry *ngIf="options==='_track_shipment'"></app-enquiry>
+    <!--<app-_tracking *ngIf="options==='_track_shipment'"></app-_tracking>-->
+    <app-main-view *ngIf="options==='_shipping'"></app-main-view>
+
+    </div>
+  
+  
