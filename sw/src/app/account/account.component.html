@@ -1,88 +1,110 @@
-<div class="content" role="main">
+
+
+  <mat-sidenav-container>
+    <mat-sidenav  mode="side" opened>
+      <mat-button-toggle-group name="_account" aria-label="Account">
+        <div fxLayout="column" fxLayoutGap="5%" >
+          <mat-button-toggle >
+            <mat-icon>add_circle</mat-icon>
+              Create Account</mat-button-toggle>
+          <mat-button-toggle >
+            <mat-icon>edit</mat-icon>
+              Delete Account</mat-button-toggle>
+          
+        </div>
+      </mat-button-toggle-group>
+    </mat-sidenav>
+    
+    <mat-sidenav-content >
+      <div style="margin-left: 30px; margin-top:50px;">
+ 
 <form [formGroup]="createForm" (ngSubmit)= "onSubmit()">
-  <fieldset class="mb-1 w-100">
+  <fieldset>
     <legend>Account Information</legend>
-    <div fxLayoutGap="5%" class="example-container" formGroupName="accountInformation">
-        <span fxLayout="row" fxLayoutGap="5%">
+    <div fxLayout="row wrap" fxLayoutGap="2%" formGroupName="accountInformation">
+        <span fxLayout="column" fxLayoutGap="5%">
         <mat-label>Existing Customer</mat-label>
         <mat-radio-group fxLayout='row' fxLayoutGap="25px" formControlName="existingCustomer">
           <mat-radio-button value="yes" >Yes</mat-radio-button>
           <mat-radio-button value="no">No</mat-radio-button>
         </mat-radio-group>
         </span>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="w-20">
         <mat-label>Account Code</mat-label>
         <input matInput type="text" required formControlName="accountCode">
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="w-20">
         <mat-label>Company Name</mat-label>
         <input matInput type="text" requiired formControlName="companyName">
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="w-20">
         <mat-label>Role</mat-label>
         <mat-select formControlName="role" required>
-          <mat-option value="Employee">Employee</mat-option>
-          <mat-option value="Agent">Agent</mat-option>
-          <mat-option value="Customer">Customer</mat-option>
+          <mat-option *ngFor="let _role of Role" value="_role">{{_role}}</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
   </fieldset>
-  <fieldset class="w-100">
+  <fieldset>
       <legend>Contact Information</legend>
-      <div fxLayoutGap="5%" class="example-container" formGroupName="contactInformation">
-        <mat-form-field appearance="fill">
+      <div fxLayout="row wrap" fxLayoutGap="2%" formGroupName="contactInformation">
+        <mat-form-field appearance="fill" class="w-30">
           <mat-label>Title</mat-label>
           <input matInput type="text" formControlName="title">
         </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="w-30">
         <mat-label>Name</mat-label>
         <input matInput type="text" required formControlName="name">
       </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Atreet Address</mat-label>
-        <textarea matInput type="text" required formControlName="streetAddress"></textarea>
+      <mat-form-field appearance="fill" class="w-30">
+        <mat-label for="address"> Address</mat-label>
+        <textarea matInput type="text" required formControlName="address" rows="3"></textarea>
       </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>City/Town</mat-label>
+      <mat-form-field appearance="fill" class="w-30">
+        <mat-label for="city">City/Town</mat-label>
         <input matInput type="text" formControlName="city">
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="w-30">
         <mat-label>State/Province</mat-label>
         <input matInput type="text" formControlName="state">
       </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Postal Code</mat-label>
+      <mat-form-field appearance="fill" class="w-30">
+        <mat-label for="postalCode">Postal Code</mat-label>
         <input matInput type="text" formControlName="postalCode">
       </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Country</mat-label>
+      <mat-form-field appearance="fill" class="w-30">
+        <mat-label for="country">Country</mat-label>
         <mat-select matInput type="text" required formControlName="country" appearance="fill">
-          <mat-option></mat-option>
+          <mat-option *ngFor="let _cnt of Country" value="_cnt">{{_cnt}}</mat-option>
           </mat-select>
       </mat-form-field>
-        <mat-checkbox required formControlName="residentialAddress"> Residential Address</mat-checkbox>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="w-30">
         <mat-label>Telephone</mat-label>
-        <input matInput type="text" required formControlName="telephone">
+        <input matInput type="tel" required formControlName="telephone">
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="w-30">
         <mat-label>E-mail</mat-label>
-        <input matInput type="text" required formControlName="email">
+        <input matInput type="email" required formControlName="email">
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="w-30">
         <mat-label>Remarks</mat-label>
-        <textarea matInput type="text" formControlName="remarks"></textarea>
+        <textarea matInput type="text" formControlName="remarks" rows="3"></textarea>
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" class="w-30">
         <mat-label>Where did you hear about us?</mat-label>
-        <textarea matInput type="text" formControlName="info"></textarea>
+        <textarea matInput type="text" formControlName="info" rows="3"></textarea>
       </mat-form-field>
+      <mat-checkbox required formControlName="residentialAddress"> Residential Address</mat-checkbox>
     </div>
-    <div fxLayout="row" fxLayoutGap="5%">
-      <button mat-raised-button class="btn-sign-in" color="primary">Create Account</button>
-      <button mat-raised-button class="btn-sign-in" color="primary">Clear</button>
+    <div fxLayout="row" fxLayoutGap="1%">
+      <button mat-raised-button class="btn-sign-in" color="primary" type="submit">Create Account</button>
+      <button mat-raised-button class="btn-sign-in" color="primary" (click)="onClear()">Clear</button>
     </div>
   </fieldset>
-</form>
-</div>
+</form>       
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+

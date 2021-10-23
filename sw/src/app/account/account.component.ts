@@ -8,11 +8,15 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class AccountComponent implements OnInit {
 
+  Country:Array<string> = [];
+
+  Role:Array<string> = ["Employee", "Agent", "Customer", "Driver"];
+
   createForm:FormGroup;
   constructor(private fb:FormBuilder) {
     this.createForm = this.fb.group({
       accountInformation: this.fb.group({
-        existingCustomer: '',
+        existingCustomer: 'no',
         accountCode:'',
         companyName:'',
         role:''
@@ -20,7 +24,7 @@ export class AccountComponent implements OnInit {
       contactInformation: this.fb.group({
         title:'',
         name:'',
-        streetAddress:'',
+        address:'',
         city:'',
         state:'',
         postalCode:'',
@@ -37,7 +41,10 @@ export class AccountComponent implements OnInit {
   }
 
   onSubmit():void {
-    alert("Naushad: " + this.createForm.value);
     console.log(this.createForm.value);
+  }
+
+  onClear(): void {
+    this.createForm.reset();
   }
 }

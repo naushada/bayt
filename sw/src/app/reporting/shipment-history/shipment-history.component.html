@@ -1,1 +1,22 @@
-<p>shipment-history works!</p>
+
+  <mat-sidenav-container>
+    <mat-sidenav  mode="side" opened>
+      <mat-button-toggle-group name="_reporting" aria-label="Reporting">
+        <div fxLayout="column" fxLayoutGap="5%" >
+          <mat-button-toggle (change)="reportingOptions='_detailed_report'">
+            <mat-icon>report</mat-icon>
+              Detailed Report</mat-button-toggle>
+          
+        </div>
+      </mat-button-toggle-group>
+    </mat-sidenav>
+    
+    <mat-sidenav-content class="content">
+      <div style="margin-left: 30px; margin-top:50px;">
+        <app-detailed-report *ngIf="reportingOptions==='_detailed_report'"></app-detailed-report>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+

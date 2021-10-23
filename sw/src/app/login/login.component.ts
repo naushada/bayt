@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
    // _whoAmI = this.loginForm.value.login.get('userId').value;
     _whoAmI = (<HTMLInputElement>document.getElementById("userId")).value; 
 
-    alert(_whoAmI);
+    //alert(_whoAmI);
     if(_whoAmI == 'admin') {
       this.router.navigate(["customer/employeeView"]);
     } else {

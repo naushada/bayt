@@ -68,4 +68,8 @@ export class NewShippingComponent implements OnInit {
   onSubmit(): void {
 
   }
+
+  onReset(): void {
+    this.newShippingForm.reset();
+  }
 }

@@ -1,0 +1,34 @@
+<form [formGroup]="detailedReportForm" (ngSubmit)="onSubmit()">
+    <div fxLayoutGap="2%" formGroupName="detailedReport">
+      
+      <mat-form-field appearance="fill">
+        <mat-label for="fromDate">From Date (mm/dd/yyyy)</mat-label>
+        <input matInput [matDatepicker]="fromDate" formControlName="fromDate" id="fromDate">
+        <mat-datepicker-toggle matSuffix [for]="fromDate"></mat-datepicker-toggle>
+        <mat-datepicker #fromDate></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label for="toDate">To Date (mm/dd/yyyy)</mat-label>
+        <input matInput [matDatepicker]="toDate" formControlName="toDate" id="toDate">
+        <mat-datepicker-toggle matSuffix [for]="toDate"></mat-datepicker-toggle>
+        <mat-datepicker #toDate></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="w-30">
+        <mat-label for="accountCode">Account Code</mat-label>
+        <input matInput type="text" formControlName="accountCode" id="accountCode" required >
+      </mat-form-field>
+
+     <div fxLayout="row" fxLayoutGap="1%" >
+        <button mat-raised-button  type="submit" color="primary"  class="btn-sign-in">
+            <mat-icon>report</mat-icon>
+          Generate Report
+        </button>
+        <button mat-raised-button color="primary"  class="btn-sign-in" (click)="onClear()">
+          Reset
+        </button>
+      </div>
+    </div>
+</form>
+   

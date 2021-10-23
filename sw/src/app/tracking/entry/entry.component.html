@@ -1,4 +1,3 @@
-<div class="content" role="main">
 <form [formGroup]="trackingEntryForm" (ngSubmit)="onSubmit()">
     <div fxLayoutGap="2%" formGroupName="trackingEntry">
       <mat-form-field appearance="fill" class="w-50">
@@ -25,6 +24,7 @@
       <mat-form-field appearance="fill" class="w-30">
         <mat-label for="connote">Connote</mat-label>
         <textarea matInput rows="5" type="text" formControlName="connote" id="connote" required ></textarea>
+        <mat-hint>This is same as Shipment#</mat-hint>
       </mat-form-field>
 
       <div fxLayout="row" fxLayoutGap="8%" style="height:50px;">
@@ -42,10 +42,12 @@
         <mat-radio-button value="Default">Default Event Location</mat-radio-button>
       </mat-radio-group>
     </div>
-      <mat-form-field appearance="fill" >
-        <mat-label for="attachment">Attachment</mat-label>
-        <input matInput formControlName="attachment" id="attachment">
-      </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label for="attachment">Choose File</mat-label>  
+      <ngx-mat-file-input formControlName="attachment"  [accept]="'.xls'">
+      </ngx-mat-file-input>
+    </mat-form-field>
+      
       <mat-form-field appearance="fill" class="w-30">
         <mat-label for="enteredBy">Entered By</mat-label>
         <input matInput formControlName="enteredBy" id="enteredBy">
@@ -66,5 +68,4 @@
       </div>
     </div>
 </form>
-</div>
    
