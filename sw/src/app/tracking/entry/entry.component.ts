@@ -32,7 +32,7 @@ export class EntryComponent implements OnInit {
   constructor(private fb: FormBuilder) { 
     this.trackingEntryForm = this.fb.group({trackingEntry: this.fb.group({
       evt:'',
-      date:'',
+      date: new Date(),
       time:'',
       notes:'',
       connote:'',

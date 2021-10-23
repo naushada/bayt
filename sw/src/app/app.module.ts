@@ -10,6 +10,11 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule } from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
+
+import { NgxMatDatetimePickerModule, NgxMatTimepickerModule, NgxMatNativeDateAdapter, NgxMatNativeDateModule} from '@angular-material-components/datetime-picker';
+
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -102,7 +107,10 @@ import { SpecificMenubarComponent } from './menubar/specific-menubar/specific-me
     MatMomentDateModule,
     MatSidenavModule,
     MatMenuModule,
-    MatToolbarModule
+    MatToolbarModule,
+    NgxMatTimepickerModule,
+    NgxMatNativeDateModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

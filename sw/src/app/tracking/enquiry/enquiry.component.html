@@ -17,6 +17,21 @@
 
   <mat-sidenav-container>
     <mat-sidenav  mode="side" opened>
+      <mat-button-toggle-group name="_tracking" aria-label="Tracking">
+      <div fxLayout="column" fxLayoutGap="5%" >
+        <mat-button-toggle (change)="enquiryOption='_single_shipment'">
+            <mat-icon>search</mat-icon>
+          Single Shipment</mat-button-toggle>
+        <mat-button-toggle (change)="enquiryOption='_multiple_shipments'">
+            <mat-icon>search</mat-icon>
+          Multiple Shipment</mat-button-toggle>
+        <mat-button-toggle (change)="enquiryOption='_update_shipment_status'">
+            <mat-icon>edit</mat-icon>
+          Update Shipment</mat-button-toggle>
+      </div>
+      </mat-button-toggle-group>
+
+      <!--
         <button mat-button class="menu-button" (click)="enquiryOption='_single_shipment'">
             <mat-icon>search</mat-icon>
             <span style="margin-left: 8px;margin-top: 5px;">Single Shipment</span>
@@ -36,6 +51,7 @@
             <mat-icon>help</mat-icon>
             <span>Help</span>
         </button>
+      -->
     
     </mat-sidenav>
     
