@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShipmentHistoryComponent implements OnInit {
 
+  reportingOptions: string = "";
   constructor() { }
 
   ngOnInit(): void {

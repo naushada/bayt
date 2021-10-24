@@ -10,6 +10,11 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule } from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
+
+import { NgxMatDatetimePickerModule, NgxMatTimepickerModule, NgxMatNativeDateAdapter, NgxMatNativeDateModule} from '@angular-material-components/datetime-picker';
+
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -20,6 +25,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatMomentDateModule} from '@angular/material-moment-adapter';
+import { NgxMatFileInputModule } from '@angular-material-components/file-input';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -50,6 +56,10 @@ import { EmployeeViewComponent } from './_customer/employee-view/employee-view.c
 import { MainViewComponent } from './shipping/main-view/main-view.component';
 import { GenericMenubarComponent } from './menubar/generic-menubar/generic-menubar.component';
 import { SpecificMenubarComponent } from './menubar/specific-menubar/specific-menubar.component';
+import { ShipmentListComponent } from './shipping/shipment-list/shipment-list.component';
+import { DocketListComponent } from './shipping/docket-list/docket-list.component';
+import { BatchImportComponent } from './shipping/batch-import/batch-import.component';
+import { DetailedReportComponent } from './reporting/detailed-report/detailed-report.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +87,11 @@ import { SpecificMenubarComponent } from './menubar/specific-menubar/specific-me
     EmployeeViewComponent,
     MainViewComponent,
     GenericMenubarComponent,
-    SpecificMenubarComponent
+    SpecificMenubarComponent,
+    ShipmentListComponent,
+    DocketListComponent,
+    BatchImportComponent,
+    DetailedReportComponent
   ],
   imports: [
     BrowserModule,
@@ -102,7 +116,11 @@ import { SpecificMenubarComponent } from './menubar/specific-menubar/specific-me
     MatMomentDateModule,
     MatSidenavModule,
     MatMenuModule,
-    MatToolbarModule
+    MatToolbarModule,
+    NgxMatTimepickerModule,
+    NgxMatNativeDateModule,
+    MatButtonToggleModule,
+    NgxMatFileInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

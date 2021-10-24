@@ -1,0 +1,47 @@
+<form [formGroup]="docketListQueryForm" (ngSubmit)="onSubmit()">
+    <div fxLayoutGap="2%" formGroupName="docketListQuery">
+      
+      <mat-form-field appearance="fill">
+        <mat-label for="fromDate">From Date (mm/dd/yyyy)</mat-label>
+        <input matInput [matDatepicker]="fromDate" formControlName="fromDate" id="fromDate">
+        <mat-datepicker-toggle matSuffix [for]="fromDate"></mat-datepicker-toggle>
+        <mat-datepicker #fromDate></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label for="toDate">To Date (mm/dd/yyyy)</mat-label>
+        <input matInput [matDatepicker]="toDate" formControlName="toDate" id="toDate">
+        <mat-datepicker-toggle matSuffix [for]="toDate"></mat-datepicker-toggle>
+        <mat-datepicker #toDate></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="w-30">
+        <mat-label for="destination">Destination</mat-label>
+        <mat-select formControlName="destination" required>
+           <mat-option *ngFor="let _dst of Destination" [value]="_dst">{{_dst}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="w-30">
+        <mat-label for="status">Status</mat-label>
+        <mat-select formControlName="status" required>
+           <mat-option *ngFor="let _st of Status" [value]="_st">{{_st}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="w-30">
+        <mat-label for="runId">Run ID/Docket# </mat-label>
+        <input matInput type="text" formControlName="runId" id="runId" required >
+      </mat-form-field>
+
+     <div fxLayout="row" fxLayoutGap="1%" >
+        <button mat-raised-button  type="submit" color="primary"  class="btn-sign-in">
+            <mat-icon>search</mat-icon>
+          Search
+        </button>
+        <button mat-raised-button color="primary"  class="btn-sign-in" (click)="onClear()">
+          Reset
+        </button>
+      </div>
+    </div>
+</form>
+   

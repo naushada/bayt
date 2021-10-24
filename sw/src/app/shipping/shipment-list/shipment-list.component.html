@@ -1,0 +1,65 @@
+<form [formGroup]="shipmentListQueryForm" (ngSubmit)="onSubmit()">
+    <div fxLayoutGap="2%" formGroupName="shipmentListQuery">
+      
+      <mat-form-field appearance="fill">
+        <mat-label for="fromDate">From Date (mm/dd/yyyy)</mat-label>
+        <input matInput [matDatepicker]="fromDate" formControlName="fromDate" id="fromDate">
+        <mat-datepicker-toggle matSuffix [for]="fromDate"></mat-datepicker-toggle>
+        <mat-datepicker #fromDate></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label for="toDate">To Date (mm/dd/yyyy)</mat-label>
+        <input matInput [matDatepicker]="toDate" formControlName="toDate" id="toDate">
+        <mat-datepicker-toggle matSuffix [for]="toDate"></mat-datepicker-toggle>
+        <mat-datepicker #toDate></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="w-30">
+        <mat-label for="destination">Destination</mat-label>
+        <mat-select formControlName="destination" required>
+           <mat-option *ngFor="let _dst of Destination" [value]="_dst">{{_dst}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="w-30">
+        <mat-label for="serviceType">Service Type</mat-label>
+        <mat-select formControlName="serviceType" required>
+           <mat-option *ngFor="let _st of ServiceType" [value]="_st">{{_st}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="w-30">
+        <mat-label for="runId">Run ID</mat-label>
+        <input matInput type="text" formControlName="runId" id="runId" required >
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="w-30">
+        <mat-label for="senderName">Sender Name</mat-label>
+        <input matInput type="text" formControlName="senderName" id="senderName" required >
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="w-30">
+        <mat-label for="accountCode">Account Code</mat-label>
+        <input matInput type="text" formControlName="accountCode" id="accountCode" required >
+      </mat-form-field>
+
+      <div fxLayout="row" fxLayoutGap="8%" style="height:50px;">
+        <mat-label for="status">Status</mat-label>
+        <mat-checkbox value="pending">Pending</mat-checkbox>
+        <mat-checkbox value="manifested">Manifested</mat-checkbox>
+        <mat-checkbox value="finalised">Finalised</mat-checkbox>
+        <mat-checkbox value="all">All Shipments of the day</mat-checkbox>
+    </div>
+      
+      <div fxLayout="row" fxLayoutGap="1%" >
+        <button mat-raised-button  type="submit" color="primary"  class="btn-sign-in">
+            <mat-icon>search</mat-icon>
+          Search
+        </button>
+        <button mat-raised-button color="primary"  class="btn-sign-in" (click)="onClear()">
+          Reset
+        </button>
+      </div>
+    </div>
+</form>
+   
