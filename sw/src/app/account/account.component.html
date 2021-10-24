@@ -97,7 +97,9 @@
       <mat-checkbox required formControlName="residentialAddress"> Residential Address</mat-checkbox>
     </div>
     <div fxLayout="row" fxLayoutGap="1%">
-      <button mat-raised-button class="btn-sign-in" color="primary" type="submit">Create Account</button>
+      <button mat-raised-button class="btn-sign-in" color="primary" type="submit">
+        <mat-icon>add_circle</mat-icon>
+        Create Account</button>
       <button mat-raised-button class="btn-sign-in" color="primary" (click)="onClear()">Clear</button>
     </div>
   </fieldset>

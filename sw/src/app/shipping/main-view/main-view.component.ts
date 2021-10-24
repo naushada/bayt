@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class MainViewComponent implements OnInit {
 
-  options: string= "";
+  options: string= "_new_shipping";
   constructor(private router:Router) { }
 
   ngOnInit(): void {
