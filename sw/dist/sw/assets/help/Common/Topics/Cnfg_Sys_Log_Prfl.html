@@ -1,0 +1,361 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2021"><meta name="DC.rights.owner" content="(C) Copyright 2021"><meta name="DC.Type" content="task"><meta name="description" content="Use this task to create a system (2G and 4G) logging profile for troubleshooting and maintaining the PW EMS."><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/Cnfg_Dvc_Sys_Prfls.html"><meta name="prodname" content=""><meta name="prodname" content="PW EMS"><meta name="version" content="6"><meta name="version" content="6"><meta name="release" content="1.1"><meta name="release" content="1"><meta name="modification" content="1"><meta name="series" content=""><meta name="DC.Creator" content="DMcAlpine"><meta name="DC.Publisher" content="Parallel Wireless Inc. Proprietary and Confidential"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Create_a_System_Logging_Profile"><meta name="DC.Language" content="en-US"><link rel="stylesheet" type="text/css" href="../../commonltr.css"><title>Configure the System Logging Profile</title></head><body id="Create_a_System_Logging_Profile"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Configure the System Logging Profile</h1>
+    
+    
+    <div class="body taskbody"><p class="shortdesc">Use this task to create a system (2G and 4G) logging profile for troubleshooting and
+        maintaining the PW EMS.</p>
+        <ol class="ol steps" id="Create_a_System_Logging_Profile__steps_isd_lld_q4b"><li class="li step stepexpand">
+                <span class="ph cmd">In the navigation bar, click <strong class="ph b">Profiles</strong> &gt; <strong class="ph b">Summary</strong>.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">In the <strong class="ph b">Profiles</strong> window, click the <strong class="ph b">System Profiles</strong> tab.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">+Create</strong>.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">In the <strong class="ph b">Create System Profile</strong> window, enter the name of this profile in
+                    the <strong class="ph b">Profile Name</strong> field.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Select <strong class="ph b">Logging</strong> from the <strong class="ph b">Profile Type</strong>.</span>
+                <div class="itemgroup info">
+                    <div class="note note note_note"><span class="note__title">NOTE:</span> Use the Name field to search for a specific parameter on this page.</div>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">LoggingModuleList</strong> to specify one or more radio carrier instances
+                    for this profile. Click the plus button (+) to add more instances. </span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Select from the <strong class="ph b">Module Name</strong> drop-down list to choose a logging level for
+                    each of the fields described below to configure the granularity of information
+                    presented in logs:</span>
+                <div class="itemgroup info">
+                    <table class="table" id="Create_a_System_Logging_Profile__table_nvy_3nw_p4b"><caption></caption><colgroup><col><col></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1">
+                                        <p class="p">Name</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">HEARTBEAT</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies a log value for the Heartbeat user plane module
+                                        that detects system health activity.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">RESOURCE</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the resource module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">IPC</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the internal inter-process-communication
+                                        module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">PROCMGR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Process Manager module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">SYSMGR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the System Manager module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">CFGMGR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies a log value for configuration-releated push
+                                        logs to resmon, which raises the alarm for tasks depending
+                                        upon parameters that are configured and informs the sysmgr
+                                        to restart a task if self-healing action is
+                                        configured.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">SON</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Self-Organizing Network (SON) module
+                                        logs.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">FAULTMGR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies a log value for Fault Manager logs.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">LTERRM</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the LTE Radio Resource Management (RRM)
+                                        module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">LTECELLMGMT</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">LTE access node (CWS/eNodeB) management module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">LTEUEMGMT</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Universal Mobile Telecommunications System (UMTS) and
+                                        3GPP Long Term Evolution (LTE) user equipment (UE)
+                                        management module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">WIFIMGR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Wi-Fi access point module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">RTMGR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Route Manager module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">DHCP</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the DHCP server module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">S1AP</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies S1 Application Protocol (S1AP) interface module
+                                        on an access node (CWS/eNodeB) across all managers in an LTE
+                                        environment.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">BBPADDR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the B macro pre-processor (BPP) motherboards on
+                                        radio cards of a CWS node.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">OAMMGR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Operations, Administration and Maintenance
+                                        (OAM) Manager module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">RFLTE</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the RF Manager module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">RESMONFRMK</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the resource monitoring framework
+                                        module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">RESMONTASK</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the resource monitoring task module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">LTERRMTASK</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the LTE Radio Resource Management (RRM) task
+                                        module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">LTERAC</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the LTE Routing Area Code module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">RRC</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Radio Resource Control (RRC) protocol
+                                        connection module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">CSC</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Country Specific Code (CSC) module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">UECC</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the user equipment (UE) Component Carrier (CC)
+                                        or UECC module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">PLATMGR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Platform Manager module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">PLATCLIENT</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Platform Client module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">HWMGR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Hardware Manager module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">IPSEC</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the IP Security (IPSec) facility
+                                        module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">UNIFTPMGR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the FTP Manager module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">WEBSERVER</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Web server portal module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">LTESTACKMGR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the LTE stack manager used for UE and the
+                                        session management.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">LTEMAC</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the eNodeB Medium Access Control (MAC)
+                                        module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">LTERLC</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the LTE Radio Link Control (RLC) address
+                                        module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">LTEDCP</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the LTE Packet Data Convergence Protocol (PDCP)
+                                        module</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">HNBMGR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Home NodeB manager module</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">LTEMODEM</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">LTE uplink modem used for backhaul module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">X2AP</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the X2 Application protocol module for control
+                                        plane signaling between two eNBs in E-UTRAN.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">TUCL</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the TCP/UDP Convergence Layer module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">RFMGR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the RF Manager module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">CERTMGR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Certificate Manager module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">AISGMGR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Antenna Interface Standards Group (AISG)
+                                        Manager module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">TRAFFICMON</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Traffic Monitoring module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">VEPDG</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the virtual Evolved Packet Data Gateway (ePDG)
+                                        module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">GPSCLIENT</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Global Positioning System (GPS) Client
+                                        module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">CLAMPAGENT</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Clamp Agent module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">ENODEBAPP</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Advanced eNodeB module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">EGTP</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">
+                                        <p class="p">Specifies the system-wide GPRS Tunneling Protocol v2
+                                            (EGTP) Stack-specific and EGTP Application-spe-cific
+                                            module across all modules.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">CL</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifiies the Cell Loss (CL) module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">SM</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the System Manager (SM) module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">BINARYLGR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the packet capturing module, which captures and
+                                        stores packets when monitoring a particular
+                                        subscriber.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">PORTALREDIR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Portal Redirection module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">BWCLIENT</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the bandwidth (BW) client module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">RTWATCHDOGMGR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the Route Watchdog Manager module.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__1 "><strong class="ph b">PHYMGR</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_nvy_3nw_p4b__entry__2 ">Specifies the physical (PHY) layer manager
+                                        module.</td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Select from the following fields in the <strong class="ph b">Log Level</strong> drop-down list based
+                    on the severity of event or notification level, which is ordered from highest to
+                    lowest:</span>
+                <div class="itemgroup info">
+                    <table class="table" id="Create_a_System_Logging_Profile__table_ew1_2tw_3pb"><caption></caption><colgroup><col><col></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="Create_a_System_Logging_Profile__table_ew1_2tw_3pb__entry__1">
+                                        <p class="p">Name</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="Create_a_System_Logging_Profile__table_ew1_2tw_3pb__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_ew1_2tw_3pb__entry__1 "><strong class="ph b">FATAL</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_ew1_2tw_3pb__entry__2 ">Displays fatal events.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_ew1_2tw_3pb__entry__1 "><strong class="ph b">CRITICAL</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_ew1_2tw_3pb__entry__2 ">Displays critical events and all events with a higher
+                                        severity level.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_ew1_2tw_3pb__entry__1 ">
+                                        <strong class="ph b">ERROR</strong> drop-down list</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_ew1_2tw_3pb__entry__2 ">Displays error events and all events with a higher
+                                        severity level.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_ew1_2tw_3pb__entry__1 ">
+                                        <strong class="ph b">WARN</strong> drop-down list</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_ew1_2tw_3pb__entry__2 ">Displays warning events and all events with a higher
+                                        severity level.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_ew1_2tw_3pb__entry__1 "><strong class="ph b">NOTICE</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_ew1_2tw_3pb__entry__2 ">Displays notice events and all events with a higher
+                                        severity level.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_ew1_2tw_3pb__entry__1 ">
+                                        <strong class="ph b">INFO</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_ew1_2tw_3pb__entry__2 ">Displays informational events and all events with a
+                                        higher severity level.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_ew1_2tw_3pb__entry__1 ">
+                                        <strong class="ph b">DEBUG</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_ew1_2tw_3pb__entry__2 ">Displays logging information for debug purposes.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_ew1_2tw_3pb__entry__1 ">
+                                        <strong class="ph b">TRACE</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Create_a_System_Logging_Profile__table_ew1_2tw_3pb__entry__2 ">Displays all traces and event information of all severity
+                                        levels.</td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">Create+</strong>.</span>
+            </li></ol>
+    </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../Common/Topics/Cnfg_Dvc_Sys_Prfls.html" title="The system profile for a device includes the configuration for keepalive timer, statistics collection, certificates, and access node logging.">Configure Device System Profiles</a></div></div></nav></article></main></body></html>

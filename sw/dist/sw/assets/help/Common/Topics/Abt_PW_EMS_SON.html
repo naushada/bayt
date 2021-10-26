@@ -1,0 +1,53 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2021"><meta name="DC.rights.owner" content="(C) Copyright 2021"><meta name="DC.Type" content="concept"><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/SON_PW_EMS.html"><meta name="prodname" content=""><meta name="prodname" content="PW EMS"><meta name="version" content="6"><meta name="version" content="6"><meta name="release" content="1.1"><meta name="release" content="1"><meta name="modification" content="1"><meta name="series" content=""><meta name="DC.Creator" content="DMcAlpine"><meta name="DC.Publisher" content="Parallel Wireless Inc. Proprietary and Confidential"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="About_SON"><meta name="DC.Language" content="en-US"><link rel="stylesheet" type="text/css" href="../../commonltr.css"><title>About the SON Service on the PW EMS</title></head><body id="About_SON"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">About the SON Service on the PW EMS</h1>
+    
+    <div class="body conbody">
+        <p class="p">The Self-Organizing Network (SON) is a service of the PW EMS that serves as an umbrella
+            of diverse system functions that automate and provide intelligent operations for
+            managing the setup, optimization, performance, and availability of a wireless network.
+            This includes the configuration operations required to make access devices operational
+            and available to service User Equipment (UE) devices. The PW EMS SON uses its static
+            configuration and intelligent operations to manage and orchestrate the wireless Radio
+            Access Network (RAN) across 2G and 4G technologies. This makes the RAN more functional,
+            useful, and efficient with minimal human intervention to reduce complexity and human
+            error and maximize functionality and performance.</p>
+        <p class="p">The PW EMS SON is responsible for the configuration and management of the access nodes
+            aggregated by the HetNet Gateway (HNG) and is built and designed around a micro-services
+            architecture where different micro-services handle different interfaces and functions.
+            All the micro-services are deployed as containers and managed, orchestrated through
+            Kubernetes. PW EMS SON also manages the virtual radio node (vNode) specific features
+            like alarms, bulk statistics, and software upgrade. A vNode is an access node on a
+            virtual baseband unit (vBBU) that can contain multiple 2G and 4G cells.</p>
+        <p class="p">The following diagram depicts the network architecture of the overall Parallel Wireless
+            solution depicting vNode (vBBU), HNG, and PW EMS SON as separate entities with the
+            interfaces among them deployed in a 4G environment. The interface between the HNG and
+            SON for the radio access services is a REST-based interface.</p>
+        <p class="p">
+            <img class="image" src="../Images/SON_4g_2g_dply.png">
+        </p>
+        <p class="p">The PW EMS SON uses the Physical Cell ID (PCI) neighbor identifier for Automatic Neighbor
+            Relations (ANR) to reduce the frequency of neighbor information updates among virtual
+            nodes. The PW EMS SON instances manage the non-overlapping sets of access nodes.</p>
+        <p class="p">The security gateway ensures a secure IPsec-based communication between the HNG and vBBU.
+            The IPsec tunnel secures all of the TR-069 data as well as the back-channel
+            activities.</p>
+        <p class="p">The PW EMS SON accomplishes the following list of tasks with TR-069:</p>
+        <ul class="ul">
+            <li class="li">Bringing up a Cell</li>
+            <li class="li">Disabling Admin State</li>
+            <li class="li">Adding Neighbor Cells to the PW EMS through ANR</li>
+            <li class="li"> Indicating Cell Status from vNodes</li>
+            <li class="li"> Uploading vBBU Inventory in SON Database</li>
+        </ul>
+        <p class="p">The PW EMS SON handles a diverse set of automated and intelligent system operations for
+            managing wireless network device setup, optimization, performance, and availability.
+            Additionally, within the PW solution, the PW EMS SON provides the full set of
+            configuration operations required to deploy access devices such as the vBBU, vNodes, and
+            access nodes having 2G and 4G cells (CWS or RRH) to provide services to UEs. The PW EMS
+            SON is a combination of static configuration and automated and algorithmic operations
+            interacting to make the wireless access network functional, useful, and efficient with
+            minimal human intervention.</p>
+    </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../Common/Topics/SON_PW_EMS.html" title="The following sections provide information to understand how SON is used with the PW EMS.">SON and the PW EMS</a></div></div></nav></article></main></body></html>

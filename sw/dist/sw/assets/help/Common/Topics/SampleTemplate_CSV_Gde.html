@@ -1,0 +1,243 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2021"><meta name="DC.rights.owner" content="(C) Copyright 2021"><meta name="DC.Type" content="reference"><meta name="description" content="The Parallel Wireless comma-separated values (CSV) file template (SampleTemplate.csv) is used to create a custom file that contains vBBU, vNode and cell device data, which is saved in tabular format."><meta name="prodname" content=""><meta name="prodname" content=""><meta name="version" content="6"><meta name="version" content="6"><meta name="release" content="1.1"><meta name="release" content="1"><meta name="modification" content="1"><meta name="series" content=""><meta name="DC.Creator" content="DMcAlpine"><meta name="DC.Publisher" content="Parallel Wireless Inc. Proprietary and Confidential"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc"><meta name="DC.Language" content="en-US"><link rel="stylesheet" type="text/css" href="../../commonltr.css"><title>SampleTemplate CSV File Guide</title></head><body id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">SampleTemplate CSV File Guide</h1>
+    
+    
+    <div class="body refbody"><p class="shortdesc">The Parallel Wireless comma-separated values (CSV) file template
+            (<em class="ph i">SampleTemplate.csv</em>) is used to create a custom file that contains vBBU, vNode
+        and cell device data, which is saved in tabular format. </p>
+        <section class="section"><h2 class="title sectiontitle">Basic CSV Information</h2>
+            
+        </section><section class="section"><p class="p">The CSV File template is offered to ensure that the customized CSV file template that you create
+                is free from errors and validates properly when it is uploaded to the PW EMS and
+                used to bulk configure the intended devices. The following rules are followed in
+                order to create a valid CSV file:</p><ul class="ul">
+                <li class="li">The CSV file can contain up to 100 unique devices. A CSV file row entry can be
+                    used for a VBBU, vNode, or cell, so the total number of entries in the file can
+                    be more than 100.</li>
+                <li class="li">The CSV file cannot be empty.</li>
+                <li class="li">The PW EMS validates all CSV file rows for the proper headers, mandatory fields,
+                    and system profile information.</li>
+                <li class="li">If any user uploads a file and starts the creation process, other users can see
+                    status for this file.</li>
+       </ul></section>
+        <section class="section" id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__section_lb5_qzl_xpb"><h2 class="title sectiontitle">CSV File Criteria</h2>
+            
+            <div class="p">
+                <ul class="ul" id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__ul_ehl_5zl_xpb">
+                    <li class="li"><strong class="ph b">Device Criteria</strong> - Each row in the CSV file is for a vBBU or vNode.
+                        For each vNode entry, service for 2 LTE cells and 1 GSM cell is
+                        allowed.</li>
+                    <li class="li"><strong class="ph b">Multiple-cell Criteria</strong> - If a value in the DeviceName column is same
+                        for multiple rows then all rows become cells of a Vnode.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="section" id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__section_mxp_wzl_xpb"><h2 class="title sectiontitle">CSV Formatting Considerations</h2>
+            
+            <div class="p">
+                <ul class="ul" id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__ul_m1h_zzl_xpb">
+                    <li class="li">A colon (<strong class="ph b">:</strong>) is used for separating a key value (for example:
+                            <cite class="cite">key:value</cite>)</li>
+                    <li class="li">A semi-colon (;) is used for separating different profile types (for
+                        example: <cite class="cite">heartbeat:HeartBeat;statsinterval:StatsInterval</cite>).</li>
+                    <li class="li"><strong class="ph b">System Profile Format</strong> -
+                            &lt;<em class="ph i">ProfileType1</em>&gt;:&lt;<em class="ph i">ProfileValue1</em>&gt;;&lt;<em class="ph i">ProfileType2</em>&gt;:&lt;<em class="ph i">ProfileValue2</em>&gt;;
+                        (for example:
+                        <cite class="cite">GsmConfig:bcgsmconfig;HeartBeat:bcheartbeat;</cite>).</li>
+                    <li class="li"><strong class="ph b">Service Profile Format</strong> -
+                            &lt;<cite class="cite">ProfileValue1</cite>&gt;;&lt;<cite class="cite">ProfileValue2</cite>&gt;;
+                        (for example: <cite class="cite">LTE Default;LTE Cell1</cite>)</li>
+                </ul>
+            </div>
+        </section>
+        <section class="section" id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__section_w3w_pg3_wpb"><h2 class="title sectiontitle">Mandatory Columns</h2>
+            
+            <div class="p">The following columns must be completed in the customized CSV file:<table class="table frame-all" id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb"><caption></caption><colgroup><col style="width:35.21126760563381%"><col style="width:64.7887323943662%"></colgroup><thead class="thead">
+                            <tr class="row">
+                                <th class="entry colsep-1 rowsep-1" id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__1">Column</th>
+                                <th class="entry colsep-1 rowsep-1" id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__2">Description</th>
+                            </tr>
+                        </thead><tbody class="tbody">
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__1 "><strong class="ph b">DeviceName</strong></td>
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__2 ">The unique, user-specified name of the device. This column
+                                    identifies whether a vNode has a single cell or multiple cells.
+                                    If a vNode has two rows that have the same value in this column,
+                                    the single device is created with two cells. If both rows have a
+                                    unique value, two vNodes are created.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__1 "><strong class="ph b">HngName</strong></td>
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__2 ">Applies to COM_VNODE only for the HetNet Gateway.
+                                        <strong class="ph b">Default</strong> is the only valid value at this time.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__1 "><strong class="ph b">Region</strong></td>
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__2 ">Applies to COM_VBBU only for the geographical region in which
+                                    this vBBU site exists. This column is not used for vNode
+                                    devices.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__1 "><strong class="ph b">Services.CellName</strong></td>
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__2 ">Applies to COM_VNODE only. The service is unique to the vNode
+                                    device and can be either GSM (2G) or LTE (4G).</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__1 "><strong class="ph b">Services.Profiles</strong></td>
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__2 ">Applies to COM_VNODE only. Accepted service profiles are:<ul class="ul" id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__ul_x1l_1j3_wpb">
+                                        <li class="li">GSM Default</li>
+                                        <li class="li">LTE Default</li>
+                                        <li class="li">LTE Cell1</li>
+                                        <li class="li">LTE Cell2</li>
+                                        <li class="li">GSM GPRS Custom</li>
+                                        <li class="li">LTE Cell Band8</li>
+                                        <li class="li">LTE 41733-CI9999-865621053</li>
+                                        <li class="li">LTE 41733-CI9999-865931053</li>
+                                        <li class="li">LTE 41733-CI9999-417069499</li>
+                                        <li class="li">GSM 41733-CI9999-417069500</li>
+                                    </ul></td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__1 "><strong class="ph b">Site</strong></td>
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__2 ">Applies to COM_VBBU only for a specific site location. This
+                                    column is not used for vNode devices.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__1 "><strong class="ph b">VbbuDeviceId</strong></td>
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__2 ">Applies to COM_VNODE only for the hardware (HW) Class ID that
+                                    was configured in the WCT vBBU interface. For example, the
+                                    Parallel Wireless HW Class ID is C19999.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__1 "><strong class="ph b">DeviceType</strong></td>
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__2 ">Accepted device types are: <ul class="ul" id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__ul_ajz_x33_wpb">
+                                        <li class="li">COM_VBBU</li>
+                                        <li class="li">COM_VNODE</li>
+                                    </ul></td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__1 "><strong class="ph b">ProductClass</strong></td>
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__2 ">
+                                    <p class="p">The device ID for the vBBU or vNode. This is the HW Class ID
+                                        that was configured in the WCT vBBU interface for a vNode
+                                        that was selected there. For example, the Parallel Wireless
+                                        HW Class ID is C19999.</p>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__1 "><strong class="ph b">SerialNumber</strong></td>
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__2 ">The device serial number, which is unique to the
+                                    device.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__1 "><strong class="ph b">Services.DataModelName</strong></td>
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__2 ">
+                                    <p class="p">Applies to COM_VNODE only. This (LTE or GSM) value must be
+                                        correct according to the existing PW EMS database service
+                                        definition profiles. To look up these values, go to
+                                            <strong class="ph b">Devices</strong> &gt; <strong class="ph b">Service Definitions</strong>. </p>
+                                </td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__1 "><strong class="ph b">Services.Version</strong></td>
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__2 ">Applies to COM_VNODE for software version of the cells on the
+                                    vNode.</td>
+                            </tr>
+                            <tr class="row">
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__1 "><strong class="ph b">SystemInformationCreate.Version</strong></td>
+                                <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_aps_mh3_wpb__entry__2 ">Applies to COM_VNODE only for the software version of the
+                                    vNode.</td>
+                            </tr>
+                        </tbody></table></div>
+        </section>
+        <section class="section" id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__section_gvk_hh3_wpb"><h2 class="title sectiontitle">Columns that Require Numbers Only</h2>
+            
+            <table class="table frame-all" id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_bzc_qk3_wpb"><caption></caption><colgroup><col style="width:74.61928934010153%"><col style="width:25.380710659898476%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry colsep-1 rowsep-1" id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_bzc_qk3_wpb__entry__1">Column Entry</th>
+                            <th class="entry colsep-1 rowsep-1" id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_bzc_qk3_wpb__entry__2">Description</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_bzc_qk3_wpb__entry__1 "><strong class="ph b">DownlinkBandwidth</strong></td>
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_bzc_qk3_wpb__entry__2 ">The downlink bandwidth value from 1 to 2000 minutes for the vBBU
+                                or vNode.</td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_bzc_qk3_wpb__entry__1 "><strong class="ph b">Services.AdditionalConfigurations.CellConfig.GSM.GPRS.BVCI</strong></td>
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_bzc_qk3_wpb__entry__2 ">Defines the Base Station System General Packet Radio Service
+                                (GPRS) Protocol (BSSGP) Virtual Connection Identifier from 2 to
+                                65535 toward the SGSN.</td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_bzc_qk3_wpb__entry__1 "><strong class="ph b">Services.AdditionalConfigurations.CellConfig.GSM.GPRS.NSVCI</strong></td>
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_bzc_qk3_wpb__entry__2 ">Defines the Network Service Virtual Connection Identifier (NSVCI)
+                                from 2 to 65535 toward the SGSN.</td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_bzc_qk3_wpb__entry__1 "><strong class="ph b">Services.AdditionalConfigurations.RRHCarrierIdx</strong></td>
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_bzc_qk3_wpb__entry__2 ">Defines the LTE 4G Radio Access Network (RAN) Radio Frequency
+                                (RF) Remote Radio Head (RRH) Carrier Index number.</td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_bzc_qk3_wpb__entry__1 "><strong class="ph b">Services.AdditionalConfigurations.CellConfig.LTE.RAN.Common.CellIdentity</strong></td>
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_bzc_qk3_wpb__entry__2 ">Defines the cell identity LTE 4G RAN common cell identity value,
+                                which has value of null, which is no value.</td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_bzc_qk3_wpb__entry__1 "><strong class="ph b">Services.AdditionalConfigurations.CellConfig.LTE.RAN.RF.EARFCNDL</strong></td>
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_bzc_qk3_wpb__entry__2 ">
+                                <p class="p">The Absolute Radio Frequency Channel Number (EARFCN) required for
+                                    the downlink, which is used to calculate the center frequency
+                                    for the EUTRA from 0 to 65535. This required value is based on
+                                    the country of operation and hardware class ID of the node.</p>
+                            </td>
+                        </tr>
+                    </tbody></table>
+        </section>
+        <section class="section" id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__section_jty_dt3_wpb"><h2 class="title sectiontitle">Columns that Require True or False (Boolean) Values</h2>
+            
+            <table class="table frame-all" id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_a2d_mt3_wpb"><caption></caption><colgroup><col style="width:59.01639344262295%"><col style="width:40.98360655737705%"></colgroup><thead class="thead">
+                        <tr class="row">
+                            <th class="entry colsep-1 rowsep-1" id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_a2d_mt3_wpb__entry__1">Column Entry</th>
+                            <th class="entry colsep-1 rowsep-1" id="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_a2d_mt3_wpb__entry__2">Description</th>
+                        </tr>
+                    </thead><tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_a2d_mt3_wpb__entry__1 "><strong class="ph b">SystemInformationCreate.IsPKIEnabled</strong></td>
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_a2d_mt3_wpb__entry__2 ">Enter true or false to indicate if PKI is enabled on the
+                                device.</td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_a2d_mt3_wpb__entry__1 "><strong class="ph b">AdditionalConfigurations.MultiCellNeighbors</strong></td>
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_a2d_mt3_wpb__entry__2 ">
+                                <p class="p">Enter true or false to indicate that a neighboring cell has
+                                    multiple cells.</p>
+                            </td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_a2d_mt3_wpb__entry__1 "><strong class="ph b">Services.AdditionalConfigurations.BidirectionalANR</strong></td>
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_a2d_mt3_wpb__entry__2 ">Enter true or false to indicate if bi-directional Automatic
+                                Neighbor Relations (ANR) is enabled with this cell.</td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_a2d_mt3_wpb__entry__1 "><strong class="ph b">Services.AdditionalConfigurations.ManualANR</strong></td>
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_a2d_mt3_wpb__entry__2 ">Enter true or false to indicate if ANR operations are enabled to
+                                be performed manually.</td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_a2d_mt3_wpb__entry__1 "><strong class="ph b">Services.AdditionalConfigurations.X2ANR</strong></td>
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_a2d_mt3_wpb__entry__2 ">Enter true or false to indicate if the ANR of X2-reported
+                                neighbors is enabled so that other cells can contact a cell to
+                                report themselves as neighbors.</td>
+                        </tr>
+                        <tr class="row">
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_a2d_mt3_wpb__entry__1 "><strong class="ph b">Services.AdditionalConfigurations.UEReportedANR</strong></td>
+                            <td class="entry colsep-1 rowsep-1" headers="xd_22a91b37aff737b8-6efab7fb-179e177129c--7ffc__table_a2d_mt3_wpb__entry__2 ">Enter true or false to indicate if User Equipment (UE) ANR
+                                reporting is enabled for this cell.</td>
+                        </tr>
+                    </tbody></table>
+        </section></div>
+</article></main></body></html>

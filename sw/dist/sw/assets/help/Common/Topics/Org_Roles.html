@@ -1,0 +1,58 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2021"><meta name="DC.rights.owner" content="(C) Copyright 2021"><meta name="DC.Type" content="reference"><meta name="description" content="The organization membership of a user is tied to a role that defines what the user is allowed to do in that organization. Users can belong to one or more organizations and the following roles and permissions can be configured for them. Refer to the appropriate Grafana documentation for more information about their configuration."><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/Abt_PW_EMS_Mntrng_Rprtng.html"><meta name="prodname" content=""><meta name="prodname" content="PW EMS"><meta name="version" content="6"><meta name="version" content="6"><meta name="release" content="1.1"><meta name="release" content="1"><meta name="modification" content="1"><meta name="series" content=""><meta name="DC.Creator" content="DMcAlpine"><meta name="DC.Publisher" content="Parallel Wireless Inc. Proprietary and Confidential"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Organization_Roles"><meta name="DC.Language" content="en-US"><link rel="stylesheet" type="text/css" href="../../commonltr.css"><title>Organization Roles</title></head><body id="Organization_Roles"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Organization Roles</h1>
+    
+    <div class="body refbody"><p class="shortdesc">The organization membership of a user is tied to a role that defines what the user is
+        allowed to do in that organization. Users can belong to one or more organizations and the
+        following roles and permissions can be configured for them. Refer to the appropriate <a class="xref" href="https://grafana.com/docs/grafana/latest/" target="_blank">Grafana
+            documentation</a> for more information about their configuration.</p>
+        <section class="section" id="Organization_Roles__section_lqt_nws_hpb"><h2 class="title sectiontitle">Admin Role</h2>
+            
+            <div class="p">This user role can do everything scoped to the organization. For example:<ul class="ul" id="Organization_Roles__ul_afk_pws_hpb">
+                    <li class="li">Can add, edit, and delete data sources.</li>
+                    <li class="li">Can add and edit users and teams in organizations.</li>
+                    <li class="li">Can add, edit, and delete folders.</li>
+                    <li class="li">Can configure app plug-ins and organization settings.</li>
+                    <li class="li">Can do everything allowed by the Editor role.</li>
+                </ul></div>
+        </section>
+        <section class="section" id="Organization_Roles__section_r51_4ws_hpb"><h2 class="title sectiontitle">Editor Role</h2>
+            
+            <div class="p">This user role has the following abilities and limitations:<ul class="ul" id="Organization_Roles__ul_tgn_qws_hpb">
+                    <li class="li">Can view, add, and edit dashboards, panels, and alert rules in dashboards to
+                        which they have access. This can be disabled on specific folders and
+                        dashboards.</li>
+                    <li class="li">Can create, update, or delete play lists.</li>
+                    <li class="li">Can access Explore.</li>
+                    <li class="li">Cannot add, edit, or delete data sources.</li>
+                    <li class="li">Cannot add, edit, or delete alert notification channels.</li>
+                    <li class="li">Cannot manage other organizations, users, and teams.</li>
+                </ul></div>
+            <p class="p">This user role can be edited by way of the Grafana server setting
+                    <code class="ph codeph">editors_can_admin</code>. If this parameter is set to true, then users
+                with this role can also administrate dashboards, folders and teams they create. This
+                is especially useful for enabling self-organizing teams to administer their own
+                dashboards.</p>
+        </section>
+        <section class="section" id="Organization_Roles__section_xsf_4ws_hpb"><h2 class="title sectiontitle">Viewer Role</h2>
+            
+            <ul class="ul" id="Organization_Roles__ul_ld3_kys_hpb">
+                <li class="li">Can view any dashboard they have access to. This can be disabled on specific
+                    folders and dashboards.</li>
+                <li class="li">Cannot add, edit, or delete data sources.</li>
+                <li class="li">Cannot add, edit, or delete dashboards or panels.</li>
+                <li class="li">Cannot create, update, or delete playlists.</li>
+                <li class="li">Cannot add, edit, or delete alert notification channels.</li>
+                <li class="li">Cannot access Explore.</li>
+                <li class="li">Cannot manage other organizations, users, and teams.</li>
+            </ul>
+            <p class="p">The viewer role can be modified through the Grafana server parameter setting
+                    <code class="ph codeph">viewers_can_edit</code>. If the value of this parameter set this to
+                true, then users with the Viewer role can also make transient dashboard edits, which
+                allows the modification of panels and queries, but not the ability to change, create
+                or save new dashboards. This change is used often for public Grafana installations
+                where anonymous users are allowed to edit panels and do queries, but are not allowed
+                to save or create new dashboards.</p>
+        </section></div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../Common/Topics/Abt_PW_EMS_Mntrng_Rprtng.html" title="Parallel Wireless Element Management System (PW EMS) Monitoring and Reporting application is provided through a Web User Interface (UI). This application collects device data from the system and presents it in interactive charts, graphs, Key Performance Indicators (KPIs), and alerts so operators can respond to the way devices are performing on the network.">About PW EMS Monitoring and Reporting</a></div></div></nav></article></main></body></html>

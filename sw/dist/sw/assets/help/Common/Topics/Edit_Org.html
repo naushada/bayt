@@ -1,0 +1,133 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2021"><meta name="DC.rights.owner" content="(C) Copyright 2021"><meta name="DC.Type" content="task"><meta name="description" content="The default organization is identified by the service provider who purchased the PW EMS software. Use this task to edit the default organization. Note that this default organization cannot deleted."><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/Cnfg_Access_PW_EMS.html"><meta name="prodname" content=""><meta name="prodname" content="PW EMS"><meta name="version" content="6"><meta name="version" content="6"><meta name="release" content="1.1"><meta name="release" content="1"><meta name="modification" content="1"><meta name="series" content=""><meta name="DC.Creator" content="DMcAlpine"><meta name="DC.Publisher" content="Parallel Wireless Inc. Proprietary and Confidential"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Edit_an_Organization"><meta name="DC.Language" content="en-US"><link rel="stylesheet" type="text/css" href="../../commonltr.css"><title>Edit the Default Organization</title></head><body id="Edit_an_Organization"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Edit the Default Organization</h1>
+    
+    <div class="body taskbody"><p class="shortdesc">The default organization is identified by the service provider who purchased the PW
+        EMS software. Use this task to edit the default organization. Note that this default
+        organization cannot deleted.</p>
+        <ol class="ol steps" id="Edit_an_Organization__steps_ryb_1f2_q4b"><li class="li step stepexpand">
+                <span class="ph cmd">Click the Navigation Bar menu and select <strong class="ph b">Settings</strong> &gt;
+                    <strong class="ph b">RBAC</strong>.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">In the <strong class="ph b">Managing Organization</strong> window, click the <strong class="ph b">Actions</strong> column
+                    button <img class="image" id="Edit_an_Organization__image_s5d_blp_gpb" src="../Images/dotted_icon.PNG"> in the
+                    default organization (Parallel Wireless) row.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Select <strong class="ph b">Edit</strong> from the drop-down list that appears.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">In the <strong class="ph b">Edit Organization's Properties</strong> dialog box, complete the following
+                    fields:</span>
+                <div class="itemgroup info">
+                    <table class="table" id="Edit_an_Organization__table_nvj_qf2_q4b"><caption></caption><colgroup><col><col></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="Edit_an_Organization__table_nvj_qf2_q4b__entry__1">
+                                        <p class="p">Field</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="Edit_an_Organization__table_nvj_qf2_q4b__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__1 ">
+                                        <strong class="ph b">Rename the Organization</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__2 ">Rename the default service provider name (Parallel
+                                        Wireless) to the service provider that owns the PW
+                                        EMS.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__1 ">
+                                        <strong class="ph b">Change Organization Type</strong> drop-down list</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__2 ">
+                                        <p class="p">Not configurable.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__1 ">
+                                        <strong class="ph b">Change Organization's Admin Email</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__2 ">
+                                        <p class="p">Enter the appropriate contact email for the MNO or MVNO
+                                            service provider organization administrator
+                                            operator.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__1 ">
+                                        <strong class="ph b">Choose Authentication Type</strong> drop-down list</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__2 ">
+                                        <p class="p">Select from the following authentication options:</p>
+                                        <p class="p">
+                                            <strong class="ph b">Note</strong>: If <strong class="ph b">LDAP</strong> is selected, additional LDAP
+                                            fields are displayed. LDAP fields are not displayed if
+                                                <strong class="ph b">Embedded and Managed Authorization</strong> is
+                                            selected.</p>
+                                        <p class="p">
+                                            <strong class="ph b">Local</strong>- Users who login to the PW EMS locally on
+                                            this PW EMS server. Passwords are managed locally.</p>
+                                        <p class="p">
+                                            <strong class="ph b">LDAP</strong>- Active directory users are authenticated by
+                                            a Lightweight Directory Access Protocol (LDAP) server
+                                            and their membership of groups (roles) are examined when
+                                            authentication is successful. The Active Directory
+                                            returns a list of groups, to which the authorized user
+                                            belongs. The externally authorized user is also added to
+                                            a local database, and is removed when this user logs
+                                            out, or its session terminates. All user login activity
+                                            is logged. The LDAP server manages authorization,
+                                            password rules, security, and so on.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__1 ">
+                                        <strong class="ph b">LDAP Server IP</strong> field</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__2 ">Enter the IP address for the LDAP server. This provides
+                                        the PW EMS a way to connect to the LDAP server.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__1 ">
+                                        <strong class="ph b">LDAP Server Port</strong> field</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__2 ">The default LDAP port 389 appears in this field by
+                                        default.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__1 ">
+                                        <strong class="ph b">LDAP Server Search Domain</strong> field</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__2 ">The string used to specify the base domain name (DN),
+                                        Common Name (CN), unique identifier (UID), and LDAP
+                                        attributes used for search. A valid DN can be a Domain
+                                        Component (DC) which uses DNS to define its namespace. The
+                                        following is an example of a search string:
+                                            <strong class="ph b">CN=Users,DC=lab,DC=parallelwireless,DC=de</strong></td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__1 ">
+                                        <strong class="ph b">LDAP Protocol</strong> field</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__2 ">Not configurable. TCP is the supported protocol on which
+                                        LDAP runs at this time.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__1 ">
+                                        <strong class="ph b">LDAP User Name</strong> field</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__2 ">Enter an LDAP user name known to the
+                                        administrator.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__1 ">
+                                        <strong class="ph b">LDAP User Password</strong> field</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Edit_an_Organization__table_nvj_qf2_q4b__entry__2 ">Enter an LDAP password known to the administrator for the
+                                        user.</td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">If you selected LDAP for your authentication method, click <strong class="ph b">TEST LDAP</strong> to
+                    verify that the LDAP IP, Port, Protocol, and Search Domain are correct.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">UPDATE</strong>. The organization displays in the <strong class="ph b">Organizations</strong>
+                    tab.</span>
+            </li></ol>
+    </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../Common/Topics/Cnfg_Access_PW_EMS.html" title="Use the following tasks to configure Role-based Access (RBAC) for users who connect to the PW EMS.">Configure PW EMS Role-Based Access</a></div></div></nav></article></main></body></html>

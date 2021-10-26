@@ -1,0 +1,49 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2021"><meta name="DC.rights.owner" content="(C) Copyright 2021"><meta name="DC.Type" content="concept"><meta name="description" content="High Availability (HA) redundancy is provided for the PW EMS through the Kubernetes virtual platform on which it runs."><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/PW_EMS_Overview.html"><meta name="prodname" content=""><meta name="prodname" content="PW EMS"><meta name="version" content="6"><meta name="version" content="6"><meta name="release" content="1.1"><meta name="release" content="1"><meta name="modification" content="1"><meta name="series" content=""><meta name="DC.Creator" content="DMcAlpine"><meta name="DC.Publisher" content="Parallel Wireless Inc. Proprietary and Confidential"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="High_Availability"><meta name="DC.Language" content="en-US"><link rel="stylesheet" type="text/css" href="../../commonltr.css"><title>High Availability</title></head><body id="High_Availability"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">High Availability</h1>
+    
+    <div class="body conbody"><p class="shortdesc">High Availability (HA) redundancy is provided for the PW EMS through the Kubernetes
+        virtual platform on which it runs.</p>
+        <p class="p">The Kubernetes virtual environment can be installed on a single server or multiple
+            servers. HA synchronizes information, device configuration, system security, alarm and
+            event notification settings, and system backup and upgrade settings in case of a
+            failover scenario.</p>
+        <p class="p">The PW EMS application is installed in a virtual environment that consists of one or more
+            Kubernetes master nodes and one or more worker nodes, which contain pods.</p>
+        <ul class="ul">
+            <li class="li">A master is a collection of three server processes: apiserver, control manager and kube scheduler that run on a single node in a cluster which is designated as the master. The master controls each worker node.</li>
+            <li class="li">A worker node is a worker system in Kubernetes. This node type has the container runtime services, kubelet and kube- proxy services, which are necessary to run one or more pods and is managed by master components.</li>
+            <li class="li"> A pod runs as a process on a node that can be part of a cluster that can be scaled
+                up or down. A pod is the smallest deployable object in Kubernetes that can have one
+                or more containers. The PW EMS instance runs in a pod container.</li>
+        </ul>
+        <p class="p">A user can be logged into a "replica" pod that contains an instance of the PW EMS UI. If
+            this pod crashes for some reason, the PW EMS UI users are automatically logged out of
+            this pod and need to log in again. Users that are logged into other replica pods that
+            each have a PW EMS instance are unaffected. Multiple replica pods can exist on the same
+            node or multiple nodes can contain an PW EMS instance that can be used in the customer
+            deployment of the PW EMS application. These different deployments can help distribute
+            HTTP requests across the different pods. There are multiple ways in which the Kubernetes
+            virtual environment can be deployed for HA. </p>
+        <p class="p"> Refer to the <em class="ph i">Hardware Specification and Installation Guides</em> for more information
+            about how the PW EMS can be deployed for HA.</p>
+        <div class="p">The following failure scenarios are supported by PW EMS HA functionality:<ul class="ul" id="High_Availability__ul_q34_vrs_4pb">
+                <li class="li"><strong class="ph b">Server Failure Scenarios</strong><ul class="ul" id="High_Availability__ul_cxq_wrs_4pb">
+                        <li class="li">Power failure.</li>
+                        <li class="li">Single server deployment failure causes the failure of the master node
+                            and one or more worker nodes.</li>
+                    </ul></li>
+                <li class="li"><strong class="ph b">Master Virtual Machine Failure Scenarios</strong><ul class="ul" id="High_Availability__ul_dlv_xrs_4pb">
+                        <li class="li">Virtual IP connectivity failure.</li>
+                        <li class="li">Control Plane problems such as the unexpected termination of the
+                            database operations upon catastrophic failure, such as disk space
+                            limitations, bugs, and so on.</li>
+                    </ul></li>
+                <li class="li"><strong class="ph b">Worker Node Failure Scenario</strong><ul class="ul" id="High_Availability__ul_rjt_css_4pb">
+                        <li class="li">The existing TCP connection between specific nodes results in a
+                            disconnect.</li>
+                    </ul></li>
+            </ul></div>
+    </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../Common/Topics/PW_EMS_Overview.html" title="The Parallel Wireles Element Management System (PW EMS) is a suite of Web-based applications used for management and monitoring of all Parallel Wireless network elements that can be deployed in a virtualized or cloud-native environment.">Overview</a></div></div></nav></article></main></body></html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2021"><meta name="DC.rights.owner" content="(C) Copyright 2021"><meta name="DC.Type" content="concept"><meta name="description" content="The HetNet Gateway (HNG) is used to virtualize and aggregate multiple technology Radio Access Network (RAN) interfaces to manage GSM (2G), UMTS (3G), and LTE (4G) cells."><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/Cnfg_Sys_Sttngs_Dvcs.html"><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/Cnfg_Systm_HNG_NetConf_Sttngs.html"><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/Strt_HNG_Actvt_VeNB_Config.html"><meta name="prodname" content=""><meta name="prodname" content="PW EMS"><meta name="version" content="6"><meta name="version" content="6"><meta name="release" content="1.1"><meta name="release" content="1"><meta name="modification" content="1"><meta name="series" content=""><meta name="DC.Creator" content="DMcAlpine"><meta name="DC.Publisher" content="Parallel Wireless Inc. Proprietary and Confidential"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Near_Real_Time_Radio_Access_Network__RAN__Intelligent_Controller"><meta name="DC.Language" content="en-US"><link rel="stylesheet" type="text/css" href="../../commonltr.css"><title>HetNet Gateway</title></head><body id="Near_Real_Time_Radio_Access_Network__RAN__Intelligent_Controller"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">HetNet Gateway</h1>
+    
+    <div class="body conbody"><p class="shortdesc">The HetNet Gateway (HNG) is used to virtualize and aggregate multiple technology
+        Radio Access Network (RAN) interfaces to manage GSM (2G), UMTS (3G), and LTE (4G)
+        cells.</p>
+        <p class="p"> </p>
+        <p class="p">The HNG is situated between Radio Access Network (RAN) and Core network and uses standard
+            backhaul capabilities. It  reduces network complexity by abstracting different RANs, and
+            by abstracting changes from the Core network to the RAN and from the the RAN to the core
+            network. For example, the HNG can virtualize thousands of base stations to look like a
+            few virtualized super cells (boomer cell) to the core service provider network.</p>
+        <p class="p">The HNG has the following capabilities that are supported across the network: </p>
+        <ul class="ul" id="Near_Real_Time_Radio_Access_Network__RAN__Intelligent_Controller__ul_rtq_xtj_lpb">
+            <li class="li">Acts as a RAN controller that can aggregate all RAN interfaces.</li>
+            <li class="li">Provides X2 gateway functionality for interference mitigation and inter-RAN
+                mobility.</li>
+            <li class="li">Supports an LTE small cell gateway (base station), which is comprised of the Home
+                eNodeB (HeNBGW), Home Node B Gateway (HNB GW), and virtual Radio Network Controller
+                (RNC), and the LTE security gateway that is to set up an IPsec tunnel with the
+                eNodeB to encrypt all traffic between the eNodeBs.</li>
+            <li class="li">Supports Multiple Operator Core Network (MOCN) for sharing the access network
+                (NodeB, eNodeB) between two or more network operators.</li>
+            <li class="li">Complies with ETSI network functions virtualization (NFV) for Virtual Network
+                Funtions (NFV).</li>
+            <li class="li">Allows multiple vendors on the RAN and multi-technologies to be used.</li>
+            <li class="li">Reduces overall network signaling towards the Core network.</li>
+            <li class="li">Aggregates interfaces towards core network.</li>
+        </ul>
+    </div>
+<nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="../../Common/Topics/Cnfg_Systm_HNG_NetConf_Sttngs.html">Configure System HNG and NETCONF Settings</a></strong><br>Use this task to configure HetNet Gateway (HNG) and Network Configuration Protocol         (NETCONF) system settings on the PW EMS so that the PW EMS and HNG can communicate in order         to pass configurations between them. The NETCONF protocol provides mechanisms to install,         manipulate, and delete the configuration of network devices.</li><li class="link ulchildlink"><strong><a href="../../Common/Topics/Strt_HNG_Actvt_VeNB_Config.html">Start the HNG to Activate the VeNB Configuration</a></strong><br>Once the HNG configuration is added to the PW EMS, the HNG must be started or a         switchover must be performed if it is operational already.    </li></ul><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../Common/Topics/Cnfg_Sys_Sttngs_Dvcs.html" title="Use this chapter to configure the system settings necessary for the HetNet Gateway (HNG) to communicate with the PW EMS, configure and manage system settings for vBBU devices, and create services for vNodes and their associated cells.">Configure System Settings for Devices</a></div></div></nav></article></main></body></html>

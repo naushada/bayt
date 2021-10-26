@@ -1,0 +1,227 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2021"><meta name="DC.rights.owner" content="(C) Copyright 2021"><meta name="DC.Type" content="task"><meta name="description" content="Use this task to configure a downlink QoS profile that configures parameters for DSCP maps to be applied to data traffic towards access devices, such as an RRH from the HNG."><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/Create_Ntwrk_Prfls.html"><meta name="prodname" content=""><meta name="prodname" content=""><meta name="version" content="6"><meta name="version" content="6"><meta name="release" content="1.1"><meta name="release" content="1"><meta name="modification" content="1"><meta name="series" content=""><meta name="DC.Creator" content="DMcAlpine"><meta name="DC.Publisher" content="Parallel Wireless Inc. Proprietary and Confidential"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a"><meta name="DC.Language" content="en-US"><link rel="stylesheet" type="text/css" href="../../commonltr.css"><title>Configure Downlink QoS Shaping</title></head><body id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Configure Downlink QoS Shaping</h1>
+    
+    
+    <div class="body taskbody"><p class="shortdesc">Use this task to configure a downlink QoS profile that configures parameters for DSCP
+        maps to be applied to data traffic towards access devices, such as an RRH from the
+        HNG.</p>
+        <ol class="ol steps" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__steps_zwr_14d_q4b"><li class="li step stepexpand">
+                <span class="ph cmd">In the navigation bar, click <strong class="ph b">Profiles</strong> &gt; <strong class="ph b">Summary</strong>.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">In the <strong class="ph b">Profiles</strong> window, click the <strong class="ph b">System Profiles</strong> tab.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">+Create</strong>.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">In the <strong class="ph b">Create System Profile</strong> window, enter the name of this profile in
+                    the <strong class="ph b">Profile Name</strong> field.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Select <strong class="ph b">DownlinkShaping</strong> from the <strong class="ph b">Profile Type</strong> drop-down
+                    list.</span>
+                <div class="itemgroup info">
+                    <div class="note note note_note"><span class="note__title">NOTE:</span> Use the Name field to search for a specific parameter on this page.</div>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">In the table below, click <strong class="ph b">Control</strong> to configure bandwidth settings for
+                    Differentiated Services Code Point (DSCP) profiles for backhaul network data
+                    traffic identified for congestion-handling purposes by completing the following
+                    fields:</span>
+                <div class="itemgroup info">
+                    <table class="table" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_p24_d4d_q4b"><caption></caption><colgroup><col><col></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_p24_d4d_q4b__entry__1">
+                                        <p class="p">Field</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_p24_d4d_q4b__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_p24_d4d_q4b__entry__1 ">
+                                        <strong class="ph b">Bandwidth</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_p24_d4d_q4b__entry__2 ">Enter the allowed bandwidth threshold from 0 to 90
+                                        percent that generates an alarm for the control traffic type
+                                        if crossed.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_p24_d4d_q4b__entry__1 ">
+                                        <strong class="ph b">Raise Alarm</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_p24_d4d_q4b__entry__2 ">Enter the raised alarm threshold limit from 0 to 100
+                                        percent for the control traffic type if crossed.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_p24_d4d_q4b__entry__1 ">
+                                        <strong class="ph b">Clear Alarm</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_p24_d4d_q4b__entry__2 ">Enter the clear alarm threshold limit from 0 to 100
+                                        percent, where a user-defined script or action is initiated
+                                        for the control traffic type if crossed.</td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">Signaling</strong> to configure bandwidth settings for DSCP profiles for
+                    backhaul network data traffic identified for signaling purposes by completing
+                    the following fields:</span>
+                <div class="itemgroup info">
+                    <table class="table" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_z5n_q5z_jpb"><caption></caption><colgroup><col><col></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_z5n_q5z_jpb__entry__1">
+                                        <p class="p">Field</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_z5n_q5z_jpb__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_z5n_q5z_jpb__entry__1 ">
+                                        <strong class="ph b">Bandwidth</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_z5n_q5z_jpb__entry__2 ">Enter the allowed bandwidth threshold from 0 to 90
+                                        percent that generates an alarm for the signaling traffic
+                                        type if crossed.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_z5n_q5z_jpb__entry__1 ">
+                                        <strong class="ph b">Raise Alarm</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_z5n_q5z_jpb__entry__2 ">Enter the raised alarm threshold limit from 0 to 100
+                                        percent for the signalling traffic type if crossed.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_z5n_q5z_jpb__entry__1 ">
+                                        <strong class="ph b">Clear Alarm</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_z5n_q5z_jpb__entry__2 ">Enter the clear alarm threshold limit from 0 to 100
+                                        percent, where a user-defined script or action is initiated
+                                        for the signalling traffic type if crossed.</td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">UMTS Voice</strong> to configure bandwidth settings for DSCP profiles for
+                    backhaul network UMTS voice traffic.</span>
+                <div class="itemgroup info">
+                    <table class="table" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_rr1_svz_jpb"><caption></caption><colgroup><col style="width:50%"><col style="width:50%"></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_rr1_svz_jpb__entry__1">
+                                        <p class="p">Field</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_rr1_svz_jpb__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_rr1_svz_jpb__entry__1 ">
+                                        <strong class="ph b">Bandwidth</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_rr1_svz_jpb__entry__2 ">Enter the allowed bandwidth threshold from 0 to 90
+                                        percent that generates an alarm for the UMTS voice traffic
+                                        type if crossed.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_rr1_svz_jpb__entry__1 ">
+                                        <strong class="ph b">Raise Alarm</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_rr1_svz_jpb__entry__2 ">Enter the raised alarm threshold limit from 0 to 100
+                                        percent for the UMTS voice traffic type if crossed.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_rr1_svz_jpb__entry__1 ">
+                                        <strong class="ph b">Clear Alarm</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_rr1_svz_jpb__entry__2 ">Enter the clear alarm threshold limit from 0 to 100
+                                        percent, where a user-defined script or action is initiated
+                                        for the UMTS voice traffic type if crossed.</td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">UMTS Data</strong> to configure bandwidth settings for DSCP profiles for
+                    backhaul network UMTS data traffic.</span>
+                <div class="itemgroup info">
+                    <table class="table" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_wnr_4xz_jpb"><caption></caption><colgroup><col style="width:50%"><col style="width:50%"></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_wnr_4xz_jpb__entry__1">
+                                        <p class="p">Field</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_wnr_4xz_jpb__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_wnr_4xz_jpb__entry__1 ">
+                                        <strong class="ph b">Bandwidth</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_wnr_4xz_jpb__entry__2 ">Enter the allowed bandwidth threshold from 0 to 90
+                                        percent that generates an alarm for the UMTS data traffic
+                                        type if crossed.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_wnr_4xz_jpb__entry__1 ">
+                                        <strong class="ph b">Raise Alarm</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_wnr_4xz_jpb__entry__2 ">Enter the raised alarm threshold limit from 0 to 100
+                                        percent for the UMTS data traffic type if crossed.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_wnr_4xz_jpb__entry__1 ">
+                                        <strong class="ph b">Clear Alarm</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_wnr_4xz_jpb__entry__2 ">Enter the clear alarm threshold limit from 0 to 100
+                                        percent, where a user-defined script or action is initiated
+                                        for the UMTS data traffic type if crossed.</td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">Lte Data</strong> to configure bandwidth settings for DSCP profiles for
+                    backhaul network LTE data traffic.</span>
+                <div class="itemgroup info">
+                    <table class="table" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_em4_yxz_jpb"><caption></caption><colgroup><col style="width:50%"><col style="width:50%"></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_em4_yxz_jpb__entry__1">
+                                        <p class="p">Field</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_em4_yxz_jpb__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_em4_yxz_jpb__entry__1 ">
+                                        <strong class="ph b">Bandwidth</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_em4_yxz_jpb__entry__2 ">Enter the allowed bandwidth threshold from 0 to 90
+                                        percent that generates an alarm for the LTE data traffic
+                                        type if crossed.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_em4_yxz_jpb__entry__1 ">
+                                        <strong class="ph b">Raise Alarm</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_em4_yxz_jpb__entry__2 ">Enter the raised alarm threshold limit from 0 to 100
+                                        percent for the LTE data traffic type if crossed.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_em4_yxz_jpb__entry__1 ">
+                                        <strong class="ph b">Clear Alarm</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="xd_3fa3effcd3ddca24-6422b5c8-178f78cc39a--7f0a__table_em4_yxz_jpb__entry__2 ">Enter the clear alarm threshold limit from 0 to 100
+                                        percent, where a user-defined script or action is initiated
+                                        for the LTE data traffic type if crossed.</td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">Create+</strong>.</span>
+            </li></ol>
+    </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../Common/Topics/Create_Ntwrk_Prfls.html" title="A network profile includes the configuration for traffic shaping, Quality of Service (QoS), and QoS statistics collection for both uplink and downlink directions over the HNG.">Create Network Profiles</a></div></div></nav></article></main></body></html>

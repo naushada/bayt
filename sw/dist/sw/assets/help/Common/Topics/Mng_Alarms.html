@@ -1,0 +1,319 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="copyright" content="(C) Copyright 2021"><meta name="DC.rights.owner" content="(C) Copyright 2021"><meta name="DC.Type" content="task"><meta name="DC.Relation" scheme="URI" content="../../Common/Topics/Fault_Mngmnt.html"><meta name="prodname" content=""><meta name="prodname" content="PW EMS"><meta name="version" content="6"><meta name="version" content="6"><meta name="release" content="1.1"><meta name="release" content="1"><meta name="modification" content="1"><meta name="series" content=""><meta name="DC.Creator" content="DMcAlpine"><meta name="DC.Publisher" content="Parallel Wireless Inc. Proprietary and Confidential"><meta name="DC.Format" content="XHTML"><meta name="DC.Identifier" content="Manage_Alarms"><meta name="DC.Language" content="en-US"><link rel="stylesheet" type="text/css" href="../../commonltr.css"><title>Manage Alarms</title></head><body id="Manage_Alarms"><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title topictitle1" id="ariaid-title1">Manage Alarms</h1>
+    <div class="body taskbody">
+        <ol class="ol steps" id="Manage_Alarms__steps_gyf_jh2_q4b"><li class="li step stepexpand">
+                <span class="ph cmd">In the navigation bar, click <strong class="ph b">Alarms</strong>.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">In the <strong class="ph b">Alarms</strong> window, you can choose how to display alarms and take
+                    certain actions with alarms by using the alarm configuration bar selections,
+                    which are shown below and discussed in more detail in the following steps.</span>
+                <div class="itemgroup info"><img class="image" id="Manage_Alarms__image_nyl_2tv_mpb" src="../Images/Alrm_cnfg_bar.PNG" width="624"></div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">In the <strong class="ph b">Alarms</strong> window, the following table describes the default and
+                    optional columns that appear in the <strong class="ph b">All Alarms</strong> table.</span>
+                <div class="itemgroup info">
+                    <div class="note note note_note"><span class="note__title">NOTE:</span> You can control how default or optional columns appear in the <strong class="ph b">All
+                            Alarms</strong> table by clicking the column display icon <img class="image" id="Manage_Alarms__image_dq4_sx1_npb" src="../Images/Column_display_icon.PNG">. In the drop-down list, check or uncheck the
+                        checkbox for any the columns described below that you want to filter in the
+                        table. Unchecking a checkbox hides a column and checking a checkbox makes a
+                        column appear in the table.</div>
+                </div>
+                <div class="itemgroup info">
+                    <table class="table" id="Manage_Alarms__table_cz3_lh2_q4b"><caption></caption><colgroup><col style="width:50%"><col style="width:50%"></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="Manage_Alarms__table_cz3_lh2_q4b__entry__1">
+                                        <p class="p">Field</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="Manage_Alarms__table_cz3_lh2_q4b__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_cz3_lh2_q4b__entry__1 ">Checkbox</td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_cz3_lh2_q4b__entry__2 ">
+                                        <p class="p">If you want to download alarms, check the checkbox next
+                                            to one or more alarm entry and click the download <img class="image" id="Manage_Alarms__image_omv_ncv_mpb" src="../Images/dwnld_icon.PNG" width="38"> icon. In the
+                                            pop-up menu that displays, select either <strong class="ph b">Excel</strong>
+                                            for an Alarms.xlsx file or <strong class="ph b">CSV</strong> for an Alarm.csv
+                                            file. The file you select downloads to your web
+                                            browser's default download location on your system.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_cz3_lh2_q4b__entry__1 ">
+                                        <strong class="ph b">Alarm Name</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_cz3_lh2_q4b__entry__2 ">(Default column) Displays a description of the alarm. For
+                                        example, OLD_CERT_FIND_FAILURE</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_cz3_lh2_q4b__entry__1 ">
+                                        <strong class="ph b">Severity</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_cz3_lh2_q4b__entry__2 ">
+                                        <p class="p">(Default column) Displays the severity of the alarm.
+                                            Click the <strong class="ph b">Severity</strong> drop-down list and check the
+                                            check box next to each of the following alarm severity
+                                            levels to filter alarms columns that you want to appear
+                                            in the table:</p>
+                                        <ul class="ul" id="Manage_Alarms__ul_kqz_rh2_q4b">
+                                            <li class="li">
+                                                <strong class="ph b">Critical</strong> - Action must be taken immediately.
+                                                If no actions are taken, there may be physical,
+                                                permanent, and irreparable damage to your
+                                                system.</li>
+                                            <li class="li">
+                                                <strong class="ph b">Major</strong> - Critical conditions exist. The
+                                                functionality has been seriously compromised and a
+                                                loss of functionality, hanging applications, and
+                                                dropped packets may occur. If no actions are taken,
+                                                your system suffers no physical harm, but ceases to
+                                                function.</li>
+                                            <li class="li">
+                                                <strong class="ph b">Minor</strong> - Error conditions exist. The
+                                                functionality has been impaired to a certain degree
+                                                and you might experience compromised functionality.
+                                                There is no physical harm to your system, but you
+                                                need to take actions to keep your system operating
+                                                properly.</li>
+                                            <li class="li">
+                                                <strong class="ph b">Warning</strong> - Warning conditions exist. Some
+                                                irregularities in performance. These conditions are
+                                                noteworthy and you should take actions to keep your
+                                                system operating properly.</li>
+                                        </ul>
+                                        <p class="p">Any alarm of a checked alarm severity level appears in
+                                            the table. Uncheck the checkbox of an alarm severity
+                                            level to hide any alarms that belong to this alarm type
+                                            so they do not appear in the table.</p>
+                                    </td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_cz3_lh2_q4b__entry__1 "><strong class="ph b">Description</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_cz3_lh2_q4b__entry__2 ">(Default column) Describes in plain language what the
+                                        alarm means. For example, "Unable to find old
+                                        certificates."</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_cz3_lh2_q4b__entry__1 ">
+                                        <strong class="ph b">Message</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_cz3_lh2_q4b__entry__2 ">(Default column) Displays the system message ID and type
+                                        of error in detail.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_cz3_lh2_q4b__entry__1 ">
+                                        <strong class="ph b">Time Stamp</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_cz3_lh2_q4b__entry__2 ">(Default column) Displays the day, month, year, and
+                                        Greenwich Mean Time (GMT) time for when the alarm was
+                                        triggered.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_cz3_lh2_q4b__entry__1 ">
+                                        <strong class="ph b">Device Name</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_cz3_lh2_q4b__entry__2 ">(Optional column) Displays the device name that triggered
+                                        the alarm. This name may display the same as the Device ID,
+                                        if it was not re-named by a user.</td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click an alarm once to provide a detailed alarm view. For example, a critical
+                    alarm is expanded to show detailed information for it:</span>
+                <div class="itemgroup info"><img class="image" id="Manage_Alarms__image_wzd_fqv_mpb" src="../Images/Expnd_alarm_exmpl.PNG" width="624"></div>
+                <div class="itemgroup info">The fields described in the following table appear only in the detailed alarm
+                    view: </div>
+                <div class="itemgroup info">
+                    <table class="table" id="Manage_Alarms__table_wc3_n5v_mpb"><caption></caption><colgroup><col style="width:50%"><col style="width:50%"></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="Manage_Alarms__table_wc3_n5v_mpb__entry__1">
+                                        <p class="p">Field</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="Manage_Alarms__table_wc3_n5v_mpb__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_wc3_n5v_mpb__entry__1 ">
+                                        <strong class="ph b">Object ID</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_wc3_n5v_mpb__entry__2 ">The internal path for the object involved.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_wc3_n5v_mpb__entry__1 "><strong class="ph b">Raised by</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_wc3_n5v_mpb__entry__2 ">Indicates the entity that raised the alarm.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_wc3_n5v_mpb__entry__1 ">
+                                        <strong class="ph b">Device ID</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_wc3_n5v_mpb__entry__2 ">This is a combination of the Organization Unique ID (OUI)
+                                        for Parallel Wireless (41733), product class (C19999) and
+                                        product serial number (for example, S3837C2X1113972) that
+                                        were made.<p class="p">For example the complete Device ID displays
+                                            like this: 41733-C19999-S3837C2X1113972 </p></td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_wc3_n5v_mpb__entry__1 "><strong class="ph b">Functional Area</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_wc3_n5v_mpb__entry__2 ">Displays what type of service or network element is
+                                        involved.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_wc3_n5v_mpb__entry__1 ">
+                                        <strong class="ph b">Device Name</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_wc3_n5v_mpb__entry__2 ">Displays the device name that triggered the alarm. This
+                                        name may display the same as the Device ID, if it was not
+                                        re-named by a user.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_wc3_n5v_mpb__entry__1 ">
+                                        <strong class="ph b">Alarm ID</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_wc3_n5v_mpb__entry__2 ">Unique alarm identifier (ID) generated and assigned by
+                                        the PW EMS.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_wc3_n5v_mpb__entry__1 "><strong class="ph b">Acknowledge</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_wc3_n5v_mpb__entry__2 ">Indicates whether the alarm has been acknowledged or not.
+                                        Click the <strong class="ph b">Acknowledge</strong> drop-down list and check the
+                                        checkbox for the <strong class="ph b">ACK</strong> (acknowledged) and <strong class="ph b">UNACK</strong>
+                                        (unacknowledged) options to display them in the table.
+                                        Uncheck the checkbox to hide either of these alarm types so
+                                        they do not appear in the table.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_wc3_n5v_mpb__entry__1 "><strong class="ph b">Source</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_wc3_n5v_mpb__entry__2 ">
+                                        <div class="p">Identifies the source device type of the alarm. Click the
+                                                <strong class="ph b">Source</strong> drop-down list and check the checkbox
+                                            for the following source device types you want to filter
+                                            from which the PW EMS receives alarms:<ul class="ul" id="Manage_Alarms__ul_gb3_st1_npb">
+                                                <li class="li"><strong class="ph b">ACS</strong></li>
+                                                <li class="li"><strong class="ph b">COM_VBBU</strong></li>
+                                                <li class="li"><strong class="ph b">COM_VNODE</strong></li>
+                                                <li class="li"><strong class="ph b">COM_VNODE_2G</strong></li>
+                                                <li class="li"><strong class="ph b">COM_VNODE_4G</strong></li>
+                                                <li class="li"><strong class="ph b">HNG</strong></li>
+                                            </ul></div>
+                                        <p class="p">Any checked device appears in the table. Uncheck the
+                                            checkbox to hide source device alarm types so they do
+                                            not appear in the table.</p>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Check the checkbox of one or more alarms to perform actions on them.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click the <strong class="ph b">Action</strong> drop-down list and select one of the following actions
+                    to perform on the alarm(s) that you selected:</span>
+                <div class="itemgroup info">
+                    <table class="table" id="Manage_Alarms__table_vxk_3r1_npb"><caption></caption><colgroup><col style="width:50%"><col style="width:50%"></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="Manage_Alarms__table_vxk_3r1_npb__entry__1">
+                                        <p class="p">Alarm Action</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="Manage_Alarms__table_vxk_3r1_npb__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_vxk_3r1_npb__entry__1 ">
+                                        <strong class="ph b">ACK</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_vxk_3r1_npb__entry__2 ">Check the checkbox to acknowledge the alarm(s) you
+                                        selected in the previous step.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_vxk_3r1_npb__entry__1 "><strong class="ph b">UNACK</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_vxk_3r1_npb__entry__2 ">Check the checkbox to unacknowledge the alarm(s) you
+                                        selected in the previous step.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_vxk_3r1_npb__entry__1 ">
+                                        <strong class="ph b">CLEAR</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_vxk_3r1_npb__entry__2 ">Check the checkbox to clear the alarm(s) you selected in
+                                        the previous step.</td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">More</strong> to select from the following alarm filter types that you want
+                    to use to filter or winnow the type of alarm information that you want to see in
+                    the <strong class="ph b">All Alarms</strong> table. The alarm filter types shown in the following
+                    figure are described in the following table:</span>
+                <div class="itemgroup info"><img class="image" id="Manage_Alarms__image_qj1_krb_npb" src="../Images/Create_alarm_filter.PNG" width="624"></div>
+                <div class="itemgroup info">
+                    <table class="table" id="Manage_Alarms__table_j3r_j1b_npb"><caption></caption><colgroup><col style="width:50%"><col style="width:50%"></colgroup><thead class="thead">
+                                <tr class="row">
+                                    <th class="entry colsep-1 rowsep-1" id="Manage_Alarms__table_j3r_j1b_npb__entry__1">
+                                        <p class="p">Alarm Filter</p>
+                                    </th>
+                                    <th class="entry colsep-1 rowsep-1" id="Manage_Alarms__table_j3r_j1b_npb__entry__2">
+                                        <p class="p">Description</p>
+                                    </th>
+                                </tr>
+                            </thead><tbody class="tbody">
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_j3r_j1b_npb__entry__1 ">
+                                        <strong class="ph b">Alarm Name</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_j3r_j1b_npb__entry__2 ">Enter a full or partial alarm name from which you want to
+                                        filter alarms.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_j3r_j1b_npb__entry__1 "><strong class="ph b">Device Name</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_j3r_j1b_npb__entry__2 ">Enter a device name from which to filter alarms.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_j3r_j1b_npb__entry__1 ">
+                                        <strong class="ph b">Device ID</strong>
+                                    </td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_j3r_j1b_npb__entry__2 ">Enter the device ID from which to filter alarms.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_j3r_j1b_npb__entry__1 "><strong class="ph b">Alarm ID</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_j3r_j1b_npb__entry__2 ">Enter the alarm ID from which to filter alarms.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_j3r_j1b_npb__entry__1 "><strong class="ph b">Message</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_j3r_j1b_npb__entry__2 ">Enter message text from which to filter alarms.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_j3r_j1b_npb__entry__1 "><strong class="ph b">Description</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_j3r_j1b_npb__entry__2 ">Enter a full or partial description from which to filter
+                                        alarms.</td>
+                                </tr>
+                                <tr class="row">
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_j3r_j1b_npb__entry__1 "><strong class="ph b">Timestamp</strong></td>
+                                    <td class="entry colsep-1 rowsep-1" headers="Manage_Alarms__table_j3r_j1b_npb__entry__2 ">Select a time (from and to) from the date calender and
+                                        enter the time in hours, minutes and seconds (HH:MM:SS) and
+                                        click <strong class="ph b">Apply</strong> from which to filter alarms.</td>
+                                </tr>
+                            </tbody></table>
+                </div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">To sort table entries, position the cursor to the right of any column header
+                    until a gray arrow appears and click this arrow up (beginning of entry list) or
+                    down (end of entry list) to display results or vice versa, as shown below:</span>
+                <div class="itemgroup info"><img class="image" id="Manage_Alarms__image_kjf_tgd_npb" src="../Images/List_sort_action.png" width="96"></div>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click the <strong class="ph b">Auto Refresh</strong> slider <strong class="ph b">On</strong> if you want to have the
+                        <strong class="ph b">Alarms</strong> window refresh periodically once every 10 minutes. Click
+                        <strong class="ph b">Off</strong> to return to the default for this page setting.</span>
+            </li><li class="li step stepexpand">
+                <span class="ph cmd">Click <strong class="ph b">LOGS</strong> at the top of the window to use as a short-cut to the
+                        <strong class="ph b">Audit Logs</strong> page. This page can also be accessed from the navigation
+                    bar &gt; <strong class="ph b">Audit Logs</strong>.</span>
+            </li></ol>
+    </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../../Common/Topics/Fault_Mngmnt.html" title="The PW EMS user interface (UI) uses fault management to manage and view active alarms and events raised by the SON components, HNG, and vBBU, and view their history.">Fault Management</a></div></div></nav></article></main></body></html>
